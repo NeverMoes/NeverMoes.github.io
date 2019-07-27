@@ -1,0 +1,1544 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  Spring AOP - NeverMoes 的笔记
+  
+  </title>
+ <meta name="description" content="">
+ <link href="atom.xml" rel="alternate" title="NeverMoes 的笔记" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+    <script src="asset/highlightjs/highlight.pack.js"></script>
+    <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+<div id="header">
+    <h1><a href="index.html">NeverMoes 的笔记</a></h1>
+</div>
+
+</nav>
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; NeverMoes 的笔记</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+      <li><a href="index.html">Home</a></li>
+      
+        <li class="divider"></li>
+        <li><label>Java</label></li>
+
+          
+            <li><a title="Java - 编码" href="15613569036612.html">Java - 编码</a></li>
+          
+            <li><a title="Java - Log" href="15594642382768.html">Java - Log</a></li>
+          
+            <li><a title="Java - 异常处理" href="15594627836663.html">Java - 异常处理</a></li>
+          
+            <li><a title="Java - Steam" href="15584212270447.html">Java - Steam</a></li>
+          
+            <li><a title="Java - 反射" href="15580921637682.html">Java - 反射</a></li>
+          
+            <li><a title="Java - Enum" href="15580808809919.html">Java - Enum</a></li>
+          
+            <li><a title="Javadoc" href="15573232964198.html">Javadoc</a></li>
+          
+            <li><a title="编程规范" href="15573214224993.html">编程规范</a></li>
+          
+            <li><a title="Java8" href="15571102853200.html">Java8</a></li>
+          
+            <li><a title="一些特性" href="15568697463497.html">一些特性</a></li>
+          
+            <li><a title="Java 补充" href="15557361529750.html">Java 补充</a></li>
+          
+            <li><a title="Java 基础" href="15554689517828.html">Java 基础</a></li>
+          
+            <li><a title="Java - IO" href="15551380554375.html">Java - IO</a></li>
+          
+            <li><a title="Java 经典设计模式" href="15548114065751.html">Java 经典设计模式</a></li>
+          
+            <li><a title="常用设计模式" href="15547272355117.html">常用设计模式</a></li>
+          
+            <li><a title="Java - 流(Stream)" href="15535872722415.html">Java - 流(Stream)</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Java 集合</label></li>
+
+          
+            <li><a title="Java 集合 - List" href="15619627957699.html">Java 集合 - List</a></li>
+          
+            <li><a title="Java - 集合框架" href="15557398305311.html">Java - 集合框架</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>并发</label></li>
+
+          
+            <li><a title="Java 并发 - 同步器框架 AQS" href="15628279381258.html">Java 并发 - 同步器框架 AQS</a></li>
+          
+            <li><a title="Java 并发 - volatile 与 Java 内存模型(JMM)" href="15628250952791.html">Java 并发 - volatile 与 Java 内存模型(JMM)</a></li>
+          
+            <li><a title="Java 并发 - 生产者消费者模型" href="15551273585518.html">Java 并发 - 生产者消费者模型</a></li>
+          
+            <li><a title="Java 并发 - atomic" href="15551259864059.html">Java 并发 - atomic</a></li>
+          
+            <li><a title="Java 并发 - 线程池" href="15550409896106.html">Java 并发 - 线程池</a></li>
+          
+            <li><a title="Java 并发 - 常见并发容器" href="15549779705652.html">Java 并发 - 常见并发容器</a></li>
+          
+            <li><a title="Java 并发 - final 重排" href="15549631305867.html">Java 并发 - final 重排</a></li>
+          
+            <li><a title="Java 并发 - synchronized" href="15549492034730.html">Java 并发 - synchronized</a></li>
+          
+            <li><a title="Java 并发 - 线程" href="15549491562348.html">Java 并发 - 线程</a></li>
+          
+            <li><a title="Java 并发 - 常用同步器" href="15549094953523.html">Java 并发 - 常用同步器</a></li>
+          
+            <li><a title="Java 并发 - 概览" href="15536711259128.html">Java 并发 - 概览</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>JVM</label></li>
+
+          
+            <li><a title="Java JVM - 分析工具" href="15592858144445.html">Java JVM - 分析工具</a></li>
+          
+            <li><a title="Java JVM - 类加载" href="15554954352575.html">Java JVM - 类加载</a></li>
+          
+            <li><a title="Java JVM - GC" href="15551422971585.html">Java JVM - GC</a></li>
+          
+            <li><a title="Java JVM - 内存布局" href="15551417067858.html">Java JVM - 内存布局</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Spring</label></li>
+
+          
+            <li><a title="Mybatis" href="15627234169476.html">Mybatis</a></li>
+          
+            <li><a title="Spring -  自定义标签" href="15580023414897.html">Spring -  自定义标签</a></li>
+          
+            <li><a title="Java - Servlet" href="15555575014317.html">Java - Servlet</a></li>
+          
+            <li><a title="Spring - 数据访问" href="15553337118605.html">Spring - 数据访问</a></li>
+          
+            <li><a title="spring 异步线程池" href="15546347724247.html">spring 异步线程池</a></li>
+          
+            <li><a title="Spring MVC" href="15546192348918.html">Spring MVC</a></li>
+          
+            <li><a title="Spring 事务" href="15544558066181.html">Spring 事务</a></li>
+          
+            <li><a title="Spring AOP" href="15543917219955.html">Spring AOP</a></li>
+          
+            <li><a title="Spring IoC" href="15543630452997.html">Spring IoC</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>源码</label></li>
+
+          
+            <li><a title="源码" href="15627233586740.html">源码</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Redis</label></li>
+
+          
+            <li><a title="Redis 实现分布式锁" href="15565438727155.html">Redis 实现分布式锁</a></li>
+          
+            <li><a title="Redis 深入 - 双写一致性" href="15560904222673.html">Redis 深入 - 双写一致性</a></li>
+          
+            <li><a title="Redis 深入 - 高可用性" href="15560904056716.html">Redis 深入 - 高可用性</a></li>
+          
+            <li><a title="Redis 深入 - 数据结构" href="15560812001633.html">Redis 深入 - 数据结构</a></li>
+          
+            <li><a title="Redis 深入 - 常见问题" href="15556760212710.html">Redis 深入 - 常见问题</a></li>
+          
+            <li><a title="Redis 基本使用" href="15542783465338.html">Redis 基本使用</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Mysql</label></li>
+
+          
+            <li><a title="Mysql - 键、索引、约束" href="15633466729778.html">Mysql - 键、索引、约束</a></li>
+          
+            <li><a title="Mysql - 性能优化" href="15633423972144.html">Mysql - 性能优化</a></li>
+          
+            <li><a title="索引中的树 - B,B+,B*" href="15633420860231.html">索引中的树 - B,B+,B*</a></li>
+          
+            <li><a title="性能优化" href="15607574336137.html">性能优化</a></li>
+          
+            <li><a title="Mysql - EXPLAIN" href="15607559623364.html">Mysql - EXPLAIN</a></li>
+          
+            <li><a title="Mysql 深入" href="15555007777074.html">Mysql 深入</a></li>
+          
+            <li><a title="Mysql 基本使用" href="15554985061309.html">Mysql 基本使用</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>消息队列</label></li>
+
+          
+            <li><a title="JMS" href="15584265544434.html">JMS</a></li>
+          
+            <li><a title="RPC - RMI" href="15572232721703.html">RPC - RMI</a></li>
+          
+            <li><a title="消息队列" href="15560753193297.html">消息队列</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>分布式</label></li>
+
+          
+            <li><a title="概览" href="15630938148608.html">概览</a></li>
+          
+            <li><a title="分布式锁" href="15625959085058.html">分布式锁</a></li>
+          
+            <li><a title="分布式事务" href="15625700887049.html">分布式事务</a></li>
+          
+            <li><a title="ZooKeeper - 实现原理" href="15574104902395.html">ZooKeeper - 实现原理</a></li>
+          
+            <li><a title="ZK 分布式锁" href="15573683537890.html">ZK 分布式锁</a></li>
+          
+            <li><a title="ZooKeeper - 基本使用" href="15572415140464.html">ZooKeeper - 基本使用</a></li>
+          
+            <li><a title="Dubbo" href="15572232166193.html">Dubbo</a></li>
+          
+            <li><a title="分布式 - 一致性协议" href="15564260705049.html">分布式 - 一致性协议</a></li>
+          
+            <li><a title="ZooKeeper - ZAB 一致性协议" href="15561221442316.html">ZooKeeper - ZAB 一致性协议</a></li>
+          
+            <li><a title="分布式 - 理论" href="15559475613873.html">分布式 - 理论</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>LeetCode</label></li>
+
+          
+            <li><a title="栈" href="15641207902154.html">栈</a></li>
+          
+            <li><a title="链表" href="15640409436152.html">链表</a></li>
+          
+            <li><a title="位运算" href="15640226818030.html">位运算</a></li>
+          
+            <li><a title="树相关" href="15638876391543.html">树相关</a></li>
+          
+            <li><a title="并查集(union-find)" href="15637156793274.html">并查集(union-find)</a></li>
+          
+            <li><a title="图相关" href="15637123231485.html">图相关</a></li>
+          
+            <li><a title="动态规划 - 2" href="15637092754569.html">动态规划 - 2</a></li>
+          
+            <li><a title="其他" href="15632741408063.html">其他</a></li>
+          
+            <li><a title="动态规划 - 2" href="15621444826793.html">动态规划 - 2</a></li>
+          
+            <li><a title="字符串" href="15621426919335.html">字符串</a></li>
+          
+            <li><a title="贪心策略" href="15621379435201.html">贪心策略</a></li>
+          
+            <li><a title="动态规划 - 1" href="15618801162146.html">动态规划 - 1</a></li>
+          
+            <li><a title="回溯" href="15617108626739.html">回溯</a></li>
+          
+            <li><a title="组合博弈" href="15617105581442.html">组合博弈</a></li>
+          
+            <li><a title="temp" href="15600064978396.html">temp</a></li>
+          
+            <li><a title="筛选法" href="15600041568309.html">筛选法</a></li>
+          
+            <li><a title="Sell Stock" href="15592212071515.html">Sell Stock</a></li>
+          
+            <li><a title="dfs" href="15590119399452.html">dfs</a></li>
+          
+            <li><a title="Index" href="15578365171892.html">Index</a></li>
+          
+            <li><a title="排序" href="15578363359025.html">排序</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>算法</label></li>
+
+          
+            <li><a title="海量数据" href="15635229096880.html">海量数据</a></li>
+          
+            <li><a title="缓存" href="15616272119801.html">缓存</a></li>
+          
+            <li><a title="位操作" href="15421595266112.html">位操作</a></li>
+          
+            <li><a title="数据结构-搜索树" href="15382213735628.html">数据结构-搜索树</a></li>
+          
+            <li><a title="数据结构-查找" href="15381206652033.html">数据结构-查找</a></li>
+          
+            <li><a title="数据结构-栈与队列" href="15377961916563.html">数据结构-栈与队列</a></li>
+          
+            <li><a title="数据结构-树" href="15376956161325.html">数据结构-树</a></li>
+          
+            <li><a title="数据结构-图" href="15366535602244.html">数据结构-图</a></li>
+          
+            <li><a title="数据结构-排序" href="15366378611089.html">数据结构-排序</a></li>
+          
+            <li><a title="数据结构-线性表" href="15365715348624.html">数据结构-线性表</a></li>
+          
+            <li><a title="数据结构-绪论" href="15364817197942.html">数据结构-绪论</a></li>
+          
+            <li><a title="算法学习路径" href="15289789971496.html">算法学习路径</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>工具</label></li>
+
+          
+            <li><a title="MyBatis" href="15590240129274.html">MyBatis</a></li>
+          
+            <li><a title="Guava" href="15573643454153.html">Guava</a></li>
+          
+            <li><a title="Lombok" href="15571355421205.html">Lombok</a></li>
+          
+            <li><a title="IntelliJ-IDEA" href="15568897283887.html">IntelliJ-IDEA</a></li>
+          
+            <li><a title="Git" href="15568705670148.html">Git</a></li>
+          
+            <li><a title="Maven" href="15547227910617.html">Maven</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>网络</label></li>
+
+          
+            <li><a title="Netty" href="15633460791334.html">Netty</a></li>
+          
+            <li><a title="Http 授权" href="15629155221529.html">Http 授权</a></li>
+          
+            <li><a title="Https" href="15627233138405.html">Https</a></li>
+          
+            <li><a title="Http" href="15627233041942.html">Http</a></li>
+          
+            <li><a title="TCP" href="15627232889065.html">TCP</a></li>
+          
+            <li><a title="重要知识点" href="15561544288813.html">重要知识点</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Linux</label></li>
+
+          
+            <li><a title="Linux - I/O 模型" href="15560816178760.html">Linux - I/O 模型</a></li>
+          
+            <li><a title="Linux" href="15556621779917.html">Linux</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>测试相关</label></li>
+
+          
+            <li><a title="Mockito" href="15590126556449.html">Mockito</a></li>
+          
+            <li><a title="测试相关" href="15587730878715.html">测试相关</a></li>
+          
+            <li><a title="JUnit" href="15579238927247.html">JUnit</a></li>
+          
+            <li><a title="测试" href="15579095305456.html">测试</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Web</label></li>
+
+          
+            <li><a title="Http 缓存控制" href="15616231135862.html">Http 缓存控制</a></li>
+          
+            <li><a title="HTTP API 认证" href="15616218028083.html">HTTP API 认证</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>其他</label></li>
+
+          
+            <li><a title="计算机中的时间处理" href="15414917404912.html">计算机中的时间处理</a></li>
+          
+
+      
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+        <section id="main-content" role="main" class="scroll-container">
+
+          <div class="row">
+            <div class="large-3 medium-3 columns">
+              <div class="hide-for-small">
+                <div class="sidebar">
+                <nav>
+                  <ul id="side-nav" class="side-nav">
+
+                    
+                      <li class="side-title"><span>Java</span></li>
+                        
+                          <li><a title="Java - 编码" href="15613569036612.html">Java - 编码</a></li>
+                        
+                          <li><a title="Java - Log" href="15594642382768.html">Java - Log</a></li>
+                        
+                          <li><a title="Java - 异常处理" href="15594627836663.html">Java - 异常处理</a></li>
+                        
+                          <li><a title="Java - Steam" href="15584212270447.html">Java - Steam</a></li>
+                        
+                          <li><a title="Java - 反射" href="15580921637682.html">Java - 反射</a></li>
+                        
+                          <li><a title="Java - Enum" href="15580808809919.html">Java - Enum</a></li>
+                        
+                          <li><a title="Javadoc" href="15573232964198.html">Javadoc</a></li>
+                        
+                          <li><a title="编程规范" href="15573214224993.html">编程规范</a></li>
+                        
+                          <li><a title="Java8" href="15571102853200.html">Java8</a></li>
+                        
+                          <li><a title="一些特性" href="15568697463497.html">一些特性</a></li>
+                        
+                          <li><a title="Java 补充" href="15557361529750.html">Java 补充</a></li>
+                        
+                          <li><a title="Java 基础" href="15554689517828.html">Java 基础</a></li>
+                        
+                          <li><a title="Java - IO" href="15551380554375.html">Java - IO</a></li>
+                        
+                          <li><a title="Java 经典设计模式" href="15548114065751.html">Java 经典设计模式</a></li>
+                        
+                          <li><a title="常用设计模式" href="15547272355117.html">常用设计模式</a></li>
+                        
+                          <li><a title="Java - 流(Stream)" href="15535872722415.html">Java - 流(Stream)</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Java 集合</span></li>
+                        
+                          <li><a title="Java 集合 - List" href="15619627957699.html">Java 集合 - List</a></li>
+                        
+                          <li><a title="Java - 集合框架" href="15557398305311.html">Java - 集合框架</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>并发</span></li>
+                        
+                          <li><a title="Java 并发 - 同步器框架 AQS" href="15628279381258.html">Java 并发 - 同步器框架 AQS</a></li>
+                        
+                          <li><a title="Java 并发 - volatile 与 Java 内存模型(JMM)" href="15628250952791.html">Java 并发 - volatile 与 Java 内存模型(JMM)</a></li>
+                        
+                          <li><a title="Java 并发 - 生产者消费者模型" href="15551273585518.html">Java 并发 - 生产者消费者模型</a></li>
+                        
+                          <li><a title="Java 并发 - atomic" href="15551259864059.html">Java 并发 - atomic</a></li>
+                        
+                          <li><a title="Java 并发 - 线程池" href="15550409896106.html">Java 并发 - 线程池</a></li>
+                        
+                          <li><a title="Java 并发 - 常见并发容器" href="15549779705652.html">Java 并发 - 常见并发容器</a></li>
+                        
+                          <li><a title="Java 并发 - final 重排" href="15549631305867.html">Java 并发 - final 重排</a></li>
+                        
+                          <li><a title="Java 并发 - synchronized" href="15549492034730.html">Java 并发 - synchronized</a></li>
+                        
+                          <li><a title="Java 并发 - 线程" href="15549491562348.html">Java 并发 - 线程</a></li>
+                        
+                          <li><a title="Java 并发 - 常用同步器" href="15549094953523.html">Java 并发 - 常用同步器</a></li>
+                        
+                          <li><a title="Java 并发 - 概览" href="15536711259128.html">Java 并发 - 概览</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>JVM</span></li>
+                        
+                          <li><a title="Java JVM - 分析工具" href="15592858144445.html">Java JVM - 分析工具</a></li>
+                        
+                          <li><a title="Java JVM - 类加载" href="15554954352575.html">Java JVM - 类加载</a></li>
+                        
+                          <li><a title="Java JVM - GC" href="15551422971585.html">Java JVM - GC</a></li>
+                        
+                          <li><a title="Java JVM - 内存布局" href="15551417067858.html">Java JVM - 内存布局</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Spring</span></li>
+                        
+                          <li><a title="Mybatis" href="15627234169476.html">Mybatis</a></li>
+                        
+                          <li><a title="Spring -  自定义标签" href="15580023414897.html">Spring -  自定义标签</a></li>
+                        
+                          <li><a title="Java - Servlet" href="15555575014317.html">Java - Servlet</a></li>
+                        
+                          <li><a title="Spring - 数据访问" href="15553337118605.html">Spring - 数据访问</a></li>
+                        
+                          <li><a title="spring 异步线程池" href="15546347724247.html">spring 异步线程池</a></li>
+                        
+                          <li><a title="Spring MVC" href="15546192348918.html">Spring MVC</a></li>
+                        
+                          <li><a title="Spring 事务" href="15544558066181.html">Spring 事务</a></li>
+                        
+                          <li><a title="Spring AOP" href="15543917219955.html">Spring AOP</a></li>
+                        
+                          <li><a title="Spring IoC" href="15543630452997.html">Spring IoC</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>源码</span></li>
+                        
+                          <li><a title="源码" href="15627233586740.html">源码</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Redis</span></li>
+                        
+                          <li><a title="Redis 实现分布式锁" href="15565438727155.html">Redis 实现分布式锁</a></li>
+                        
+                          <li><a title="Redis 深入 - 双写一致性" href="15560904222673.html">Redis 深入 - 双写一致性</a></li>
+                        
+                          <li><a title="Redis 深入 - 高可用性" href="15560904056716.html">Redis 深入 - 高可用性</a></li>
+                        
+                          <li><a title="Redis 深入 - 数据结构" href="15560812001633.html">Redis 深入 - 数据结构</a></li>
+                        
+                          <li><a title="Redis 深入 - 常见问题" href="15556760212710.html">Redis 深入 - 常见问题</a></li>
+                        
+                          <li><a title="Redis 基本使用" href="15542783465338.html">Redis 基本使用</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Mysql</span></li>
+                        
+                          <li><a title="Mysql - 键、索引、约束" href="15633466729778.html">Mysql - 键、索引、约束</a></li>
+                        
+                          <li><a title="Mysql - 性能优化" href="15633423972144.html">Mysql - 性能优化</a></li>
+                        
+                          <li><a title="索引中的树 - B,B+,B*" href="15633420860231.html">索引中的树 - B,B+,B*</a></li>
+                        
+                          <li><a title="性能优化" href="15607574336137.html">性能优化</a></li>
+                        
+                          <li><a title="Mysql - EXPLAIN" href="15607559623364.html">Mysql - EXPLAIN</a></li>
+                        
+                          <li><a title="Mysql 深入" href="15555007777074.html">Mysql 深入</a></li>
+                        
+                          <li><a title="Mysql 基本使用" href="15554985061309.html">Mysql 基本使用</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>消息队列</span></li>
+                        
+                          <li><a title="JMS" href="15584265544434.html">JMS</a></li>
+                        
+                          <li><a title="RPC - RMI" href="15572232721703.html">RPC - RMI</a></li>
+                        
+                          <li><a title="消息队列" href="15560753193297.html">消息队列</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>分布式</span></li>
+                        
+                          <li><a title="概览" href="15630938148608.html">概览</a></li>
+                        
+                          <li><a title="分布式锁" href="15625959085058.html">分布式锁</a></li>
+                        
+                          <li><a title="分布式事务" href="15625700887049.html">分布式事务</a></li>
+                        
+                          <li><a title="ZooKeeper - 实现原理" href="15574104902395.html">ZooKeeper - 实现原理</a></li>
+                        
+                          <li><a title="ZK 分布式锁" href="15573683537890.html">ZK 分布式锁</a></li>
+                        
+                          <li><a title="ZooKeeper - 基本使用" href="15572415140464.html">ZooKeeper - 基本使用</a></li>
+                        
+                          <li><a title="Dubbo" href="15572232166193.html">Dubbo</a></li>
+                        
+                          <li><a title="分布式 - 一致性协议" href="15564260705049.html">分布式 - 一致性协议</a></li>
+                        
+                          <li><a title="ZooKeeper - ZAB 一致性协议" href="15561221442316.html">ZooKeeper - ZAB 一致性协议</a></li>
+                        
+                          <li><a title="分布式 - 理论" href="15559475613873.html">分布式 - 理论</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>LeetCode</span></li>
+                        
+                          <li><a title="栈" href="15641207902154.html">栈</a></li>
+                        
+                          <li><a title="链表" href="15640409436152.html">链表</a></li>
+                        
+                          <li><a title="位运算" href="15640226818030.html">位运算</a></li>
+                        
+                          <li><a title="树相关" href="15638876391543.html">树相关</a></li>
+                        
+                          <li><a title="并查集(union-find)" href="15637156793274.html">并查集(union-find)</a></li>
+                        
+                          <li><a title="图相关" href="15637123231485.html">图相关</a></li>
+                        
+                          <li><a title="动态规划 - 2" href="15637092754569.html">动态规划 - 2</a></li>
+                        
+                          <li><a title="其他" href="15632741408063.html">其他</a></li>
+                        
+                          <li><a title="动态规划 - 2" href="15621444826793.html">动态规划 - 2</a></li>
+                        
+                          <li><a title="字符串" href="15621426919335.html">字符串</a></li>
+                        
+                          <li><a title="贪心策略" href="15621379435201.html">贪心策略</a></li>
+                        
+                          <li><a title="动态规划 - 1" href="15618801162146.html">动态规划 - 1</a></li>
+                        
+                          <li><a title="回溯" href="15617108626739.html">回溯</a></li>
+                        
+                          <li><a title="组合博弈" href="15617105581442.html">组合博弈</a></li>
+                        
+                          <li><a title="temp" href="15600064978396.html">temp</a></li>
+                        
+                          <li><a title="筛选法" href="15600041568309.html">筛选法</a></li>
+                        
+                          <li><a title="Sell Stock" href="15592212071515.html">Sell Stock</a></li>
+                        
+                          <li><a title="dfs" href="15590119399452.html">dfs</a></li>
+                        
+                          <li><a title="Index" href="15578365171892.html">Index</a></li>
+                        
+                          <li><a title="排序" href="15578363359025.html">排序</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>算法</span></li>
+                        
+                          <li><a title="海量数据" href="15635229096880.html">海量数据</a></li>
+                        
+                          <li><a title="缓存" href="15616272119801.html">缓存</a></li>
+                        
+                          <li><a title="位操作" href="15421595266112.html">位操作</a></li>
+                        
+                          <li><a title="数据结构-搜索树" href="15382213735628.html">数据结构-搜索树</a></li>
+                        
+                          <li><a title="数据结构-查找" href="15381206652033.html">数据结构-查找</a></li>
+                        
+                          <li><a title="数据结构-栈与队列" href="15377961916563.html">数据结构-栈与队列</a></li>
+                        
+                          <li><a title="数据结构-树" href="15376956161325.html">数据结构-树</a></li>
+                        
+                          <li><a title="数据结构-图" href="15366535602244.html">数据结构-图</a></li>
+                        
+                          <li><a title="数据结构-排序" href="15366378611089.html">数据结构-排序</a></li>
+                        
+                          <li><a title="数据结构-线性表" href="15365715348624.html">数据结构-线性表</a></li>
+                        
+                          <li><a title="数据结构-绪论" href="15364817197942.html">数据结构-绪论</a></li>
+                        
+                          <li><a title="算法学习路径" href="15289789971496.html">算法学习路径</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>工具</span></li>
+                        
+                          <li><a title="MyBatis" href="15590240129274.html">MyBatis</a></li>
+                        
+                          <li><a title="Guava" href="15573643454153.html">Guava</a></li>
+                        
+                          <li><a title="Lombok" href="15571355421205.html">Lombok</a></li>
+                        
+                          <li><a title="IntelliJ-IDEA" href="15568897283887.html">IntelliJ-IDEA</a></li>
+                        
+                          <li><a title="Git" href="15568705670148.html">Git</a></li>
+                        
+                          <li><a title="Maven" href="15547227910617.html">Maven</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>网络</span></li>
+                        
+                          <li><a title="Netty" href="15633460791334.html">Netty</a></li>
+                        
+                          <li><a title="Http 授权" href="15629155221529.html">Http 授权</a></li>
+                        
+                          <li><a title="Https" href="15627233138405.html">Https</a></li>
+                        
+                          <li><a title="Http" href="15627233041942.html">Http</a></li>
+                        
+                          <li><a title="TCP" href="15627232889065.html">TCP</a></li>
+                        
+                          <li><a title="重要知识点" href="15561544288813.html">重要知识点</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Linux</span></li>
+                        
+                          <li><a title="Linux - I/O 模型" href="15560816178760.html">Linux - I/O 模型</a></li>
+                        
+                          <li><a title="Linux" href="15556621779917.html">Linux</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>测试相关</span></li>
+                        
+                          <li><a title="Mockito" href="15590126556449.html">Mockito</a></li>
+                        
+                          <li><a title="测试相关" href="15587730878715.html">测试相关</a></li>
+                        
+                          <li><a title="JUnit" href="15579238927247.html">JUnit</a></li>
+                        
+                          <li><a title="测试" href="15579095305456.html">测试</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Web</span></li>
+                        
+                          <li><a title="Http 缓存控制" href="15616231135862.html">Http 缓存控制</a></li>
+                        
+                          <li><a title="HTTP API 认证" href="15616218028083.html">HTTP API 认证</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>其他</span></li>
+                        
+                          <li><a title="计算机中的时间处理" href="15414917404912.html">计算机中的时间处理</a></li>
+                        
+
+                    
+                  </ul>
+                </nav>
+                </div>
+              </div>
+            </div>
+            <div class="large-9 medium-9 columns">
+
+ <div class="markdown-body">
+<h1>Spring AOP</h1>
+
+<ul>
+<li>
+<a href="#toc_0">AOP 实现机制</a>
+</li>
+<li>
+<a href="#toc_1">代理模式</a>
+<ul>
+<li>
+<a href="#toc_2">静态代理</a>
+</li>
+<li>
+<a href="#toc_3">动态代理</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_4">约定编程</a>
+<ul>
+<li>
+<a href="#toc_5">拦截器</a>
+</li>
+<li>
+<a href="#toc_6">约定流程</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_7">AOP</a>
+<ul>
+<li>
+<a href="#toc_8">例子</a>
+</li>
+<li>
+<a href="#toc_9">概念</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_10">＠AspectJ</a>
+</li>
+<li>
+<a href="#toc_11">AOP 深入</a>
+<ul>
+<li>
+<a href="#toc_12">Joinpoint</a>
+</li>
+<li>
+<a href="#toc_13">Pointcut</a>
+</li>
+<li>
+<a href="#toc_14">Advice</a>
+</li>
+<li>
+<a href="#toc_15">Advisor</a>
+</li>
+<li>
+<a href="#toc_16">织入</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_17">参考</a>
+</li>
+</ul>
+
+
+<h2 id="toc_0">AOP 实现机制</h2>
+
+<p>Java 平台下实现 AOP 的一些方式：</p>
+
+<ol>
+<li>动态代理，最普遍的 AOP 实现方式，通过动态代理的机制间接访问对象。</li>
+<li>动态字节码增强，CGLIB 的实现方式，将逻辑切入编译好的 class 文件。</li>
+<li>Java 代码生成，早期 EJB 容器使用的方法，直接生成代码编译产生相应的 Java 类。</li>
+<li>自定义类加载器，在类加载过程中将切面逻辑织入 class 文件。</li>
+<li>AOL 扩展，AspectJ 使用这种方式实现。</li>
+</ol>
+
+<p>Spring AOP <strong>默认使用动态的的方式实现</strong>，当对象没有实现代理接口时才会使用 CGLib 实现AOP。</p>
+
+<h2 id="toc_1">代理模式</h2>
+
+<p>代理模式是 Spring AOP 的一个重要实现方式。</p>
+
+<h3 id="toc_2">静态代理</h3>
+
+<p><img src="media/15543917219955/15544409421004.jpg" alt=""/></p>
+
+<p>如果我们需要实现这样一个简单的静态代理。</p>
+
+<pre class="line-numbers"><code class="language-java"> //// 定义接口 ////
+ interface Person {
+    void speak();
+}
+
+ //// 定义实体 ////
+class Actor implements Person {
+    private String content;
+    public Actor(String content) {
+        this.content = content;
+    }
+
+    @Override
+    public void speak() {
+        System.out.println(this.content);
+    }
+}
+
+ //// 定义代理 ////
+class Agent implements Person {
+    private Actor actor;
+    private String before;
+    private String after;
+    public Agent(Actor actor, String before, String after) {
+        this.actor = actor;
+        this.before = before;
+        this.after = after;
+    }
+    @Override
+    public void speak() {
+        System.out.println(&quot;Before actor speak, Agent say: &quot; + before);
+        this.actor.speak();
+        System.out.println(&quot;After actor speak, Agent say: &quot; + after);
+    }
+}
+
+ //// 测试方法 ////
+public class StaticProxy {
+    public static void main(String[] args) {
+        Actor actor = new Actor(&quot;I am a famous actor!&quot;);
+        Agent agent = new Agent(actor, &quot;Hello I am an agent.&quot;, &quot;That&#39;s all!&quot;);
+        agent.speak();
+    }
+}
+
+ //// 输出 ////
+ // Before actor speak, Agent say: Hello I am an agent.
+ // I am a famous actor!
+ // After actor speak, Agent say: That&#39;s all!
+</code></pre>
+
+<h3 id="toc_3">动态代理</h3>
+
+<p>我们通过 JDK 自带的反射方法里实现动态代理，这里需要讲解一下最重要的一个接口和一个静态方法：</p>
+
+<pre class="line-numbers"><code class="language-java">import java.lang.reflect
+public interface InvocationHandler {
+    public Object invoke(Object proxy, // 被代理类的实例
+                         Method method, // 实例需要被调用的方法
+                         Object[] args) // 被调用方法的参数 
+        throws Throwable;
+}
+                                      // 被代理类的加载器
+public static Object newProxyInstance(ClassLoader loader,
+                                      // 被代理类的接口数组
+                                      Class&lt;?&gt;[] interfaces, 
+                                      // 上面那个接口的实例
+                                      InvocationHandler h) 
+                                      throws IllegalArgumentException
+</code></pre>
+
+<p>通过这一个接口和这个静态方法实现动态代理：</p>
+
+<pre class="line-numbers"><code class="language-java"> //// 定义接口 ////
+public interface Fruit {
+    public void show();
+}
+
+ //// 定义接口实现 ////
+public class Apple implements Fruit{
+    @Override
+    public void show() {
+        System.out.println(&quot;&lt;&lt;&lt;&lt;show method is invoked&quot;);
+    }
+}
+
+ //// 利用刚才提到的接口和方法实现动态代理 ////
+public class DynamicAgent {
+    //实现InvocationHandler接口，并且可以初始化被代理类的对象
+    static class MyHandler implements InvocationHandler {
+        private Object proxy;
+        public MyHandler(Object proxy) {
+            this.proxy = proxy;
+        }
+            
+        //自定义invoke方法
+        @Override
+        public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+            System.out.println(&quot;&gt;&gt;&gt;&gt;before invoking&quot;);
+            //真正调用方法的地方
+            Object ret = method.invoke(this.proxy, args);
+            System.out.println(&quot;&gt;&gt;&gt;&gt;after invoking&quot;);
+            return ret;
+        }
+    }
+
+    //返回一个被修改过的对象
+    public static Object agent(Class interfaceClazz, Object proxy) {
+        return Proxy.newProxyInstance(interfaceClazz.getClassLoader(), new Class[]{interfaceClazz},
+                new MyHandler(proxy));
+    }    
+}
+
+ //// 测试 ////
+public class ReflectTest {
+    public static void main(String[] args) throws InvocationTargetException, IllegalAccessException {
+        //注意一定要返回接口，不能返回实现类否则会报错
+        Fruit fruit = (Fruit) DynamicAgent.agent(Fruit.class, new Apple());
+        fruit.show();
+    }
+}
+</code></pre>
+
+<h2 id="toc_4">约定编程</h2>
+
+<p>在 AOP 之前先来看一个代理模式和约定编程的例子。</p>
+
+<h3 id="toc_5">拦截器</h3>
+
+<pre class="line-numbers"><code class="language-java">// 定义接口与接口实现
+public interface HelloService {
+    public void sayHello(String name);
+}
+
+public class HelloServiceimpl implements HelloService {
+    @Override
+    public void sayHello (String name) { 
+        if (name == null I I name.trim() == &quot;&quot;)
+            throw new RuntimeException(&quot;parameter is null ! ! &quot; ) ;
+        System.out.println(&quot; hello &quot;+ name);
+    }
+}
+</code></pre>
+
+<p>使用代理的方式实现一个拦截器</p>
+
+<pre class="line-numbers"><code class="language-java">//// 拦截器接口
+
+public interface Interceptor {
+    //事前方法
+    public boolean before();
+    
+    //事后方法
+    public void after();
+    /**
+     * 取代原有事件方法
+     * @param invocation -- 回调参数，可以通过它的proceed方法，回调原有事件
+     * @return 原有事件返回对象
+     * @throws InvocationTargetException
+     * @throws IllegalAccessException
+     */
+    public Object around(Invocation invocation) throws InvocationTargetException, IllegalAccessException;
+    
+    //是否返回方法。事件没有发生异常执行
+    public void afterReturning();
+    
+    //事后异常方法，当事件发生异常后执行
+    public void afterThrowing();
+
+    //是否使用around方法取代原有方法
+    boolean useAround();
+    
+}
+</code></pre>
+
+<pre class="line-numbers"><code class="language-java">//// 拦截器实现
+
+public class MyInterceptor implements Interceptor {
+
+    @Override
+    public boolean before() {
+        System.out.println(&quot;before ......&quot;);
+        return true;
+    }
+
+    @Override
+    public boolean useAround() {
+        return true;
+    }
+
+    @Override
+    public void after() {
+        System.out.println(&quot;after ......&quot;);
+    }
+
+    @Override
+    public Object around(Invocation invocation) throws InvocationTargetException, IllegalAccessException {
+        System.out.println(&quot;around before ......&quot;);
+        Object obj = invocation.proceed();
+        System.out.println(&quot;around after ......&quot;);
+        return obj;
+    }
+
+    @Override
+    public void afterReturning() {
+        System.out.println(&quot;afterReturning......&quot;);
+
+    }
+
+    @Override
+    public void afterThrowing() {
+        System.out.println(&quot;afterThrowing 。。。。。。&quot;);
+    }
+}
+</code></pre>
+
+<pre class="line-numbers"><code class="language-java">//// around 方法中的 Invocation
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+public class Invocation {
+
+    private Object[] params;
+    private Method method;
+    private Object target;
+    
+    public Invocation(Object target, Method method, Object[] params) {
+        this.target = target;
+        this.method = method;
+        this.params = params;
+    }
+    
+    public Object proceed() throws InvocationTargetException, IllegalAccessException {
+       // 利用反射的方式调用原函数 
+        return method.invoke(target, params); 
+    }
+    
+    /* setter */
+}
+</code></pre>
+
+<pre class="line-numbers"><code class="language-java">// 测试
+public class AopMain {
+
+    public static void main(String[] args) {
+        testProxy();
+    }
+    
+    private static void testProxy() {
+        HelloService helloService = new HelloServiceImpl();
+        HelloService proxy = (HelloService) ProxyBean.getProxyBean(helloService, new MyInterceptor());
+        proxy.sayHello(&quot;zhangsan&quot;);
+        System.out.println(&quot;\n###############name is null!!#############\n&quot;);
+        proxy.sayHello(null);
+    }
+}
+
+/* 输出如下：
+before ......
+around before......
+hello zhangsan 
+around after ......
+after ......
+afterReturning ......
+
+###############name is null!!###############
+
+before ......
+around before ......
+after ......
+afterThrowing......
+*/
+</code></pre>
+
+<h3 id="toc_6">约定流程</h3>
+
+<p>实际上拦截器调用代理对象时，使用了这样一套约定流程：</p>
+
+<ol>
+<li>先调用拦截器的 before 方法。</li>
+<li>调用拦截器的 useAround 方法判断是否要调用 around 方法，如果调用忽略 target 对象的对应方法，否贼调用 target 对象的对应方法。</li>
+<li>调用 拦截器的 after 方法</li>
+<li>发生异常调用 afterThrowing 方法 ，正常返回调用 afterReturn 方法。</li>
+</ol>
+
+<p><img src="media/15543917219955/15552948568440.jpg" alt=""/></p>
+
+<h2 id="toc_7">AOP</h2>
+
+<h3 id="toc_8">例子</h3>
+
+<pre class="line-numbers"><code class="language-java">import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class UserDao {
+    public int insertUser(Connection conn, User user) throws SQLException {
+        PreparedStatement ps = null;
+        try {
+            ps = conn.prepareStatement(&quot;insert into t_user(user_name, note) values( ?, ?)&quot;);
+            ps.setString(1, user.getUsername());
+            ps.setString(2, user.getNote());
+            return ps.executeUpdate();
+        } finally {
+            ps.close();
+        }
+    }
+}
+
+public class UserService {
+    public int insertUser() {
+        UserDao userDao = new UserDao();
+        User user = new User();
+        user.setUsername(&quot;user_name_1&quot;);
+        user.setNote(&quot;note_1&quot;);
+        Connection conn = null;
+        int result = 0;
+        try {
+            Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+            conn = DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/xxx&quot;, &quot;root&quot;, &quot;123456&quot;);
+            //非自动提交事务
+            conn.setAutoCommit(false);
+            result = userDao.insertUser(conn, user);
+            //提交事务
+            conn.commit();
+        } catch (Exception e) {
+            try {
+                //回滚事务
+                conn.rollback();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+            e.printStackTrace();
+        } finally {
+            //释放数据连接资源
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return result;
+    }
+}
+</code></pre>
+
+<p>可以发现这个流程是可以约定化的。</p>
+
+<p><img src="media/15543917219955/15552956880382.jpg" alt=""/></p>
+
+<p><img src="media/15543917219955/15552956971909.jpg" alt=""/></p>
+
+<h3 id="toc_9">概念</h3>
+
+<ul>
+<li><strong>连接点(join point)</strong>，被拦截对象，spring AOP 中就是一个特定的方法。</li>
+<li><strong>目标对象(target)</strong>，即被代理对象。</li>
+<li><strong>切点(point cut)</strong>，对<strong>连接点进行匹配</strong>的一个功能概念。</li>
+<li><strong>切面(aspect)</strong>，定义切点，通知，和引入的地方。</li>
+<li><strong>通知(advice)</strong>，约定流程中的方法，比如 <code>before</code> 前置通知。</li>
+<li><strong>织入(weaving)</strong>，为原有对象生成代理对象并将其与切点匹配织入约定流程的过程。</li>
+<li><strong>引入(introduction)</strong>，引入新的类与方法，增强原有的 Bean。</li>
+</ul>
+
+<p>以之前的拦截器为例，说明一下约定流程。<br/>
+<img src="media/15543917219955/15544432853335.jpg" alt=""/></p>
+
+<h2 id="toc_10">＠AspectJ</h2>
+
+<p>这里以<code>AspectJ</code>为例说明 AOP流程，Spring AOP<strong>只支持对方法进行拦截</strong>。<br/>
+一个使用 AOP 来对用户参数做校验的例子：</p>
+
+<pre class="line-numbers"><code class="language-java">// Service 接口
+public interface UserService {
+    public void printUser();
+}
+///// 
+@Service
+public class UserServiceImpl implements UserService {
+    @Override
+    public void printUser(User user) {
+        if (user == null) {
+            throw new RuntimeException(&quot;检查用户参数是否为空......&quot;);
+        }
+        System.out.print(&quot;id =&quot; + user.getId());
+        System.out.print(&quot;\tusername =&quot; + user.getUsername());
+        System.out.println(&quot;\tnote =&quot; + user.getNote());
+    }
+}
+</code></pre>
+
+<pre class="line-numbers"><code class="language-java">// 用于引入的接口
+public interface UserValidator {
+    public boolean validate(User user);
+}
+// 接口实现
+public class UserValidatorImpl implements UserValidator {
+    @Override
+    public boolean validate(User user) {
+        System.out.println(&quot;引入新的接口：&quot;+ UserValidator.class.getSimpleName());
+        return user != null;
+    }
+}
+</code></pre>
+
+<pre class="line-numbers"><code class="language-java">@Aspect
+＠Order(1) // 多个切面时指定切面顺序
+public class MyAspect {
+    // 切点定义
+    @Pointcut(&quot;execution(* com.nemos.UserServiceImpl.printUser(..))&quot;)
+    public void pointCut() {}
+        
+    // 直接使用正则匹配
+    @Before(&quot;execution(* com.nemos.UserServiceImpl.printUser(..))&quot;)
+    public void before() {
+        System.out.println(&quot;before ......&quot;);
+    }
+        
+    // 使用切点，和正则匹配含义相同，并传入连接点名为 user 的参数
+    @After(&quot;pointCut() &amp;&amp; args(user)&quot;)
+    // JoinPoint 为非环绕通知自动传入的对象
+    public void after(JoinPoint point, User user) {
+     Object[] args = point.getArgs() ;
+        System.out.println(&quot;after ......&quot;);
+    }
+    
+    @AfterReturning(&quot;pointCut()&quot;)
+    public void afterReturning() {
+        System.out.println(&quot;afterReturning ......&quot;);
+    }
+    
+    @AfterThrowing(&quot;pointCut()&quot;)
+    public void afterThrowing() {
+        System.out.println(&quot;afterThrowing ......&quot;);
+    }
+        
+    @Around(&quot;pointCut()&quot;)
+    public void around(ProceedingJoinPoint jp) throws Throwable {
+        System.out.println(&quot;around before......&quot;);
+        jp.proceed(); // 调用原方法
+        System.out.println(&quot;around after......&quot;);
+    }
+    // 定义引入
+    @DeclareParents(value=&quot;com.nemos.UserServiceImpl+&quot;,
+                    defaultImpl=UserValidatorImpl.class)
+    public UserValidator userValidator;
+    // 省略
+    
+}
+//// 最后使用的时候，需要在某个地方定义切面
+@Bean(name = &quot;myAspect&quot;)
+public MyAspect initMyAspect() {
+    return new MyAspect();
+}
+</code></pre>
+
+<p>测试方法：</p>
+
+<pre class="line-numbers"><code class="language-java">//定义请求
+@RequestMapping (&quot;/vp&quot;)
+//返回JSON
+@ResponseBody
+public User valida teAndPrint (Long id, String userName, String note) {
+    User user = new User() ;
+    user.setId(id) ;
+    user.setUsername(userName) ;
+    user.setNote(note) ;
+    //强制转换
+    UserValidator userValidator = (UserValidator) userService ;
+    //验证用户是否为空
+    if (userValidator.validate (user)) {
+        userService.printUser(user);
+    }
+    return user ;
+}
+</code></pre>
+
+<p>这里我们一共做了几件事，逐一分析如下：</p>
+
+<ul>
+<li><code>@Aspect</code> 定义切面类。
+<ul>
+<li>当有多个切面都匹配时可以用 <code>@Order()</code> 表明切面顺序，也可以在切面类中实现 <code>Orderd</code> 接口来返回切面顺序。</li>
+<li><code>＠Before</code>、<code>＠After</code>、<code>＠AfterReturning</code>、<code>＠AfterThrowing</code> 通知。</li>
+<li><code>@Around</code> 因为环绕通知会代替原方法，所以需要传入一个 <code>ProceedingJoinPoint</code> 的 <code>proceed()</code> 方法来调用原来的方法。</li>
+</ul></li>
+<li>使用了 <code>@Pointcut</code> 来定义切点：
+<ul>
+<li><code>execution(*com.nemos.UserServiceImpl.printUser(..))</code> 正则式子，匹配织入的方法。</li>
+<li><code>execution</code> 使用一个正则式子来表示需要拦截的方法。</li>
+<li><code>*</code> 表示返回任意类型。</li>
+<li><code>com.nemos.UserServiceImpl</code> 指定目标对象的名称。</li>
+<li><code>printUser</code> 指定方法。</li>
+<li><code>(..)</code> 表示任意参数匹配。</li>
+</ul></li>
+<li><code>＠DeclareParents</code> 引入新的类增强功能。
+<ul>
+<li><code>value</code>，指向要增强功能的目标对象。</li>
+<li><code>defaultlmpl</code>，引入增强功能的类。</li>
+</ul></li>
+<li><code>args(user)</code> 获得方法的参数</li>
+<li>如果没有定义 Service 接口，就会使用 CGLib 来实现 AOP。</li>
+</ul>
+
+<p>一些常用的切点指示器：<br/>
+<img src="media/15543917219955/15552972029080.jpg" alt=""/></p>
+
+<h2 id="toc_11">AOP 深入</h2>
+
+<p>这一部分推荐结合《Spring 揭秘》食用。</p>
+
+<h3 id="toc_12">Joinpoint</h3>
+
+<p>AOP 需要在某个过程中织入，这种织入的执行时间点称为 <strong>joinpoint</strong>，常见的有：</p>
+
+<ol>
+<li><strong>方法调用</strong>，某个方法被调用时。</li>
+<li><strong>方法调用执行</strong>，方法内部执行的开始时点。</li>
+<li><strong>构造方法调用</strong>，某个对象被调用构造函数初始化时。</li>
+<li><strong>构造方法执行</strong>，类似。</li>
+<li><strong>字段设置</strong>，通过 setter 方法设置属性时。</li>
+<li><strong>字段获取</strong>，通过 getter 方法获得属性时。</li>
+<li><strong>异常处理执行</strong>，异常抛出后对应的处理逻辑执行点。</li>
+<li><strong>类初始化</strong>，类中某些静态类型初始化的时点。</li>
+</ol>
+
+<p>Spring 只支持<strong>方法执行</strong>类型的 joinpoint。</p>
+
+<h3 id="toc_13">Pointcut</h3>
+
+<p>Pointcut的表述方式：</p>
+
+<ol>
+<li>直接指定 joinpoint 所在的方法名。</li>
+<li>正则匹配。<strong>普遍方式</strong></li>
+<li>使用特点的 pointcut 语言。</li>
+</ol>
+
+<pre class="line-numbers"><code class="language-text">public interface Pointcut {
+    ClassFilter getClassFilter() ; // 被执行织入操作的对象
+    MethodMatcher getMethodMatcher() ; // 对象对应的方法
+    Pointcut TRUE = TruePointcut.INSTANCE;
+}
+////
+public interface ClassFilter {
+    boolean matched (Class clazz); // 判断目标对象的类型与 pointcut 类型是否一致。
+    ClassFilter TRUE = TrueClassFilter.INSTANCE;
+}
+////
+public interface MethoaMatcher [
+    boolean matches(Method method, Class targetClass) ;
+    boolean matches(Method method, Class targetClass, Object[] args) ;
+    boolean isRuntime() ;
+    MethodMatcher TRUE = TrueMethodMatcher.INSTANCE;
+)
+</code></pre>
+
+<p><img src="media/15543917219955/15553266883284.jpg" alt=""/></p>
+
+<p>常见 Pointcut</p>
+
+<p><img src="media/15543917219955/15553267194990.jpg" alt=""/></p>
+
+<ol>
+<li><code>NameMatchMethodPointcut</code>，对类名进行匹配。</li>
+<li><code>JdkRegexpMethodPointcut</code>，以<strong>正则匹配方法签名</strong>。</li>
+<li><code>AnnotationMatchingPointcut</code>，注解匹配。</li>
+<li><code>ComposablePointcut</code>，用于实现逻辑运算。</li>
+<li>自定义。</li>
+</ol>
+
+<h3 id="toc_14">Advice</h3>
+
+<p>advice 可以分为两类：</p>
+
+<ol>
+<li><strong>per-class</strong>，可以在目标对象类的所以实例之间共享。<strong>只提供方法拦截</strong>，不会为目标对象保存状态或者添加特性。上图中的所有都是这种类型的 advice。
+<ul>
+<li><strong>Before</strong> advice</li>
+<li><strong>Throw</strong> advice</li>
+<li><strong>AfterReturning</strong> advice</li>
+<li><strong>Around</strong> advice</li>
+</ul></li>
+<li><strong>per-instance</strong>，<strong>Introduction</strong> 为此唯一实现。不会在目标类中共享，但是会<strong>为不同的实例对象保存各种的状态及相关逻辑</strong>。
+<ul>
+<li><code>DelegatingIntroductionInterceptor</code>，委派一个对象添加到目标对象上。</li>
+</ul></li>
+</ol>
+
+<p><img src="media/15543917219955/15553276109313.jpg" alt=""/></p>
+
+<p><img src="media/15543917219955/15553284451987.jpg" alt=""/></p>
+
+<h3 id="toc_15">Advisor</h3>
+
+<p>Advisor 是 aspect 的一种实现，持有多个 Pointcut 和多个 Advice。</p>
+
+<p><img src="media/15543917219955/15553296785674.jpg" alt=""/></p>
+
+<p>简单先将其分为两个分支：</p>
+
+<ol>
+<li><code>PointcutAdvisor</code></li>
+<li><code>IntroductionAdvisor</code></li>
+</ol>
+
+<p><strong>PointcutAdvisor</strong><br/>
+<img src="media/15543917219955/15553297616092.jpg" alt=""/></p>
+
+<p>常用实现：</p>
+
+<ol>
+<li><code>DefaultPointcutAdvisor</code>，除了不能指定 Introduction 类型的 Advice 其他都可以通过这个使用。</li>
+<li><code>NameMatchMethodPointcutAdvisor</code>，细化后的 <code>DefaultPointcutAdvisor</code>，限定了 Advice 只能为 <code>NameMatchMethodPointcut</code>。</li>
+<li><code>RegexpMethodPointcutAdvisor</code>，同上限定。</li>
+</ol>
+
+<p><strong>IntroductionAdvisor</strong><br/>
+<img src="media/15543917219955/15553300919312.jpg" alt=""/></p>
+
+<p>仅限于 Introduction 使用场景。</p>
+
+<h3 id="toc_16">织入</h3>
+
+<p>介绍完了组件，说明一下具体的织入过程。<br/>
+其中 <code>ProxyFactory</code> 是织入器最基本的一个实现。<br/>
+可以通过类似代理了模式的 <code>ProxyFactory proxy = new ProxyFactory(targetObject)</code> 的方式来使用。<br/>
+这里需要两个组件：</p>
+
+<ol>
+<li>需要织入的目标对象，可以通过构造方法传入或者 setter 方法设置。</li>
+<li>要应用的切面对象，即 Advisor。</li>
+</ol>
+
+<h2 id="toc_17">参考</h2>
+
+<p><a href="">《深入浅出 Spring boot 2.x》</a><br/>
+<a href="">《Spring 揭秘》</a></p>
+
+
+</div>
+
+<br /><br />
+<hr />
+
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="15544558066181.html"  title="Previous Post: Spring 事务">&laquo; Spring 事务</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="15543630452997.html" 
+	        title="Next Post: Spring IoC">Spring IoC &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
+
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
+
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '15543917219955.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
+</div></div>
+
+
+<div class="page-bottom">
+  <div class="row">
+  <hr />
+  <div class="small-9 columns">
+  <p class="copyright">Copyright &copy; 2015
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+  <div class="small-3 columns">
+  <p class="copyright text-right"><a href="#header">TOP</a></p>
+  </div>
+   
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+    
+    
+    <script src="asset/js/foundation.min.js"></script>
+    <script src="asset/js/foundation/foundation.offcanvas.js"></script>
+    <script>
+      $(document).foundation();
+
+     
+    </script>
+    
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+
+  </body>
+</html>

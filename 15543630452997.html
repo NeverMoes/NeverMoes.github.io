@@ -1,0 +1,1750 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  Spring IoC - NeverMoes 的笔记
+  
+  </title>
+ <meta name="description" content="">
+ <link href="atom.xml" rel="alternate" title="NeverMoes 的笔记" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+    <script src="asset/highlightjs/highlight.pack.js"></script>
+    <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+<div id="header">
+    <h1><a href="index.html">NeverMoes 的笔记</a></h1>
+</div>
+
+</nav>
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; NeverMoes 的笔记</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+      <li><a href="index.html">Home</a></li>
+      
+        <li class="divider"></li>
+        <li><label>Java</label></li>
+
+          
+            <li><a title="Java - 编码" href="15613569036612.html">Java - 编码</a></li>
+          
+            <li><a title="Java - Log" href="15594642382768.html">Java - Log</a></li>
+          
+            <li><a title="Java - 异常处理" href="15594627836663.html">Java - 异常处理</a></li>
+          
+            <li><a title="Java - Steam" href="15584212270447.html">Java - Steam</a></li>
+          
+            <li><a title="Java - 反射" href="15580921637682.html">Java - 反射</a></li>
+          
+            <li><a title="Java - Enum" href="15580808809919.html">Java - Enum</a></li>
+          
+            <li><a title="Javadoc" href="15573232964198.html">Javadoc</a></li>
+          
+            <li><a title="编程规范" href="15573214224993.html">编程规范</a></li>
+          
+            <li><a title="Java8" href="15571102853200.html">Java8</a></li>
+          
+            <li><a title="一些特性" href="15568697463497.html">一些特性</a></li>
+          
+            <li><a title="Java 补充" href="15557361529750.html">Java 补充</a></li>
+          
+            <li><a title="Java 基础" href="15554689517828.html">Java 基础</a></li>
+          
+            <li><a title="Java - IO" href="15551380554375.html">Java - IO</a></li>
+          
+            <li><a title="Java 经典设计模式" href="15548114065751.html">Java 经典设计模式</a></li>
+          
+            <li><a title="常用设计模式" href="15547272355117.html">常用设计模式</a></li>
+          
+            <li><a title="Java - 流(Stream)" href="15535872722415.html">Java - 流(Stream)</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Java 集合</label></li>
+
+          
+            <li><a title="Java 集合 - List" href="15619627957699.html">Java 集合 - List</a></li>
+          
+            <li><a title="Java - 集合框架" href="15557398305311.html">Java - 集合框架</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>并发</label></li>
+
+          
+            <li><a title="Java 并发 - 同步器框架 AQS" href="15628279381258.html">Java 并发 - 同步器框架 AQS</a></li>
+          
+            <li><a title="Java 并发 - volatile 与 Java 内存模型(JMM)" href="15628250952791.html">Java 并发 - volatile 与 Java 内存模型(JMM)</a></li>
+          
+            <li><a title="Java 并发 - 生产者消费者模型" href="15551273585518.html">Java 并发 - 生产者消费者模型</a></li>
+          
+            <li><a title="Java 并发 - atomic" href="15551259864059.html">Java 并发 - atomic</a></li>
+          
+            <li><a title="Java 并发 - 线程池" href="15550409896106.html">Java 并发 - 线程池</a></li>
+          
+            <li><a title="Java 并发 - 常见并发容器" href="15549779705652.html">Java 并发 - 常见并发容器</a></li>
+          
+            <li><a title="Java 并发 - final 重排" href="15549631305867.html">Java 并发 - final 重排</a></li>
+          
+            <li><a title="Java 并发 - synchronized" href="15549492034730.html">Java 并发 - synchronized</a></li>
+          
+            <li><a title="Java 并发 - 线程" href="15549491562348.html">Java 并发 - 线程</a></li>
+          
+            <li><a title="Java 并发 - 常用同步器" href="15549094953523.html">Java 并发 - 常用同步器</a></li>
+          
+            <li><a title="Java 并发 - 概览" href="15536711259128.html">Java 并发 - 概览</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>JVM</label></li>
+
+          
+            <li><a title="Java JVM - 分析工具" href="15592858144445.html">Java JVM - 分析工具</a></li>
+          
+            <li><a title="Java JVM - 类加载" href="15554954352575.html">Java JVM - 类加载</a></li>
+          
+            <li><a title="Java JVM - GC" href="15551422971585.html">Java JVM - GC</a></li>
+          
+            <li><a title="Java JVM - 内存布局" href="15551417067858.html">Java JVM - 内存布局</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Spring</label></li>
+
+          
+            <li><a title="Mybatis" href="15627234169476.html">Mybatis</a></li>
+          
+            <li><a title="Spring -  自定义标签" href="15580023414897.html">Spring -  自定义标签</a></li>
+          
+            <li><a title="Java - Servlet" href="15555575014317.html">Java - Servlet</a></li>
+          
+            <li><a title="Spring - 数据访问" href="15553337118605.html">Spring - 数据访问</a></li>
+          
+            <li><a title="spring 异步线程池" href="15546347724247.html">spring 异步线程池</a></li>
+          
+            <li><a title="Spring MVC" href="15546192348918.html">Spring MVC</a></li>
+          
+            <li><a title="Spring 事务" href="15544558066181.html">Spring 事务</a></li>
+          
+            <li><a title="Spring AOP" href="15543917219955.html">Spring AOP</a></li>
+          
+            <li><a title="Spring IoC" href="15543630452997.html">Spring IoC</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>源码</label></li>
+
+          
+            <li><a title="源码" href="15627233586740.html">源码</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Redis</label></li>
+
+          
+            <li><a title="Redis 实现分布式锁" href="15565438727155.html">Redis 实现分布式锁</a></li>
+          
+            <li><a title="Redis 深入 - 双写一致性" href="15560904222673.html">Redis 深入 - 双写一致性</a></li>
+          
+            <li><a title="Redis 深入 - 高可用性" href="15560904056716.html">Redis 深入 - 高可用性</a></li>
+          
+            <li><a title="Redis 深入 - 数据结构" href="15560812001633.html">Redis 深入 - 数据结构</a></li>
+          
+            <li><a title="Redis 深入 - 常见问题" href="15556760212710.html">Redis 深入 - 常见问题</a></li>
+          
+            <li><a title="Redis 基本使用" href="15542783465338.html">Redis 基本使用</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Mysql</label></li>
+
+          
+            <li><a title="Mysql - 键、索引、约束" href="15633466729778.html">Mysql - 键、索引、约束</a></li>
+          
+            <li><a title="Mysql - 性能优化" href="15633423972144.html">Mysql - 性能优化</a></li>
+          
+            <li><a title="索引中的树 - B,B+,B*" href="15633420860231.html">索引中的树 - B,B+,B*</a></li>
+          
+            <li><a title="性能优化" href="15607574336137.html">性能优化</a></li>
+          
+            <li><a title="Mysql - EXPLAIN" href="15607559623364.html">Mysql - EXPLAIN</a></li>
+          
+            <li><a title="Mysql 深入" href="15555007777074.html">Mysql 深入</a></li>
+          
+            <li><a title="Mysql 基本使用" href="15554985061309.html">Mysql 基本使用</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>消息队列</label></li>
+
+          
+            <li><a title="JMS" href="15584265544434.html">JMS</a></li>
+          
+            <li><a title="RPC - RMI" href="15572232721703.html">RPC - RMI</a></li>
+          
+            <li><a title="消息队列" href="15560753193297.html">消息队列</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>分布式</label></li>
+
+          
+            <li><a title="概览" href="15630938148608.html">概览</a></li>
+          
+            <li><a title="分布式锁" href="15625959085058.html">分布式锁</a></li>
+          
+            <li><a title="分布式事务" href="15625700887049.html">分布式事务</a></li>
+          
+            <li><a title="ZooKeeper - 实现原理" href="15574104902395.html">ZooKeeper - 实现原理</a></li>
+          
+            <li><a title="ZK 分布式锁" href="15573683537890.html">ZK 分布式锁</a></li>
+          
+            <li><a title="ZooKeeper - 基本使用" href="15572415140464.html">ZooKeeper - 基本使用</a></li>
+          
+            <li><a title="Dubbo" href="15572232166193.html">Dubbo</a></li>
+          
+            <li><a title="分布式 - 一致性协议" href="15564260705049.html">分布式 - 一致性协议</a></li>
+          
+            <li><a title="ZooKeeper - ZAB 一致性协议" href="15561221442316.html">ZooKeeper - ZAB 一致性协议</a></li>
+          
+            <li><a title="分布式 - 理论" href="15559475613873.html">分布式 - 理论</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>LeetCode</label></li>
+
+          
+            <li><a title="栈" href="15641207902154.html">栈</a></li>
+          
+            <li><a title="链表" href="15640409436152.html">链表</a></li>
+          
+            <li><a title="位运算" href="15640226818030.html">位运算</a></li>
+          
+            <li><a title="树相关" href="15638876391543.html">树相关</a></li>
+          
+            <li><a title="并查集(union-find)" href="15637156793274.html">并查集(union-find)</a></li>
+          
+            <li><a title="图相关" href="15637123231485.html">图相关</a></li>
+          
+            <li><a title="动态规划 - 2" href="15637092754569.html">动态规划 - 2</a></li>
+          
+            <li><a title="其他" href="15632741408063.html">其他</a></li>
+          
+            <li><a title="动态规划 - 2" href="15621444826793.html">动态规划 - 2</a></li>
+          
+            <li><a title="字符串" href="15621426919335.html">字符串</a></li>
+          
+            <li><a title="贪心策略" href="15621379435201.html">贪心策略</a></li>
+          
+            <li><a title="动态规划 - 1" href="15618801162146.html">动态规划 - 1</a></li>
+          
+            <li><a title="回溯" href="15617108626739.html">回溯</a></li>
+          
+            <li><a title="组合博弈" href="15617105581442.html">组合博弈</a></li>
+          
+            <li><a title="temp" href="15600064978396.html">temp</a></li>
+          
+            <li><a title="筛选法" href="15600041568309.html">筛选法</a></li>
+          
+            <li><a title="Sell Stock" href="15592212071515.html">Sell Stock</a></li>
+          
+            <li><a title="dfs" href="15590119399452.html">dfs</a></li>
+          
+            <li><a title="Index" href="15578365171892.html">Index</a></li>
+          
+            <li><a title="排序" href="15578363359025.html">排序</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>算法</label></li>
+
+          
+            <li><a title="海量数据" href="15635229096880.html">海量数据</a></li>
+          
+            <li><a title="缓存" href="15616272119801.html">缓存</a></li>
+          
+            <li><a title="位操作" href="15421595266112.html">位操作</a></li>
+          
+            <li><a title="数据结构-搜索树" href="15382213735628.html">数据结构-搜索树</a></li>
+          
+            <li><a title="数据结构-查找" href="15381206652033.html">数据结构-查找</a></li>
+          
+            <li><a title="数据结构-栈与队列" href="15377961916563.html">数据结构-栈与队列</a></li>
+          
+            <li><a title="数据结构-树" href="15376956161325.html">数据结构-树</a></li>
+          
+            <li><a title="数据结构-图" href="15366535602244.html">数据结构-图</a></li>
+          
+            <li><a title="数据结构-排序" href="15366378611089.html">数据结构-排序</a></li>
+          
+            <li><a title="数据结构-线性表" href="15365715348624.html">数据结构-线性表</a></li>
+          
+            <li><a title="数据结构-绪论" href="15364817197942.html">数据结构-绪论</a></li>
+          
+            <li><a title="算法学习路径" href="15289789971496.html">算法学习路径</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>工具</label></li>
+
+          
+            <li><a title="MyBatis" href="15590240129274.html">MyBatis</a></li>
+          
+            <li><a title="Guava" href="15573643454153.html">Guava</a></li>
+          
+            <li><a title="Lombok" href="15571355421205.html">Lombok</a></li>
+          
+            <li><a title="IntelliJ-IDEA" href="15568897283887.html">IntelliJ-IDEA</a></li>
+          
+            <li><a title="Git" href="15568705670148.html">Git</a></li>
+          
+            <li><a title="Maven" href="15547227910617.html">Maven</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>网络</label></li>
+
+          
+            <li><a title="Netty" href="15633460791334.html">Netty</a></li>
+          
+            <li><a title="Http 授权" href="15629155221529.html">Http 授权</a></li>
+          
+            <li><a title="Https" href="15627233138405.html">Https</a></li>
+          
+            <li><a title="Http" href="15627233041942.html">Http</a></li>
+          
+            <li><a title="TCP" href="15627232889065.html">TCP</a></li>
+          
+            <li><a title="重要知识点" href="15561544288813.html">重要知识点</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Linux</label></li>
+
+          
+            <li><a title="Linux - I/O 模型" href="15560816178760.html">Linux - I/O 模型</a></li>
+          
+            <li><a title="Linux" href="15556621779917.html">Linux</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>测试相关</label></li>
+
+          
+            <li><a title="Mockito" href="15590126556449.html">Mockito</a></li>
+          
+            <li><a title="测试相关" href="15587730878715.html">测试相关</a></li>
+          
+            <li><a title="JUnit" href="15579238927247.html">JUnit</a></li>
+          
+            <li><a title="测试" href="15579095305456.html">测试</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Web</label></li>
+
+          
+            <li><a title="Http 缓存控制" href="15616231135862.html">Http 缓存控制</a></li>
+          
+            <li><a title="HTTP API 认证" href="15616218028083.html">HTTP API 认证</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>其他</label></li>
+
+          
+            <li><a title="计算机中的时间处理" href="15414917404912.html">计算机中的时间处理</a></li>
+          
+
+      
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+        <section id="main-content" role="main" class="scroll-container">
+
+          <div class="row">
+            <div class="large-3 medium-3 columns">
+              <div class="hide-for-small">
+                <div class="sidebar">
+                <nav>
+                  <ul id="side-nav" class="side-nav">
+
+                    
+                      <li class="side-title"><span>Java</span></li>
+                        
+                          <li><a title="Java - 编码" href="15613569036612.html">Java - 编码</a></li>
+                        
+                          <li><a title="Java - Log" href="15594642382768.html">Java - Log</a></li>
+                        
+                          <li><a title="Java - 异常处理" href="15594627836663.html">Java - 异常处理</a></li>
+                        
+                          <li><a title="Java - Steam" href="15584212270447.html">Java - Steam</a></li>
+                        
+                          <li><a title="Java - 反射" href="15580921637682.html">Java - 反射</a></li>
+                        
+                          <li><a title="Java - Enum" href="15580808809919.html">Java - Enum</a></li>
+                        
+                          <li><a title="Javadoc" href="15573232964198.html">Javadoc</a></li>
+                        
+                          <li><a title="编程规范" href="15573214224993.html">编程规范</a></li>
+                        
+                          <li><a title="Java8" href="15571102853200.html">Java8</a></li>
+                        
+                          <li><a title="一些特性" href="15568697463497.html">一些特性</a></li>
+                        
+                          <li><a title="Java 补充" href="15557361529750.html">Java 补充</a></li>
+                        
+                          <li><a title="Java 基础" href="15554689517828.html">Java 基础</a></li>
+                        
+                          <li><a title="Java - IO" href="15551380554375.html">Java - IO</a></li>
+                        
+                          <li><a title="Java 经典设计模式" href="15548114065751.html">Java 经典设计模式</a></li>
+                        
+                          <li><a title="常用设计模式" href="15547272355117.html">常用设计模式</a></li>
+                        
+                          <li><a title="Java - 流(Stream)" href="15535872722415.html">Java - 流(Stream)</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Java 集合</span></li>
+                        
+                          <li><a title="Java 集合 - List" href="15619627957699.html">Java 集合 - List</a></li>
+                        
+                          <li><a title="Java - 集合框架" href="15557398305311.html">Java - 集合框架</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>并发</span></li>
+                        
+                          <li><a title="Java 并发 - 同步器框架 AQS" href="15628279381258.html">Java 并发 - 同步器框架 AQS</a></li>
+                        
+                          <li><a title="Java 并发 - volatile 与 Java 内存模型(JMM)" href="15628250952791.html">Java 并发 - volatile 与 Java 内存模型(JMM)</a></li>
+                        
+                          <li><a title="Java 并发 - 生产者消费者模型" href="15551273585518.html">Java 并发 - 生产者消费者模型</a></li>
+                        
+                          <li><a title="Java 并发 - atomic" href="15551259864059.html">Java 并发 - atomic</a></li>
+                        
+                          <li><a title="Java 并发 - 线程池" href="15550409896106.html">Java 并发 - 线程池</a></li>
+                        
+                          <li><a title="Java 并发 - 常见并发容器" href="15549779705652.html">Java 并发 - 常见并发容器</a></li>
+                        
+                          <li><a title="Java 并发 - final 重排" href="15549631305867.html">Java 并发 - final 重排</a></li>
+                        
+                          <li><a title="Java 并发 - synchronized" href="15549492034730.html">Java 并发 - synchronized</a></li>
+                        
+                          <li><a title="Java 并发 - 线程" href="15549491562348.html">Java 并发 - 线程</a></li>
+                        
+                          <li><a title="Java 并发 - 常用同步器" href="15549094953523.html">Java 并发 - 常用同步器</a></li>
+                        
+                          <li><a title="Java 并发 - 概览" href="15536711259128.html">Java 并发 - 概览</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>JVM</span></li>
+                        
+                          <li><a title="Java JVM - 分析工具" href="15592858144445.html">Java JVM - 分析工具</a></li>
+                        
+                          <li><a title="Java JVM - 类加载" href="15554954352575.html">Java JVM - 类加载</a></li>
+                        
+                          <li><a title="Java JVM - GC" href="15551422971585.html">Java JVM - GC</a></li>
+                        
+                          <li><a title="Java JVM - 内存布局" href="15551417067858.html">Java JVM - 内存布局</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Spring</span></li>
+                        
+                          <li><a title="Mybatis" href="15627234169476.html">Mybatis</a></li>
+                        
+                          <li><a title="Spring -  自定义标签" href="15580023414897.html">Spring -  自定义标签</a></li>
+                        
+                          <li><a title="Java - Servlet" href="15555575014317.html">Java - Servlet</a></li>
+                        
+                          <li><a title="Spring - 数据访问" href="15553337118605.html">Spring - 数据访问</a></li>
+                        
+                          <li><a title="spring 异步线程池" href="15546347724247.html">spring 异步线程池</a></li>
+                        
+                          <li><a title="Spring MVC" href="15546192348918.html">Spring MVC</a></li>
+                        
+                          <li><a title="Spring 事务" href="15544558066181.html">Spring 事务</a></li>
+                        
+                          <li><a title="Spring AOP" href="15543917219955.html">Spring AOP</a></li>
+                        
+                          <li><a title="Spring IoC" href="15543630452997.html">Spring IoC</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>源码</span></li>
+                        
+                          <li><a title="源码" href="15627233586740.html">源码</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Redis</span></li>
+                        
+                          <li><a title="Redis 实现分布式锁" href="15565438727155.html">Redis 实现分布式锁</a></li>
+                        
+                          <li><a title="Redis 深入 - 双写一致性" href="15560904222673.html">Redis 深入 - 双写一致性</a></li>
+                        
+                          <li><a title="Redis 深入 - 高可用性" href="15560904056716.html">Redis 深入 - 高可用性</a></li>
+                        
+                          <li><a title="Redis 深入 - 数据结构" href="15560812001633.html">Redis 深入 - 数据结构</a></li>
+                        
+                          <li><a title="Redis 深入 - 常见问题" href="15556760212710.html">Redis 深入 - 常见问题</a></li>
+                        
+                          <li><a title="Redis 基本使用" href="15542783465338.html">Redis 基本使用</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Mysql</span></li>
+                        
+                          <li><a title="Mysql - 键、索引、约束" href="15633466729778.html">Mysql - 键、索引、约束</a></li>
+                        
+                          <li><a title="Mysql - 性能优化" href="15633423972144.html">Mysql - 性能优化</a></li>
+                        
+                          <li><a title="索引中的树 - B,B+,B*" href="15633420860231.html">索引中的树 - B,B+,B*</a></li>
+                        
+                          <li><a title="性能优化" href="15607574336137.html">性能优化</a></li>
+                        
+                          <li><a title="Mysql - EXPLAIN" href="15607559623364.html">Mysql - EXPLAIN</a></li>
+                        
+                          <li><a title="Mysql 深入" href="15555007777074.html">Mysql 深入</a></li>
+                        
+                          <li><a title="Mysql 基本使用" href="15554985061309.html">Mysql 基本使用</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>消息队列</span></li>
+                        
+                          <li><a title="JMS" href="15584265544434.html">JMS</a></li>
+                        
+                          <li><a title="RPC - RMI" href="15572232721703.html">RPC - RMI</a></li>
+                        
+                          <li><a title="消息队列" href="15560753193297.html">消息队列</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>分布式</span></li>
+                        
+                          <li><a title="概览" href="15630938148608.html">概览</a></li>
+                        
+                          <li><a title="分布式锁" href="15625959085058.html">分布式锁</a></li>
+                        
+                          <li><a title="分布式事务" href="15625700887049.html">分布式事务</a></li>
+                        
+                          <li><a title="ZooKeeper - 实现原理" href="15574104902395.html">ZooKeeper - 实现原理</a></li>
+                        
+                          <li><a title="ZK 分布式锁" href="15573683537890.html">ZK 分布式锁</a></li>
+                        
+                          <li><a title="ZooKeeper - 基本使用" href="15572415140464.html">ZooKeeper - 基本使用</a></li>
+                        
+                          <li><a title="Dubbo" href="15572232166193.html">Dubbo</a></li>
+                        
+                          <li><a title="分布式 - 一致性协议" href="15564260705049.html">分布式 - 一致性协议</a></li>
+                        
+                          <li><a title="ZooKeeper - ZAB 一致性协议" href="15561221442316.html">ZooKeeper - ZAB 一致性协议</a></li>
+                        
+                          <li><a title="分布式 - 理论" href="15559475613873.html">分布式 - 理论</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>LeetCode</span></li>
+                        
+                          <li><a title="栈" href="15641207902154.html">栈</a></li>
+                        
+                          <li><a title="链表" href="15640409436152.html">链表</a></li>
+                        
+                          <li><a title="位运算" href="15640226818030.html">位运算</a></li>
+                        
+                          <li><a title="树相关" href="15638876391543.html">树相关</a></li>
+                        
+                          <li><a title="并查集(union-find)" href="15637156793274.html">并查集(union-find)</a></li>
+                        
+                          <li><a title="图相关" href="15637123231485.html">图相关</a></li>
+                        
+                          <li><a title="动态规划 - 2" href="15637092754569.html">动态规划 - 2</a></li>
+                        
+                          <li><a title="其他" href="15632741408063.html">其他</a></li>
+                        
+                          <li><a title="动态规划 - 2" href="15621444826793.html">动态规划 - 2</a></li>
+                        
+                          <li><a title="字符串" href="15621426919335.html">字符串</a></li>
+                        
+                          <li><a title="贪心策略" href="15621379435201.html">贪心策略</a></li>
+                        
+                          <li><a title="动态规划 - 1" href="15618801162146.html">动态规划 - 1</a></li>
+                        
+                          <li><a title="回溯" href="15617108626739.html">回溯</a></li>
+                        
+                          <li><a title="组合博弈" href="15617105581442.html">组合博弈</a></li>
+                        
+                          <li><a title="temp" href="15600064978396.html">temp</a></li>
+                        
+                          <li><a title="筛选法" href="15600041568309.html">筛选法</a></li>
+                        
+                          <li><a title="Sell Stock" href="15592212071515.html">Sell Stock</a></li>
+                        
+                          <li><a title="dfs" href="15590119399452.html">dfs</a></li>
+                        
+                          <li><a title="Index" href="15578365171892.html">Index</a></li>
+                        
+                          <li><a title="排序" href="15578363359025.html">排序</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>算法</span></li>
+                        
+                          <li><a title="海量数据" href="15635229096880.html">海量数据</a></li>
+                        
+                          <li><a title="缓存" href="15616272119801.html">缓存</a></li>
+                        
+                          <li><a title="位操作" href="15421595266112.html">位操作</a></li>
+                        
+                          <li><a title="数据结构-搜索树" href="15382213735628.html">数据结构-搜索树</a></li>
+                        
+                          <li><a title="数据结构-查找" href="15381206652033.html">数据结构-查找</a></li>
+                        
+                          <li><a title="数据结构-栈与队列" href="15377961916563.html">数据结构-栈与队列</a></li>
+                        
+                          <li><a title="数据结构-树" href="15376956161325.html">数据结构-树</a></li>
+                        
+                          <li><a title="数据结构-图" href="15366535602244.html">数据结构-图</a></li>
+                        
+                          <li><a title="数据结构-排序" href="15366378611089.html">数据结构-排序</a></li>
+                        
+                          <li><a title="数据结构-线性表" href="15365715348624.html">数据结构-线性表</a></li>
+                        
+                          <li><a title="数据结构-绪论" href="15364817197942.html">数据结构-绪论</a></li>
+                        
+                          <li><a title="算法学习路径" href="15289789971496.html">算法学习路径</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>工具</span></li>
+                        
+                          <li><a title="MyBatis" href="15590240129274.html">MyBatis</a></li>
+                        
+                          <li><a title="Guava" href="15573643454153.html">Guava</a></li>
+                        
+                          <li><a title="Lombok" href="15571355421205.html">Lombok</a></li>
+                        
+                          <li><a title="IntelliJ-IDEA" href="15568897283887.html">IntelliJ-IDEA</a></li>
+                        
+                          <li><a title="Git" href="15568705670148.html">Git</a></li>
+                        
+                          <li><a title="Maven" href="15547227910617.html">Maven</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>网络</span></li>
+                        
+                          <li><a title="Netty" href="15633460791334.html">Netty</a></li>
+                        
+                          <li><a title="Http 授权" href="15629155221529.html">Http 授权</a></li>
+                        
+                          <li><a title="Https" href="15627233138405.html">Https</a></li>
+                        
+                          <li><a title="Http" href="15627233041942.html">Http</a></li>
+                        
+                          <li><a title="TCP" href="15627232889065.html">TCP</a></li>
+                        
+                          <li><a title="重要知识点" href="15561544288813.html">重要知识点</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Linux</span></li>
+                        
+                          <li><a title="Linux - I/O 模型" href="15560816178760.html">Linux - I/O 模型</a></li>
+                        
+                          <li><a title="Linux" href="15556621779917.html">Linux</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>测试相关</span></li>
+                        
+                          <li><a title="Mockito" href="15590126556449.html">Mockito</a></li>
+                        
+                          <li><a title="测试相关" href="15587730878715.html">测试相关</a></li>
+                        
+                          <li><a title="JUnit" href="15579238927247.html">JUnit</a></li>
+                        
+                          <li><a title="测试" href="15579095305456.html">测试</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Web</span></li>
+                        
+                          <li><a title="Http 缓存控制" href="15616231135862.html">Http 缓存控制</a></li>
+                        
+                          <li><a title="HTTP API 认证" href="15616218028083.html">HTTP API 认证</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>其他</span></li>
+                        
+                          <li><a title="计算机中的时间处理" href="15414917404912.html">计算机中的时间处理</a></li>
+                        
+
+                    
+                  </ul>
+                </nav>
+                </div>
+              </div>
+            </div>
+            <div class="large-9 medium-9 columns">
+
+ <div class="markdown-body">
+<h1>Spring IoC</h1>
+
+<ul>
+<li>
+<a href="#toc_0">IoC 概念</a>
+<ul>
+<li>
+<a href="#toc_1">依赖注入</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_2">Spring 配置</a>
+<ul>
+<li>
+<a href="#toc_3">Java 方式</a>
+</li>
+<li>
+<a href="#toc_4">注解方式</a>
+</li>
+<li>
+<a href="#toc_5">XML 方式</a>
+</li>
+<li>
+<a href="#toc_6">手动注册</a>
+</li>
+<li>
+<a href="#toc_7">自动装配</a>
+</li>
+<li>
+<a href="#toc_8">其他装配</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_9">Ioc 容器</a>
+<ul>
+<li>
+<a href="#toc_10">IoC 容器过程</a>
+</li>
+<li>
+<a href="#toc_11">Bean 的生命周期</a>
+</li>
+<li>
+<a href="#toc_12">Bean 作用域</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_13">配置</a>
+<ul>
+<li>
+<a href="#toc_14">配置加载</a>
+</li>
+<li>
+<a href="#toc_15">属性文件</a>
+</li>
+<li>
+<a href="#toc_16">＠Profile</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_17">ApplicationContext</a>
+<ul>
+<li>
+<a href="#toc_18">资源加载策略</a>
+</li>
+<li>
+<a href="#toc_19">事件监听</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_20">Spring boot</a>
+<ul>
+<li>
+<a href="#toc_21">自动配置</a>
+</li>
+<li>
+<a href="#toc_22">启动流程</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_23">参考</a>
+</li>
+</ul>
+
+
+<h2 id="toc_0">IoC 概念</h2>
+
+<p>IoC 即 Inversion of Control 控制反转。是 Spring 最重要的一个概念。即 Spring 的容器会维护各种对象，在你需要的时候将控制权交到你手上，而<strong>避免了因为主动控制对象带来的耦合性</strong>。</p>
+
+<h3 id="toc_1">依赖注入</h3>
+
+<p><strong>依赖注入(DI)是实现控制反转的一种方式。</strong><br/>
+依赖注入一般有三种方式</p>
+
+<ol>
+<li>构造器注入</li>
+<li>Setter 方法注入</li>
+<li>接口注入</li>
+</ol>
+
+<p>假设存在两个相互依赖的类：</p>
+
+<pre class="line-numbers"><code class="language-java">public class Classes {
+    // 依赖类
+    private Boy boy;
+    public Classes(){
+        // 在当前对象中直接 new 出依赖类
+        boy = new Boy(&quot;Bob&quot;);
+    }
+    public void run(){
+        boy.run();
+    }
+}
+
+public class Boy {
+    String name;
+    public Boy(String name){ this.name = name}
+    public void run(){}
+}
+</code></pre>
+
+<p><strong>构造方式注入</strong>，即在对象构造时传入一个依赖对象来完成注入。</p>
+
+<pre class="line-numbers"><code class="language-java">public class Classes {
+    // 依赖类
+    private Boy boy;
+    public Classes(Boy boy) {
+        this.boy = boy;
+    }
+    public void run() {
+        boy.run();
+    }
+}
+</code></pre>
+
+<p><strong>setter方法注入</strong>，通过 set 方法来设置需要依赖的类，<strong>不用一定在构造时设置</strong>更加灵活。</p>
+
+<pre class="line-numbers"><code class="language-java">public class Classes {
+    //....
+    private Boy boy;
+    public void setBoy(Boy boy){
+        this.boy = boy;
+    }
+    //....
+}
+</code></pre>
+
+<p><strong>接口注入</strong>通过实现特定接口来注入对象</p>
+
+<pre class="line-numbers"><code class="language-java">// 定义注入接口
+public interface BoyInjection {
+    void inject(Boy boy);
+}
+// 
+public class Classes implements BoyInjection {
+    //....
+    private Boy boy;
+    @Override
+    public void inject(Boy boy) {
+        //实现接口中的方法
+        this.boy = boy;
+    }
+    //....
+}
+</code></pre>
+
+<p>通过实现接口来注入需要的对象，一般不大使用。</p>
+
+<h2 id="toc_2">Spring 配置</h2>
+
+<p>Spring IoC 提供了一个集中管理 Java 对象的方式。那么这种 Java 对象配置就需要 Bean 来定义。<br/>
+Bean 即依赖注入需要管理的一种标准化的对象。<br/>
+Bean 定义使用 <code>BeanDefinition</code> 类来描述。一般包含以下信息：</p>
+
+<ul>
+<li>类名，即定义 Bean 对象的地方。</li>
+<li>Bean 的表现行为，作用域，生命周期等。</li>
+<li>需要依赖的其他对象。</li>
+<li>其他配置。</li>
+</ul>
+
+<p>具体如下：</p>
+
+<ul>
+<li><code>Class</code> 与 bean 绑定的类。</li>
+<li><code>Name</code> ，用于标识 Bean，name 可以有多个，但是 id 是唯一的。
+<ul>
+<li>如果同时指定多个 name 但是没有 id，以第一个 name 作为标识。</li>
+<li>如果同时指定 name 和 id，此时 id 为标识，name 为别名，但是都可以通过 getBean 来获得。</li>
+<li>可以通过 alias 指定别名，别名也是唯一的。</li>
+</ul></li>
+<li><code>Property</code>，属性，可以指定依赖或者值。</li>
+<li><code>Scope</code>，作用域。</li>
+<li><code>Constructor arguments</code>，构造参数。</li>
+<li><code>Autowiring mode</code>，注解注入模式。</li>
+<li><code>Lazy initialization mode</code>，是否懒加载。</li>
+<li>其他属性和参数设定参照<a href="https://docs.spring.io/spring/docs/5.1.6.RELEASE/spring-framework-reference/core.html#beans-definition">文档</a></li>
+</ul>
+
+<h3 id="toc_3">Java 方式</h3>
+
+<pre class="line-numbers"><code class="language-java">@Configuration
+public class AppConfig
+{
+    @Bean
+    public MyService myService() {
+        return new MyServiceImpl();
+    }
+}
+</code></pre>
+
+<ol>
+<li>类必须被 <code>@Configuration</code> 注解。</li>
+<li>使用 <code>@Bean</code> 注解，在配置中注册Bean，<strong>函数返回对象作为 Bean</strong>。</li>
+</ol>
+
+<h3 id="toc_4">注解方式</h3>
+
+<ul>
+<li><code>@Component</code>，类似 XML，注解一个类作为 Bean。在任何层都可以使用。</li>
+<li><code>@Autowired</code> 注入 Bean。属性，方法，方法参数都可以用。默认按类型注入。</li>
+<li><code>@Resource</code> 同样注入 Bean，但是默认按名称注入。</li>
+</ul>
+
+<p>需要在配置中定义：<br/>
+<code>@ComponentScan(basePackages = &quot;com.java&quot;)</code></p>
+
+<p>有时候后我们的容器不知道要注入哪个对象，就需<strong>要解决歧义性</strong>，用于解决歧义性的注解：</p>
+
+<ul>
+<li><code>@Primary</code>，注解 Bean 时，用于定义优先级。</li>
+<li><code>@Quelifier</code>，注入时，过滤特定的 Bean。</li>
+</ul>
+
+<h3 id="toc_5">XML 方式</h3>
+
+<p>Spring 2.0 之后使用Schema XML 格式来描述配置。Schema 的好处是可以让不同的配置文件有自己的<strong>命名空间</strong>。<br/>
+<code>ApplicationContext.xml</code> 为默认的配置文件。</p>
+
+<p>基本格式：</p>
+
+<pre class="line-numbers"><code class="language-markup">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+
+&lt;/beans&gt;
+</code></pre>
+
+<pre class="line-numbers"><code class="language-markup">&lt;!-- 以 classpath 为根目录 引入其他配置 --&gt;
+&lt;import resource=&quot;otherjuice.xml&quot;/&gt; 
+
+&lt;!-- 配置 source 原料 --&gt;
+&lt;bean name=&quot;source&quot; class=&quot;pojo.Source&quot;&gt;
+    &lt;property name=&quot;fruit&quot; value=&quot;橙子&quot;/&gt;
+    &lt;property name=&quot;sugar&quot; value=&quot;多糖&quot;/&gt;
+    &lt;property name=&quot;size&quot; value=&quot;超大杯&quot;/&gt;
+&lt;/bean&gt;
+
+&lt;bean name=&quot;juiceMaker&quot; class=&quot;pojo.JuiceMaker&quot;&gt;
+    &lt;!-- 注入上面配置的id为source的Source对象 这里 setter 注入--&gt;
+    &lt;property name=&quot;source&quot; ref=&quot;source&quot;/&gt;
+    &lt;!-- 构造器注入， 假设构造函数接受一个 source 参数--&gt;
+    &lt;constructor-arg&gt; 
+        &lt;ref bean=&quot;source&quot;/&gt; 
+    &lt;/constructor-arg&gt; 
+    &lt;!-- 这两种写法相同 --&gt;
+    &lt;constructor-arg ref=&quot;source&quot;/&gt;
+&lt;/bean&gt;
+</code></pre>
+
+<p>集合类型的装配</p>
+
+<pre class="line-numbers"><code class="language-java">package pojo;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+
+public class ComplexAssembly {
+ 
+    private Long id;
+    private List&lt;String&gt; list;
+    private Map&lt;String, String&gt; map;
+    private Properties properties;
+    private Set&lt;String&gt; set;
+    private String[] array;
+
+    /* setter and getter */ 
+}
+</code></pre>
+
+<pre class="line-numbers"><code class="language-markup">&lt;bean id=&quot;complexAssembly&quot; class=&quot;pojo.ComplexAssembly&quot;&gt;
+    &lt;!-- 装配Long类型的id --&gt;
+    &lt;property name=&quot;id&quot; value=&quot;1&quot;/&gt;
+ 
+    &lt;!-- 装配List类型的list --&gt;
+    &lt;property name=&quot;list&quot;&gt;
+        &lt;list&gt;
+            &lt;value&gt;value-list-1&lt;/value&gt;
+            &lt;value&gt;value-list-2&lt;/value&gt;
+            &lt;value&gt;value-list-3&lt;/value&gt;
+        &lt;/list&gt;
+    &lt;/property&gt;
+ 
+    &lt;!-- 装配Map类型的map --&gt;
+    &lt;property name=&quot;map&quot;&gt;
+        &lt;map&gt;
+            &lt;entry key=&quot;key1&quot; value=&quot;value-key-1&quot;/&gt;
+            &lt;entry key=&quot;key2&quot; value=&quot;value-key-2&quot;/&gt;
+            &lt;entry key=&quot;key3&quot; value=&quot;value-key-2&quot;/&gt;
+        &lt;/map&gt;
+    &lt;/property&gt;
+ 
+    &lt;!-- 装配Properties类型的properties --&gt;
+    &lt;property name=&quot;properties&quot;&gt;
+        &lt;props&gt;
+            &lt;prop key=&quot;prop1&quot;&gt;value-prop-1&lt;/prop&gt;
+            &lt;prop key=&quot;prop2&quot;&gt;value-prop-2&lt;/prop&gt;
+            &lt;prop key=&quot;prop3&quot;&gt;value-prop-3&lt;/prop&gt;
+        &lt;/props&gt;
+    &lt;/property&gt;
+ 
+    &lt;!-- 装配Set类型的set --&gt;
+    &lt;property name=&quot;set&quot;&gt;
+        &lt;set&gt;
+            &lt;value&gt;value-set-1&lt;/value&gt;
+            &lt;value&gt;value-set-2&lt;/value&gt;
+            &lt;value&gt;value-set-3&lt;/value&gt;
+        &lt;/set&gt;
+    &lt;/property&gt;
+ 
+    &lt;!-- 装配String[]类型的array --&gt;
+    &lt;property name=&quot;array&quot;&gt;
+        &lt;array&gt;
+            &lt;value&gt;value-array-1&lt;/value&gt;
+            &lt;value&gt;value-array-2&lt;/value&gt;
+            &lt;value&gt;value-array-3&lt;/value&gt;
+        &lt;/array&gt;
+    &lt;/property&gt;
+&lt;/bean&gt;
+</code></pre>
+
+<p><img src="media/15543630452997/15557638766880.jpg" alt=""/></p>
+
+<p><strong>c-命名空间</strong>，在 XML 中更为简洁地描述构造器参数的方式，要使用它的话，必须要在 XML 的顶部声明其模式。</p>
+
+<pre class="line-numbers"><code class="language-markup">&lt;!-- 引入 c-命名空间之前 --&gt;
+&lt;bean name=&quot;student1&quot; class=&quot;pojo.Student&quot;&gt;
+    &lt;constructor-arg name=&quot;id&quot; value=&quot;1&quot; /&gt;
+    &lt;constructor-arg name=&quot;name&quot; value=&quot;学生1&quot;/&gt;
+&lt;/bean&gt;
+
+&lt;!-- 引入 c-命名空间之后 --&gt;
+&lt;bean name=&quot;student2&quot; class=&quot;pojo.Student&quot;
+      c:id=&quot;2&quot; c:name=&quot;学生2&quot;/&gt;
+&lt;!-- 用顺序，同理 --&gt;
+&lt;bean name=&quot;student2&quot; class=&quot;pojo.Student&quot;
+      c:_0=&quot;3&quot; c:_1=&quot;学生3&quot;/&gt;
+</code></pre>
+
+<p><strong>p-命名空间</strong>，p-命名空间则是用setter的注入方式来配置 bean 。</p>
+
+<pre class="line-numbers"><code class="language-markup">&lt;!-- 引入p-命名空间之前 --&gt;
+&lt;bean name=&quot;student1&quot; class=&quot;pojo.Student&quot;&gt;
+    &lt;property name=&quot;id&quot; value=&quot;1&quot; /&gt;
+    &lt;property name=&quot;name&quot; value=&quot;学生1&quot;/&gt;
+&lt;/bean&gt;
+
+&lt;!-- 引入p-命名空间之后 --&gt;
+&lt;bean name=&quot;student2&quot; class=&quot;pojo.Student&quot; 
+      p:id=&quot;2&quot; p:name=&quot;学生2&quot;/&gt;
+&lt;!-- 注入其他 Bean --&gt;
+&lt;bean name=&quot;student2&quot; class=&quot;pojo.Student&quot;
+          p:id=&quot;2&quot; p:name=&quot;学生2&quot; p:cdCard-ref=&quot;cdCard1&quot;/&gt;
+</code></pre>
+
+<p><strong>util-命名空间</strong></p>
+
+<pre class="line-numbers"><code class="language-markup">&lt;!-- 引入util-命名空间之前 --&gt;
+&lt;property name=&quot;list&quot;&gt;
+    &lt;list&gt;
+        &lt;ref bean=&quot;bean1&quot;/&gt;
+        &lt;ref bean=&quot;bean2&quot;/&gt;
+    &lt;/list&gt;
+&lt;/property&gt;
+
+&lt;!-- 引入util-命名空间之后 --&gt;
+&lt;util:list id=&quot;list&quot;&gt;
+    &lt;ref bean=&quot;bean1&quot;/&gt;
+    &lt;ref bean=&quot;bean2&quot;/&gt;
+&lt;/util:list&gt;
+</code></pre>
+
+<h3 id="toc_6">手动注册</h3>
+
+<p>上面都是通过配置让 spring 帮助我们自动装配的，我们还可以手动装配，但是一般不建议使用。<br/>
+类似于使用这种方法：<code>container.register(Service.class, new Service());</code></p>
+
+<h3 id="toc_7">自动装配</h3>
+
+<p>即 Spring 容器能够自动装配相互依赖的 Bean，即容器不需要 <constructor-arg> 和 <property> 配置，能自动处理 Bean 之间的依赖。</p>
+
+<p>XML 方式：<br/>
+<code>&lt;bean id=&quot;employeeDAO&quot; class=&quot;com.EmployeeDAOImpl&quot; autowire=&quot;byName&quot; /&gt;</code></p>
+
+<p>注解方式：<br/>
+<code>@Autowired</code></p>
+
+<p>需要指定配置开启<br/>
+<code>&lt;context:annotation-config/&gt;</code><br/>
+注意，<code>&lt;context:component-scan base-package=&quot;org.xxx&quot;&gt;</code> 定义路径，用于扫描其中的 被注解标识的 JavaBean。包含了 <code>&lt;context:annotation-config/&gt;</code> 的功能。</p>
+
+<p>同理：<br/>
+<code>&lt;bean class =&quot;org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor&quot;/&gt;</code></p>
+
+<p>自动装配的方式：</p>
+
+<ol>
+<li><code>no</code>：默认的方式是不进行自动装配，通过显式设置 ref 属性来进行装配。</li>
+<li><code>byName</code>：通过参数名自动装配，Spring容器在配置文件中发现bean的autowire属性被设置成byname，之后容器试图匹配、装配和该bean的属性具有相同名字的bean。</li>
+<li><code>byType</code>：通过参数类型自动装配，Spring容器在配置文件中发现bean的autowire属性被设置成byType，之后容器试图匹配、装配和该bean的属性具有相同类型的bean。如果有多个bean符合条件，则抛出错误。</li>
+<li><code>constructor</code>：这个方式类似于byType， 但是要提供给构造器参数，如果没有确定的带参数的构造器参数类型，将会抛出异常。</li>
+<li><code>autodetect</code>：首先尝试使用constructor来自动装配，如果无法工作，则使用byType方式。</li>
+</ol>
+
+<p>自动装配的局限性是：</p>
+
+<ul>
+<li>重写：你仍需用 <constructor-arg>和 <property> 配置来定义依赖，意味着总要重写自动装配。</li>
+<li>基本数据类型：你不能自动装配简单的属性，如基本数据类型，String字符串，和类。</li>
+<li>模糊特性：自动装配不如显式装配精确，如果有可能，建议使用显式装配。</li>
+</ul>
+
+<h3 id="toc_8">其他装配</h3>
+
+<p><strong>条件装配</strong><br/>
+使用<code>＠Conditional</code>注解来指定condition类，condition类必须实现<code>org.springframework.context.annotation.Condition</code>接口并重写<code>matches</code>方法。由<code>matches</code>方法指定是否要装配 Bean。</p>
+
+<p><strong>Spring EL 装配</strong><br/>
+EL 表达式也可以来装配值。<br/>
+比如：</p>
+
+<pre class="line-numbers"><code class="language-javc">@Value (&quot;#{T(System).currentTimeMillis()}&quot;) 
+private Long initTime = null;
+</code></pre>
+
+<p><code>#{...}</code> 表示启用 EL 表达式。<br/>
+<code>T()</code> 表示引入包。<br/>
+所以上面表达是使用 <code>System.cw-rentTimeMillis()</code> 方法为属性赋值。</p>
+
+<h2 id="toc_9">Ioc 容器</h2>
+
+<p>Spring Ioc 容器是<strong>对象的维护池和注入对象的提供者</strong>，实现了：</p>
+
+<ul>
+<li>以 Bean 为标准描述对象</li>
+<li>使用各种不同的方式加载对象</li>
+<li>在需要的地方注入对象</li>
+</ul>
+
+<p>IoC 容器中最底层的容器接口为：<strong>BeanFactory</strong>，定义如下：</p>
+
+<pre class="line-numbers"><code class="language-java">package org.springframework.beans.factory;
+
+public interface BeanFactory {
+    // 工厂前缀，用于和装配的 Bean 做区分
+    String FACTORY_BEAN_PREFIX = &quot;&amp;&quot;;
+
+    // 不同的获得实例的方法
+    Object getBean(String name) throws BeansException;
+
+    &lt;T&gt; T getBean(String name, Class&lt;T&gt; requiredType) throws BeansException;
+
+    &lt;T&gt; T getBean(Class&lt;T&gt; requiredType) throws BeansException;
+
+    Object getBean(String name, Object... args) throws BeansException;
+
+    boolean containsBean(String name); // 是否存在
+
+    boolean isSingleton(String name) throws NoSuchBeanDefinitionException;// 是否为单实例
+
+    boolean isPrototype(String name) throws NoSuchBeanDefinitionException;// 是否为原型（多实例）
+
+    boolean isTypeMatch(String name, Class&lt;?&gt; targetType)
+            throws NoSuchBeanDefinitionException;// 名称、类型是否匹配
+
+    Class&lt;?&gt; getType(String name) throws NoSuchBeanDefinitionException; // 获取类型
+
+    String[] getAliases(String name);// 根据实例的名字获取实例的别名
+}
+</code></pre>
+
+<p>我们初始化好容器之后就可以通过容器来获得需要的对象了。</p>
+
+<pre class="line-numbers"><code class="language-java">ApplicationContext context = new ApplicationContext();
+
+Pet pet = context.getBean(&quot;pet&quot;, Pet.class)
+pet.run()
+</code></pre>
+
+<h3 id="toc_10">IoC 容器过程</h3>
+
+<p><img src="media/15543630452997/15552374995017.jpg" alt=""/></p>
+
+<p>Bean 的生命周期一般可以分为两个阶段：</p>
+
+<ol>
+<li>容器启动阶段，通过某种方式加载 <strong>Configuration MetaData</strong>。</li>
+<li>Bean 实例化阶段，实例化具体的 Bean 对象。</li>
+</ol>
+
+<p><strong>容器启动阶段的过程为</strong>：</p>
+
+<ul>
+<li>依赖某些工具类 <code>BeanDefinitionReader</code> 加载 Configuration MetaData。</li>
+<li>将 Configuration MetaData 解析成对应的 <code>BeanDefinition</code>。</li>
+<li>将 <code>BeanDefinition</code> 注册到 <code>BeanDefinitionRegistry</code>。</li>
+</ul>
+
+<p>Spring 提供了一种叫做 <code>BeanFactoryPostProcessor</code> 的机制对容器进行扩展。主要是实例化之前对注册到 <code>BeanDefinition</code> 所保存的内容进行修改。<br/>
+Spring 本身就提供了几种 <code>BeanFactoryPostProcessor</code> 的实现：</p>
+
+<ol>
+<li><code>PropertyPlaceholderConfigurer</code>，运行我们在 XML 文件中使用占位符，并从 properties 文件中加载对应的占位符。<strong>比如说配置数据源</strong>。</li>
+<li><code>PropertyOverrideConfigurer</code>，<strong>覆盖 properties文件的中配置</strong>。
+<ul>
+<li>必须在 properties 文件使用 <code>beanName.propertyName=value</code> 的格式。</li>
+</ul></li>
+</ol>
+
+<h3 id="toc_11">Bean 的生命周期</h3>
+
+<p><strong>Bean 实例化阶段的过程为</strong></p>
+
+<ol>
+<li>Bean 的实例化与 <code>BeanWrapper</code>
+<ul>
+<li>IoC 的容器内部对 Bean 会有不同的实例化策略。</li>
+<li>最后返回的是 <code>BeanWrapper</code> 实例，方便对属性的修改而不用反射 API。</li>
+</ul></li>
+<li>各种 Aware 接口。必须要实现以 Aware 结尾的一些接口
+<ul>
+<li><strong>BeanFactory 相关</strong>：
+<ul>
+<li><code>BeanNameAware</code>，设置 beanName。</li>
+<li><code>BeanClassLoaderAware</code>，设置类加载器。</li>
+<li><code>BeanFactoryAware</code>，<strong>使得对象获得当前 BeanFactory 的引用</strong>。</li>
+</ul></li>
+<li><strong>ApplicationContext 相关</strong>：
+<ul>
+<li>以下的所有接口都会注入 ApplicationContext 实例，并保存引用</li>
+<li><code>ResourceLoaderAware</code></li>
+<li><code>ApplicationEventPublisherAware</code></li>
+<li><code>MessageSourceAware</code></li>
+<li><code>ApplicationContextAware</code></li>
+</ul></li>
+</ul></li>
+<li>BeanPostProcessor 接口的 <code>postProcessBeforeInitialization</code> 方法，这个接口会对所有 Bean 都生效。注意不要与 BeanFactoryPostProcessor 弄混。</li>
+<li><code>@PostConstruct</code>标注的方法。</li>
+<li>自定义初始化方法。</li>
+<li>InitializingBean 接口的 <code>afterPropertiesSet</code>方法。和<bean>属性的 init-method 。</li>
+<li><code>BeanPostProcessor</code>类的<code>postProcessAfterInitialization</code>方法，注意对所有 Bean 都生效。</li>
+<li>正常生存期</li>
+<li><code>@PreDestroy</code>标注方法。</li>
+<li>DisposableBean 接口的<code>destroy</code>方法与<bean> 属性的 destroy-method 。</li>
+</ol>
+
+<p><img src="media/15543630452997/15556365441875.jpg" alt=""/></p>
+
+<p><img src="media/15543630452997/15543852285928.jpg" alt=""/></p>
+
+<h3 id="toc_12">Bean 作用域</h3>
+
+<p>所有 Spring 应用：</p>
+
+<ol>
+<li><code>singleton</code>，IoC 容器只会存在一个共享的 Bean 实例。可以指定 Lazy-init 来延迟加载。</li>
+<li><code>prototype</code>，每次请求 Bean 的时候都会创建一个新的实例。</li>
+</ol>
+
+<p>Spring Web 应用，仅限于 <strong>WebApplicationContext</strong> 环境。</p>
+
+<ol>
+<li><code>application</code>，Web 应用的整个生命周期。</li>
+<li><code>session</code>，HTTP 会话期间。</li>
+<li><code>request</code>，HTTP 一次请求期间。</li>
+<li><code>globalSesssion</code>，一个全家的 HTTP session 中。</li>
+</ol>
+
+<p>注解指定：<br/>
+<code>@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)</code><br/>
+<code>@Scope(WebApplicationContext.SCOPE REQUEST)</code></p>
+
+<p>XML指定：<br/>
+<code>&lt;bean id=&quot;bean&quot; class=&quot;Class&quot; scope=&quot;singleton&quot;&gt;</code></p>
+
+<h2 id="toc_13">配置</h2>
+
+<h3 id="toc_14">配置加载</h3>
+
+<p>容器需要配置文件来找到定于具体 Bean 的地方。<br/>
+常见配置相关注解：</p>
+
+<ul>
+<li><code>@Configuration</code>，注解定义配置。</li>
+<li><code>@ComponentScan(basePackages={&quot;com.springboot.web&quot;})</code>，表示启动组件扫描并 定义 Bean 的扫描路径。
+<ul>
+<li>对应 XML 配置中的<code>&lt;context:component-scan&gt;</code></li>
+<li>默认路径为 <code>src/main/java</code></li>
+</ul></li>
+<li><code>@Import(OtherConfiguration.class)</code>，表示导入配置类。
+<ul>
+<li>4.2 之后也支持导入普通类，并将其注册为 Bean</li>
+</ul></li>
+<li><code>@ImportResource(value={&quot;classpath:beans.xml&quot;})</code>，定义 XML 定义的 Bean 的加载路径。</li>
+<li><code>@Conditional</code>，表示满足一定条件后才初始化 Bean 或启用配置。
+<ul>
+<li>用于 <code>@Component</code>、 <code>@Service</code>、 <code>@Configuration</code> 等注解。</li>
+<li>实现 <code>Condition</code> 接口，并覆盖 <code>matched</code> 方法。</li>
+<li><img src="media/15543630452997/15556380156461.jpg" alt=""/></li>
+</ul></li>
+</ul>
+
+<h3 id="toc_15">属性文件</h3>
+
+<p>属性配置：</p>
+
+<pre class="line-numbers"><code class="language-text">database.driverName=com.mysql.jdbc.Driver
+database.url=jdbc:mysql://localhost:3306/test
+database.username=root
+database.password=123456
+</code></pre>
+
+<pre class="line-numbers"><code class="language-java">@Component
+@PropertySource(value={&quot;classpath:jdbc.properties&quot;}) // 定义加载路径
+@ConfigurationProperties(&quot;database&quot;) 
+//前缀=databasse，会在配置文件中寻找database.*的配置项
+public class DataBaseProperties {
+    @Value(&quot;${database.driverName}&quot;)
+    private String driverName = null;
+    // @ConfigurationProperties 自动注入
+    private String url = null;
+    private String username = null;
+    private String password = null;
+    
+    // 省略 getters 
+</code></pre>
+
+<ul>
+<li>使用<code>@Value(&quot;${}&quot;)</code>读取配置文件。</li>
+<li>使用 <code>@ConfigurationProperties(&quot;&quot;)</code> 注解整个类。</li>
+<li>需要 <code>spring-boot-configuration-processor</code> 依赖</li>
+</ul>
+
+<p>@EnableConfigurationProperties</p>
+
+<h3 id="toc_16">＠Profile</h3>
+
+<p>这个注解一般用于环境切换。</p>
+
+<p>比如定义一个生产环境的数据库。</p>
+
+<pre class="line-numbers"><code class="language-java">@Bean(name = &quot;dataSource&quot;, destroyMethod = &quot;close&quot;)
+@Profile(&quot;dev&quot;)
+public DataSource getDevDataSource() {
+    Properties props = new Properties();
+    props.setProperty(&quot;driver&quot;, &quot;com.mysql.jdbc.Driver&quot;);
+    props.setProperty(&quot;url&quot;, &quot;jdbc:mysql://localhost:3306/dev_spring_boot&quot;);
+    props.setProperty(&quot;username&quot;, &quot;root&quot;);
+    props.setProperty(&quot;password&quot;, &quot;123456&quot;);
+    DataSource dataSource = null;
+    try {
+        dataSource = BasicDataSourceFactory.createDataSource(props);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    return dataSource;
+}
+</code></pre>
+
+<p>Spring 默认不启用 Profile 机制，即被 <code>@Profile</code> 注解的类不会被加载。但是有两个参数可以配置 Profile 。<br/>
+<code>spring.profiles.active</code>，优先级高。<br/>
+<code>spring.profiles.default</code>，优先级低。<br/>
+在启动项中配置： <code>JAVA OPTS=-D spring.profiles.active=dev</code>。</p>
+
+<h2 id="toc_17">ApplicationContext</h2>
+
+<p><code>ApplicationContext</code> 比起 <code>BeanFactory</code> 添加了几个重要功能：</p>
+
+<ol>
+<li>资源加载</li>
+<li>事件监听</li>
+<li>国家化</li>
+</ol>
+
+<h3 id="toc_18">资源加载策略</h3>
+
+<p>常用的几个配置加载启动的 context：</p>
+
+<ul>
+<li><code>FileSystemXmlApplicationContext</code>，从文件系统加载配置。</li>
+<li><code>ClassPathXmlApplicationContext</code>，从 classpath 加载配置。</li>
+<li><code>XmlWebApplicationContext</code>，用于 web 的 XML 实现。</li>
+</ul>
+
+<p>Spring 经常需要从某个地方读取资源来加载，所以定义了一套统一的资源加载策略。<br/>
+<code>org.springframework.core.io.Resource</code> 接口定义了资源。<br/>
+<code>org.springframework.core.io.ResourceLoader</code> 接口定义了资源的加载策略。</p>
+
+<p>比如 Bean 的创建需要读取某个资源。<br/>
+<code>BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource(&quot;...&quot;));</code></p>
+
+<p><code>org.springframework.core.io.Resource</code> 的常用子类：</p>
+
+<ul>
+<li><code>ByteArrayResource</code> 字节数组作为资源。</li>
+<li><code>ClassPathResource</code> 从 ClassPath 中加载。</li>
+<li><code>FileSystemResource</code> 从文件系统中加载。是 <code>java.io.File</code> 的封装。</li>
+<li><code>UrlResource</code> 通过 <code>java.net.URL</code> 进行具体资源的查找与定位。</li>
+<li><code>InputStreamResource</code> 将输入流作为资源加载。</li>
+</ul>
+
+<p><code>org.springframework.core.io.Resource</code> 的接口定义 7 种方法帮助我们查询资源状态，访问资源内容，还能创建新的相对资源。</p>
+
+<pre class="line-numbers"><code class="language-java">public interface Resource extends InputStreamSource { 
+    boolean exists(); 
+    boolean isOpen(); 
+    URL getURL() throws IOException; 
+    File getFile() throws IOException;
+    Resource createRelative(String relativePath) throws IOException;
+    String getFilename();
+    String getDescription();
+}
+
+public interface InputStreamSource { 
+    InputStream getInputStream() throws IOException; 
+}
+</code></pre>
+
+<p>说了资源，下面再说资源的加载策略。<br/>
+<code>ResourceLoader</code> 的接口定义如下：</p>
+
+<pre class="line-numbers"><code class="language-java">public interface ResourceLoader { 
+    String CLASSPATH_URL_PREFIX = ResourceUtils.CLASSPATH_URL_PREFIX; Resource getResource(String location); 
+    ClassLoader getClassLoader(); 
+}
+</code></pre>
+
+<p>常用的 <code>ResourceLoader</code> 实现：</p>
+
+<ul>
+<li><code>DefaultResourceLoader</code> 会根据资源路径格式的不同来查找：
+<ol>
+<li>资源路径如果以 classpath: 为前缀，构造 ClassPathResource 类型资源并返回。</li>
+<li>否则，尝试通过 URL 访问资源，构造 UrlResource 类型的资源并返回。</li>
+<li>如果访问不到，委派 getResourceByPath(String) 来定位。</li>
+</ol></li>
+<li><code>FileSystemResourceLoader</code> 从文件系统加载 <code>FileSystemResource</code> 返回。</li>
+</ul>
+
+<p><code>ResourcePatternResolve</code> 接口的实现<strong>批量查找资源</strong>，返回多个 <code>Resource</code> 实例。常见实现：</p>
+
+<ul>
+<li><code>PathMatchingResourcePatternResolver</code>，路径匹配加载。</li>
+</ul>
+
+<p><img src="media/15543630452997/15552470698816.jpg" alt=""/></p>
+
+<h3 id="toc_19">事件监听</h3>
+
+<p><code>ApplicationContext</code> 中的事件监听：</p>
+
+<ul>
+<li><code>org.springframework.context.AppliationEvent</code>，事件继承自。</li>
+<li><code>org.springframework.context.ApplicationListener</code>，监听器接口。</li>
+</ul>
+
+<p>这两个都会以 Bean 的形式注册在容器中。容器内一旦发布事件 ，实现了监听器接口的类都会对这些事件进行处理。</p>
+
+<pre class="line-numbers"><code class="language-java">public class AllApplicationEventListener implements ApplicationListener &lt;ApplicationEvent&gt;
+{
+    @Override
+    public void onApplicationEvent(ApplicationEvent applicationEvent)
+    {
+        //process event
+    }
+}
+</code></pre>
+
+<p>Spring 提供了以下5中标准的事件：</p>
+
+<ol>
+<li><code>ContextRefreshedEvent</code> 上下文更新事件：该事件会在ApplicationContext被初始化或者更新时发布。也可以在调用ConfigurableApplicationContext 接口中的refresh()方法时被触发。</li>
+<li><code>ContextStartedEvent</code> 上下文开始事件：当容器调用ConfigurableApplicationContext的Start()方法开始/重新开始容器时触发该事件。</li>
+<li><code>ContextStoppedEvent</code> 上下文停止事件：当容器调用ConfigurableApplicationContext的Stop()方法停止容器时触发该事件。</li>
+<li><code>ContextClosedEvent</code> 上下文关闭事件：当ApplicationContext被关闭时触发该事件。容器被关闭时，其管理的所有单例Bean都被销毁。</li>
+<li><code>RequestHandledEvent</code> 请求处理事件：在Web应用中，当一个http请求（request）结束触发该事件。</li>
+</ol>
+
+<p>自定义的事件与监听器：</p>
+
+<pre class="line-numbers"><code class="language-java">public class CustomApplicationEvent extends ApplicationEvent
+{
+    public CustomApplicationEvent ( Object source, final String msg )
+    {
+        super(source);
+        System.out.println(&quot;Created a Custom event&quot;);
+    }
+}
+////
+public class CustomEventListener implements ApplicationListener &lt; CustomApplicationEvent &gt;
+{
+    @Override
+    public void onApplicationEvent(CustomApplicationEvent applicationEvent) {
+        //handle event
+    }
+}
+/// 发布事件
+CustomApplicationEvent customEvent = new CustomApplicationEvent(applicationContext, &quot;Test message&quot;);
+applicationContext.publishEvent(customEvent);
+</code></pre>
+
+<h2 id="toc_20">Spring boot</h2>
+
+<h3 id="toc_21">自动配置</h3>
+
+<p>典型的 Spring boot 应用：</p>
+
+<pre class="line-numbers"><code class="language-java">@SpringBootApplication
+public class WebApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(WebApplication.class, args);
+    }
+}
+</code></pre>
+
+<p>其中 <code>@SpringBootApplication</code> 实际上是三个注解的复合：</p>
+
+<ul>
+<li><code>@SpringBootConfiguration</code>
+<ul>
+<li>即 <code>@Configuration</code></li>
+</ul></li>
+<li><code>@EnableAutoConfiguration</code>
+<ul>
+<li><strong>重点</strong></li>
+</ul></li>
+<li><code>@ComponentScan</code></li>
+</ul>
+
+<p><code>@EnableAutoConfiguration</code> 表示开启自动配置。<br/>
+包含了：</p>
+
+<ul>
+<li><code>@AutoConfigurationPackage</code></li>
+<li><code>@Import(EnableAutoConfigurationImportSelector.class)</code></li>
+</ul>
+
+<p><code>EnableAutoConfigurationImportSelector</code> 被作为 Bean 注册到容器中。<br/>
+而这个类会将所有符合条件的 <code>@Configuration</code> 都加载进容器。<br/>
+比如 <code>META-INF/spring.factories</code> 中的内容：</p>
+
+<pre class="line-numbers"><code class="language-java">// 来自 org.springframework.boot.autoconfigure下的META-INF/spring.factories
+// 配置的key = EnableAutoConfiguration，与代码中一致
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,\
+org.springframework.boot.autoconfigure.aop.AopAutoConfiguration,\
+org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration\
+.....
+</code></pre>
+
+<p>以 <code>DataSourceAutoConfiguration</code> 为例，观察 Spring Boot 是如何自动配置的：</p>
+
+<pre class="line-numbers"><code class="language-java">@Configuration
+@ConditionalOnClass({ DataSource.class, EmbeddedDatabaseType.class })
+@EnableConfigurationProperties(DataSourceProperties.class)
+@Import({ Registrar.class, DataSourcePoolMetadataProvidersConfiguration.class })
+public class DataSourceAutoConfiguration {
+}
+</code></pre>
+
+<p><code>@EnableConfigurationProperties(DataSourceProperties.class)</code>会将默认配置注入：</p>
+
+<pre class="line-numbers"><code class="language-java">// 提供对datasource配置信息的支持，所有的配置前缀为：spring.datasource
+@ConfigurationProperties(prefix = &quot;spring.datasource&quot;)
+public class DataSourceProperties  {
+    private ClassLoader classLoader;
+    private Environment environment;
+    private String name = &quot;testdb&quot;;
+    ......
+}
+</code></pre>
+
+<p>理一下思路：</p>
+
+<ol>
+<li><code>@SpringBootApplication</code>
+<ul>
+<li>标注 Spring Boot 应用</li>
+</ul></li>
+<li><code>@EnableAutoConfiguration</code> 
+<ul>
+<li>开启自动配置</li>
+</ul></li>
+<li><code>EnableAutoConfigurationImportSelector</code> 被注册
+<ul>
+<li>开始加载所有符合条件的配置</li>
+</ul></li>
+<li><code>META-INF/spring.factories</code>
+<ul>
+<li>循环检查其中的配置</li>
+</ul></li>
+<li><code>DataSourceAutoConfiguration</code>
+<ul>
+<li>某个具体应用的自动配置</li>
+</ul></li>
+<li>导入具体的应用的默认配置和额外配置</li>
+</ol>
+
+<h3 id="toc_22">启动流程</h3>
+
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzU2MTI4MjI0MQ==&amp;mid=2247485838&amp;idx=1&amp;sn=50721df48c176b1bc9c51294ccea43ba"></a></p>
+
+<h2 id="toc_23">参考</h2>
+
+<p><a href="https://www.ctolib.com/topics-35589.html">25个经典的Spring面试问答</a><br/>
+<a href="https://mp.weixin.qq.com/s?__biz=MzI3ODcxMzQzMw==&amp;mid=2247486678&amp;idx=1&amp;sn=2a5e38e67c3d267d6c58d963adb24ccc">史上最全 69 道 Spring 面试题和答案</a><br/>
+<a href="https://mp.weixin.qq.com/s?__biz=MzU2MTI4MjI0MQ==&amp;mid=2247485838&amp;idx=1&amp;sn=50721df48c176b1bc9c51294ccea43ba">给你一份Spring Boot核心知识清单</a><br/>
+<a href="https://zhuanlan.zhihu.com/p/37287871">Spring(3)——装配 Spring Bean 详解</a><br/>
+<a href="https://snailclimb.top/JavaGuide/#/./system-design/framework/SpringBean?id=%E5%8D%95%E4%BE%8B%E7%AE%A1%E7%90%86%E7%9A%84%E5%AF%B9%E8%B1%A1">Spring中bean的作用域与生命周期</a><br/>
+<a href="">《深入浅出 Spring boot 2.x》</a><br/>
+<a href="">《Spring 揭秘》</a></p>
+
+
+</div>
+
+<br /><br />
+<hr />
+
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="15543917219955.html"  title="Previous Post: Spring AOP">&laquo; Spring AOP</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="15542783465338.html" 
+	        title="Next Post: Redis 基本使用">Redis 基本使用 &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
+
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
+
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '15543630452997.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
+</div></div>
+
+
+<div class="page-bottom">
+  <div class="row">
+  <hr />
+  <div class="small-9 columns">
+  <p class="copyright">Copyright &copy; 2015
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+  <div class="small-3 columns">
+  <p class="copyright text-right"><a href="#header">TOP</a></p>
+  </div>
+   
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+    
+    
+    <script src="asset/js/foundation.min.js"></script>
+    <script src="asset/js/foundation/foundation.offcanvas.js"></script>
+    <script>
+      $(document).foundation();
+
+     
+    </script>
+    
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+
+  </body>
+</html>

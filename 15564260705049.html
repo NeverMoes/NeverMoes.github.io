@@ -1,0 +1,1245 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  分布式 - 一致性协议 - NeverMoes 的笔记
+  
+  </title>
+ <meta name="description" content="">
+ <link href="atom.xml" rel="alternate" title="NeverMoes 的笔记" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+    <script src="asset/highlightjs/highlight.pack.js"></script>
+    <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+<div id="header">
+    <h1><a href="index.html">NeverMoes 的笔记</a></h1>
+</div>
+
+</nav>
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; NeverMoes 的笔记</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+      <li><a href="index.html">Home</a></li>
+      
+        <li class="divider"></li>
+        <li><label>Java</label></li>
+
+          
+            <li><a title="Java - 编码" href="15613569036612.html">Java - 编码</a></li>
+          
+            <li><a title="Java - Log" href="15594642382768.html">Java - Log</a></li>
+          
+            <li><a title="Java - 异常处理" href="15594627836663.html">Java - 异常处理</a></li>
+          
+            <li><a title="Java - Steam" href="15584212270447.html">Java - Steam</a></li>
+          
+            <li><a title="Java - 反射" href="15580921637682.html">Java - 反射</a></li>
+          
+            <li><a title="Java - Enum" href="15580808809919.html">Java - Enum</a></li>
+          
+            <li><a title="Javadoc" href="15573232964198.html">Javadoc</a></li>
+          
+            <li><a title="编程规范" href="15573214224993.html">编程规范</a></li>
+          
+            <li><a title="Java8" href="15571102853200.html">Java8</a></li>
+          
+            <li><a title="一些特性" href="15568697463497.html">一些特性</a></li>
+          
+            <li><a title="Java 补充" href="15557361529750.html">Java 补充</a></li>
+          
+            <li><a title="Java 基础" href="15554689517828.html">Java 基础</a></li>
+          
+            <li><a title="Java - IO" href="15551380554375.html">Java - IO</a></li>
+          
+            <li><a title="Java 经典设计模式" href="15548114065751.html">Java 经典设计模式</a></li>
+          
+            <li><a title="常用设计模式" href="15547272355117.html">常用设计模式</a></li>
+          
+            <li><a title="Java - 流(Stream)" href="15535872722415.html">Java - 流(Stream)</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Java 集合</label></li>
+
+          
+            <li><a title="Java 集合 - List" href="15619627957699.html">Java 集合 - List</a></li>
+          
+            <li><a title="Java - 集合框架" href="15557398305311.html">Java - 集合框架</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>并发</label></li>
+
+          
+            <li><a title="Java 并发 - 同步器框架 AQS" href="15628279381258.html">Java 并发 - 同步器框架 AQS</a></li>
+          
+            <li><a title="Java 并发 - volatile 与 Java 内存模型(JMM)" href="15628250952791.html">Java 并发 - volatile 与 Java 内存模型(JMM)</a></li>
+          
+            <li><a title="Java 并发 - 生产者消费者模型" href="15551273585518.html">Java 并发 - 生产者消费者模型</a></li>
+          
+            <li><a title="Java 并发 - atomic" href="15551259864059.html">Java 并发 - atomic</a></li>
+          
+            <li><a title="Java 并发 - 线程池" href="15550409896106.html">Java 并发 - 线程池</a></li>
+          
+            <li><a title="Java 并发 - 常见并发容器" href="15549779705652.html">Java 并发 - 常见并发容器</a></li>
+          
+            <li><a title="Java 并发 - final 重排" href="15549631305867.html">Java 并发 - final 重排</a></li>
+          
+            <li><a title="Java 并发 - synchronized" href="15549492034730.html">Java 并发 - synchronized</a></li>
+          
+            <li><a title="Java 并发 - 线程" href="15549491562348.html">Java 并发 - 线程</a></li>
+          
+            <li><a title="Java 并发 - 常用同步器" href="15549094953523.html">Java 并发 - 常用同步器</a></li>
+          
+            <li><a title="Java 并发 - 概览" href="15536711259128.html">Java 并发 - 概览</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>JVM</label></li>
+
+          
+            <li><a title="Java JVM - 分析工具" href="15592858144445.html">Java JVM - 分析工具</a></li>
+          
+            <li><a title="Java JVM - 类加载" href="15554954352575.html">Java JVM - 类加载</a></li>
+          
+            <li><a title="Java JVM - GC" href="15551422971585.html">Java JVM - GC</a></li>
+          
+            <li><a title="Java JVM - 内存布局" href="15551417067858.html">Java JVM - 内存布局</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Spring</label></li>
+
+          
+            <li><a title="Mybatis" href="15627234169476.html">Mybatis</a></li>
+          
+            <li><a title="Spring -  自定义标签" href="15580023414897.html">Spring -  自定义标签</a></li>
+          
+            <li><a title="Java - Servlet" href="15555575014317.html">Java - Servlet</a></li>
+          
+            <li><a title="Spring - 数据访问" href="15553337118605.html">Spring - 数据访问</a></li>
+          
+            <li><a title="spring 异步线程池" href="15546347724247.html">spring 异步线程池</a></li>
+          
+            <li><a title="Spring MVC" href="15546192348918.html">Spring MVC</a></li>
+          
+            <li><a title="Spring 事务" href="15544558066181.html">Spring 事务</a></li>
+          
+            <li><a title="Spring AOP" href="15543917219955.html">Spring AOP</a></li>
+          
+            <li><a title="Spring IoC" href="15543630452997.html">Spring IoC</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>源码</label></li>
+
+          
+            <li><a title="源码" href="15627233586740.html">源码</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Redis</label></li>
+
+          
+            <li><a title="Redis 实现分布式锁" href="15565438727155.html">Redis 实现分布式锁</a></li>
+          
+            <li><a title="Redis 深入 - 双写一致性" href="15560904222673.html">Redis 深入 - 双写一致性</a></li>
+          
+            <li><a title="Redis 深入 - 高可用性" href="15560904056716.html">Redis 深入 - 高可用性</a></li>
+          
+            <li><a title="Redis 深入 - 数据结构" href="15560812001633.html">Redis 深入 - 数据结构</a></li>
+          
+            <li><a title="Redis 深入 - 常见问题" href="15556760212710.html">Redis 深入 - 常见问题</a></li>
+          
+            <li><a title="Redis 基本使用" href="15542783465338.html">Redis 基本使用</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Mysql</label></li>
+
+          
+            <li><a title="Mysql - 键、索引、约束" href="15633466729778.html">Mysql - 键、索引、约束</a></li>
+          
+            <li><a title="Mysql - 性能优化" href="15633423972144.html">Mysql - 性能优化</a></li>
+          
+            <li><a title="索引中的树 - B,B+,B*" href="15633420860231.html">索引中的树 - B,B+,B*</a></li>
+          
+            <li><a title="性能优化" href="15607574336137.html">性能优化</a></li>
+          
+            <li><a title="Mysql - EXPLAIN" href="15607559623364.html">Mysql - EXPLAIN</a></li>
+          
+            <li><a title="Mysql 深入" href="15555007777074.html">Mysql 深入</a></li>
+          
+            <li><a title="Mysql 基本使用" href="15554985061309.html">Mysql 基本使用</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>消息队列</label></li>
+
+          
+            <li><a title="JMS" href="15584265544434.html">JMS</a></li>
+          
+            <li><a title="RPC - RMI" href="15572232721703.html">RPC - RMI</a></li>
+          
+            <li><a title="消息队列" href="15560753193297.html">消息队列</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>分布式</label></li>
+
+          
+            <li><a title="概览" href="15630938148608.html">概览</a></li>
+          
+            <li><a title="分布式锁" href="15625959085058.html">分布式锁</a></li>
+          
+            <li><a title="分布式事务" href="15625700887049.html">分布式事务</a></li>
+          
+            <li><a title="ZooKeeper - 实现原理" href="15574104902395.html">ZooKeeper - 实现原理</a></li>
+          
+            <li><a title="ZK 分布式锁" href="15573683537890.html">ZK 分布式锁</a></li>
+          
+            <li><a title="ZooKeeper - 基本使用" href="15572415140464.html">ZooKeeper - 基本使用</a></li>
+          
+            <li><a title="Dubbo" href="15572232166193.html">Dubbo</a></li>
+          
+            <li><a title="分布式 - 一致性协议" href="15564260705049.html">分布式 - 一致性协议</a></li>
+          
+            <li><a title="ZooKeeper - ZAB 一致性协议" href="15561221442316.html">ZooKeeper - ZAB 一致性协议</a></li>
+          
+            <li><a title="分布式 - 理论" href="15559475613873.html">分布式 - 理论</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>LeetCode</label></li>
+
+          
+            <li><a title="栈" href="15641207902154.html">栈</a></li>
+          
+            <li><a title="链表" href="15640409436152.html">链表</a></li>
+          
+            <li><a title="位运算" href="15640226818030.html">位运算</a></li>
+          
+            <li><a title="树相关" href="15638876391543.html">树相关</a></li>
+          
+            <li><a title="并查集(union-find)" href="15637156793274.html">并查集(union-find)</a></li>
+          
+            <li><a title="图相关" href="15637123231485.html">图相关</a></li>
+          
+            <li><a title="动态规划 - 2" href="15637092754569.html">动态规划 - 2</a></li>
+          
+            <li><a title="其他" href="15632741408063.html">其他</a></li>
+          
+            <li><a title="动态规划 - 2" href="15621444826793.html">动态规划 - 2</a></li>
+          
+            <li><a title="字符串" href="15621426919335.html">字符串</a></li>
+          
+            <li><a title="贪心策略" href="15621379435201.html">贪心策略</a></li>
+          
+            <li><a title="动态规划 - 1" href="15618801162146.html">动态规划 - 1</a></li>
+          
+            <li><a title="回溯" href="15617108626739.html">回溯</a></li>
+          
+            <li><a title="组合博弈" href="15617105581442.html">组合博弈</a></li>
+          
+            <li><a title="temp" href="15600064978396.html">temp</a></li>
+          
+            <li><a title="筛选法" href="15600041568309.html">筛选法</a></li>
+          
+            <li><a title="Sell Stock" href="15592212071515.html">Sell Stock</a></li>
+          
+            <li><a title="dfs" href="15590119399452.html">dfs</a></li>
+          
+            <li><a title="Index" href="15578365171892.html">Index</a></li>
+          
+            <li><a title="排序" href="15578363359025.html">排序</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>算法</label></li>
+
+          
+            <li><a title="海量数据" href="15635229096880.html">海量数据</a></li>
+          
+            <li><a title="缓存" href="15616272119801.html">缓存</a></li>
+          
+            <li><a title="位操作" href="15421595266112.html">位操作</a></li>
+          
+            <li><a title="数据结构-搜索树" href="15382213735628.html">数据结构-搜索树</a></li>
+          
+            <li><a title="数据结构-查找" href="15381206652033.html">数据结构-查找</a></li>
+          
+            <li><a title="数据结构-栈与队列" href="15377961916563.html">数据结构-栈与队列</a></li>
+          
+            <li><a title="数据结构-树" href="15376956161325.html">数据结构-树</a></li>
+          
+            <li><a title="数据结构-图" href="15366535602244.html">数据结构-图</a></li>
+          
+            <li><a title="数据结构-排序" href="15366378611089.html">数据结构-排序</a></li>
+          
+            <li><a title="数据结构-线性表" href="15365715348624.html">数据结构-线性表</a></li>
+          
+            <li><a title="数据结构-绪论" href="15364817197942.html">数据结构-绪论</a></li>
+          
+            <li><a title="算法学习路径" href="15289789971496.html">算法学习路径</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>工具</label></li>
+
+          
+            <li><a title="MyBatis" href="15590240129274.html">MyBatis</a></li>
+          
+            <li><a title="Guava" href="15573643454153.html">Guava</a></li>
+          
+            <li><a title="Lombok" href="15571355421205.html">Lombok</a></li>
+          
+            <li><a title="IntelliJ-IDEA" href="15568897283887.html">IntelliJ-IDEA</a></li>
+          
+            <li><a title="Git" href="15568705670148.html">Git</a></li>
+          
+            <li><a title="Maven" href="15547227910617.html">Maven</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>网络</label></li>
+
+          
+            <li><a title="Netty" href="15633460791334.html">Netty</a></li>
+          
+            <li><a title="Http 授权" href="15629155221529.html">Http 授权</a></li>
+          
+            <li><a title="Https" href="15627233138405.html">Https</a></li>
+          
+            <li><a title="Http" href="15627233041942.html">Http</a></li>
+          
+            <li><a title="TCP" href="15627232889065.html">TCP</a></li>
+          
+            <li><a title="重要知识点" href="15561544288813.html">重要知识点</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Linux</label></li>
+
+          
+            <li><a title="Linux - I/O 模型" href="15560816178760.html">Linux - I/O 模型</a></li>
+          
+            <li><a title="Linux" href="15556621779917.html">Linux</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>测试相关</label></li>
+
+          
+            <li><a title="Mockito" href="15590126556449.html">Mockito</a></li>
+          
+            <li><a title="测试相关" href="15587730878715.html">测试相关</a></li>
+          
+            <li><a title="JUnit" href="15579238927247.html">JUnit</a></li>
+          
+            <li><a title="测试" href="15579095305456.html">测试</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>Web</label></li>
+
+          
+            <li><a title="Http 缓存控制" href="15616231135862.html">Http 缓存控制</a></li>
+          
+            <li><a title="HTTP API 认证" href="15616218028083.html">HTTP API 认证</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>其他</label></li>
+
+          
+            <li><a title="计算机中的时间处理" href="15414917404912.html">计算机中的时间处理</a></li>
+          
+
+      
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+        <section id="main-content" role="main" class="scroll-container">
+
+          <div class="row">
+            <div class="large-3 medium-3 columns">
+              <div class="hide-for-small">
+                <div class="sidebar">
+                <nav>
+                  <ul id="side-nav" class="side-nav">
+
+                    
+                      <li class="side-title"><span>Java</span></li>
+                        
+                          <li><a title="Java - 编码" href="15613569036612.html">Java - 编码</a></li>
+                        
+                          <li><a title="Java - Log" href="15594642382768.html">Java - Log</a></li>
+                        
+                          <li><a title="Java - 异常处理" href="15594627836663.html">Java - 异常处理</a></li>
+                        
+                          <li><a title="Java - Steam" href="15584212270447.html">Java - Steam</a></li>
+                        
+                          <li><a title="Java - 反射" href="15580921637682.html">Java - 反射</a></li>
+                        
+                          <li><a title="Java - Enum" href="15580808809919.html">Java - Enum</a></li>
+                        
+                          <li><a title="Javadoc" href="15573232964198.html">Javadoc</a></li>
+                        
+                          <li><a title="编程规范" href="15573214224993.html">编程规范</a></li>
+                        
+                          <li><a title="Java8" href="15571102853200.html">Java8</a></li>
+                        
+                          <li><a title="一些特性" href="15568697463497.html">一些特性</a></li>
+                        
+                          <li><a title="Java 补充" href="15557361529750.html">Java 补充</a></li>
+                        
+                          <li><a title="Java 基础" href="15554689517828.html">Java 基础</a></li>
+                        
+                          <li><a title="Java - IO" href="15551380554375.html">Java - IO</a></li>
+                        
+                          <li><a title="Java 经典设计模式" href="15548114065751.html">Java 经典设计模式</a></li>
+                        
+                          <li><a title="常用设计模式" href="15547272355117.html">常用设计模式</a></li>
+                        
+                          <li><a title="Java - 流(Stream)" href="15535872722415.html">Java - 流(Stream)</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Java 集合</span></li>
+                        
+                          <li><a title="Java 集合 - List" href="15619627957699.html">Java 集合 - List</a></li>
+                        
+                          <li><a title="Java - 集合框架" href="15557398305311.html">Java - 集合框架</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>并发</span></li>
+                        
+                          <li><a title="Java 并发 - 同步器框架 AQS" href="15628279381258.html">Java 并发 - 同步器框架 AQS</a></li>
+                        
+                          <li><a title="Java 并发 - volatile 与 Java 内存模型(JMM)" href="15628250952791.html">Java 并发 - volatile 与 Java 内存模型(JMM)</a></li>
+                        
+                          <li><a title="Java 并发 - 生产者消费者模型" href="15551273585518.html">Java 并发 - 生产者消费者模型</a></li>
+                        
+                          <li><a title="Java 并发 - atomic" href="15551259864059.html">Java 并发 - atomic</a></li>
+                        
+                          <li><a title="Java 并发 - 线程池" href="15550409896106.html">Java 并发 - 线程池</a></li>
+                        
+                          <li><a title="Java 并发 - 常见并发容器" href="15549779705652.html">Java 并发 - 常见并发容器</a></li>
+                        
+                          <li><a title="Java 并发 - final 重排" href="15549631305867.html">Java 并发 - final 重排</a></li>
+                        
+                          <li><a title="Java 并发 - synchronized" href="15549492034730.html">Java 并发 - synchronized</a></li>
+                        
+                          <li><a title="Java 并发 - 线程" href="15549491562348.html">Java 并发 - 线程</a></li>
+                        
+                          <li><a title="Java 并发 - 常用同步器" href="15549094953523.html">Java 并发 - 常用同步器</a></li>
+                        
+                          <li><a title="Java 并发 - 概览" href="15536711259128.html">Java 并发 - 概览</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>JVM</span></li>
+                        
+                          <li><a title="Java JVM - 分析工具" href="15592858144445.html">Java JVM - 分析工具</a></li>
+                        
+                          <li><a title="Java JVM - 类加载" href="15554954352575.html">Java JVM - 类加载</a></li>
+                        
+                          <li><a title="Java JVM - GC" href="15551422971585.html">Java JVM - GC</a></li>
+                        
+                          <li><a title="Java JVM - 内存布局" href="15551417067858.html">Java JVM - 内存布局</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Spring</span></li>
+                        
+                          <li><a title="Mybatis" href="15627234169476.html">Mybatis</a></li>
+                        
+                          <li><a title="Spring -  自定义标签" href="15580023414897.html">Spring -  自定义标签</a></li>
+                        
+                          <li><a title="Java - Servlet" href="15555575014317.html">Java - Servlet</a></li>
+                        
+                          <li><a title="Spring - 数据访问" href="15553337118605.html">Spring - 数据访问</a></li>
+                        
+                          <li><a title="spring 异步线程池" href="15546347724247.html">spring 异步线程池</a></li>
+                        
+                          <li><a title="Spring MVC" href="15546192348918.html">Spring MVC</a></li>
+                        
+                          <li><a title="Spring 事务" href="15544558066181.html">Spring 事务</a></li>
+                        
+                          <li><a title="Spring AOP" href="15543917219955.html">Spring AOP</a></li>
+                        
+                          <li><a title="Spring IoC" href="15543630452997.html">Spring IoC</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>源码</span></li>
+                        
+                          <li><a title="源码" href="15627233586740.html">源码</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Redis</span></li>
+                        
+                          <li><a title="Redis 实现分布式锁" href="15565438727155.html">Redis 实现分布式锁</a></li>
+                        
+                          <li><a title="Redis 深入 - 双写一致性" href="15560904222673.html">Redis 深入 - 双写一致性</a></li>
+                        
+                          <li><a title="Redis 深入 - 高可用性" href="15560904056716.html">Redis 深入 - 高可用性</a></li>
+                        
+                          <li><a title="Redis 深入 - 数据结构" href="15560812001633.html">Redis 深入 - 数据结构</a></li>
+                        
+                          <li><a title="Redis 深入 - 常见问题" href="15556760212710.html">Redis 深入 - 常见问题</a></li>
+                        
+                          <li><a title="Redis 基本使用" href="15542783465338.html">Redis 基本使用</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Mysql</span></li>
+                        
+                          <li><a title="Mysql - 键、索引、约束" href="15633466729778.html">Mysql - 键、索引、约束</a></li>
+                        
+                          <li><a title="Mysql - 性能优化" href="15633423972144.html">Mysql - 性能优化</a></li>
+                        
+                          <li><a title="索引中的树 - B,B+,B*" href="15633420860231.html">索引中的树 - B,B+,B*</a></li>
+                        
+                          <li><a title="性能优化" href="15607574336137.html">性能优化</a></li>
+                        
+                          <li><a title="Mysql - EXPLAIN" href="15607559623364.html">Mysql - EXPLAIN</a></li>
+                        
+                          <li><a title="Mysql 深入" href="15555007777074.html">Mysql 深入</a></li>
+                        
+                          <li><a title="Mysql 基本使用" href="15554985061309.html">Mysql 基本使用</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>消息队列</span></li>
+                        
+                          <li><a title="JMS" href="15584265544434.html">JMS</a></li>
+                        
+                          <li><a title="RPC - RMI" href="15572232721703.html">RPC - RMI</a></li>
+                        
+                          <li><a title="消息队列" href="15560753193297.html">消息队列</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>分布式</span></li>
+                        
+                          <li><a title="概览" href="15630938148608.html">概览</a></li>
+                        
+                          <li><a title="分布式锁" href="15625959085058.html">分布式锁</a></li>
+                        
+                          <li><a title="分布式事务" href="15625700887049.html">分布式事务</a></li>
+                        
+                          <li><a title="ZooKeeper - 实现原理" href="15574104902395.html">ZooKeeper - 实现原理</a></li>
+                        
+                          <li><a title="ZK 分布式锁" href="15573683537890.html">ZK 分布式锁</a></li>
+                        
+                          <li><a title="ZooKeeper - 基本使用" href="15572415140464.html">ZooKeeper - 基本使用</a></li>
+                        
+                          <li><a title="Dubbo" href="15572232166193.html">Dubbo</a></li>
+                        
+                          <li><a title="分布式 - 一致性协议" href="15564260705049.html">分布式 - 一致性协议</a></li>
+                        
+                          <li><a title="ZooKeeper - ZAB 一致性协议" href="15561221442316.html">ZooKeeper - ZAB 一致性协议</a></li>
+                        
+                          <li><a title="分布式 - 理论" href="15559475613873.html">分布式 - 理论</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>LeetCode</span></li>
+                        
+                          <li><a title="栈" href="15641207902154.html">栈</a></li>
+                        
+                          <li><a title="链表" href="15640409436152.html">链表</a></li>
+                        
+                          <li><a title="位运算" href="15640226818030.html">位运算</a></li>
+                        
+                          <li><a title="树相关" href="15638876391543.html">树相关</a></li>
+                        
+                          <li><a title="并查集(union-find)" href="15637156793274.html">并查集(union-find)</a></li>
+                        
+                          <li><a title="图相关" href="15637123231485.html">图相关</a></li>
+                        
+                          <li><a title="动态规划 - 2" href="15637092754569.html">动态规划 - 2</a></li>
+                        
+                          <li><a title="其他" href="15632741408063.html">其他</a></li>
+                        
+                          <li><a title="动态规划 - 2" href="15621444826793.html">动态规划 - 2</a></li>
+                        
+                          <li><a title="字符串" href="15621426919335.html">字符串</a></li>
+                        
+                          <li><a title="贪心策略" href="15621379435201.html">贪心策略</a></li>
+                        
+                          <li><a title="动态规划 - 1" href="15618801162146.html">动态规划 - 1</a></li>
+                        
+                          <li><a title="回溯" href="15617108626739.html">回溯</a></li>
+                        
+                          <li><a title="组合博弈" href="15617105581442.html">组合博弈</a></li>
+                        
+                          <li><a title="temp" href="15600064978396.html">temp</a></li>
+                        
+                          <li><a title="筛选法" href="15600041568309.html">筛选法</a></li>
+                        
+                          <li><a title="Sell Stock" href="15592212071515.html">Sell Stock</a></li>
+                        
+                          <li><a title="dfs" href="15590119399452.html">dfs</a></li>
+                        
+                          <li><a title="Index" href="15578365171892.html">Index</a></li>
+                        
+                          <li><a title="排序" href="15578363359025.html">排序</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>算法</span></li>
+                        
+                          <li><a title="海量数据" href="15635229096880.html">海量数据</a></li>
+                        
+                          <li><a title="缓存" href="15616272119801.html">缓存</a></li>
+                        
+                          <li><a title="位操作" href="15421595266112.html">位操作</a></li>
+                        
+                          <li><a title="数据结构-搜索树" href="15382213735628.html">数据结构-搜索树</a></li>
+                        
+                          <li><a title="数据结构-查找" href="15381206652033.html">数据结构-查找</a></li>
+                        
+                          <li><a title="数据结构-栈与队列" href="15377961916563.html">数据结构-栈与队列</a></li>
+                        
+                          <li><a title="数据结构-树" href="15376956161325.html">数据结构-树</a></li>
+                        
+                          <li><a title="数据结构-图" href="15366535602244.html">数据结构-图</a></li>
+                        
+                          <li><a title="数据结构-排序" href="15366378611089.html">数据结构-排序</a></li>
+                        
+                          <li><a title="数据结构-线性表" href="15365715348624.html">数据结构-线性表</a></li>
+                        
+                          <li><a title="数据结构-绪论" href="15364817197942.html">数据结构-绪论</a></li>
+                        
+                          <li><a title="算法学习路径" href="15289789971496.html">算法学习路径</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>工具</span></li>
+                        
+                          <li><a title="MyBatis" href="15590240129274.html">MyBatis</a></li>
+                        
+                          <li><a title="Guava" href="15573643454153.html">Guava</a></li>
+                        
+                          <li><a title="Lombok" href="15571355421205.html">Lombok</a></li>
+                        
+                          <li><a title="IntelliJ-IDEA" href="15568897283887.html">IntelliJ-IDEA</a></li>
+                        
+                          <li><a title="Git" href="15568705670148.html">Git</a></li>
+                        
+                          <li><a title="Maven" href="15547227910617.html">Maven</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>网络</span></li>
+                        
+                          <li><a title="Netty" href="15633460791334.html">Netty</a></li>
+                        
+                          <li><a title="Http 授权" href="15629155221529.html">Http 授权</a></li>
+                        
+                          <li><a title="Https" href="15627233138405.html">Https</a></li>
+                        
+                          <li><a title="Http" href="15627233041942.html">Http</a></li>
+                        
+                          <li><a title="TCP" href="15627232889065.html">TCP</a></li>
+                        
+                          <li><a title="重要知识点" href="15561544288813.html">重要知识点</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Linux</span></li>
+                        
+                          <li><a title="Linux - I/O 模型" href="15560816178760.html">Linux - I/O 模型</a></li>
+                        
+                          <li><a title="Linux" href="15556621779917.html">Linux</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>测试相关</span></li>
+                        
+                          <li><a title="Mockito" href="15590126556449.html">Mockito</a></li>
+                        
+                          <li><a title="测试相关" href="15587730878715.html">测试相关</a></li>
+                        
+                          <li><a title="JUnit" href="15579238927247.html">JUnit</a></li>
+                        
+                          <li><a title="测试" href="15579095305456.html">测试</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>Web</span></li>
+                        
+                          <li><a title="Http 缓存控制" href="15616231135862.html">Http 缓存控制</a></li>
+                        
+                          <li><a title="HTTP API 认证" href="15616218028083.html">HTTP API 认证</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>其他</span></li>
+                        
+                          <li><a title="计算机中的时间处理" href="15414917404912.html">计算机中的时间处理</a></li>
+                        
+
+                    
+                  </ul>
+                </nav>
+                </div>
+              </div>
+            </div>
+            <div class="large-9 medium-9 columns">
+
+ <div class="markdown-body">
+<h1>分布式 - 一致性协议</h1>
+
+<ul>
+<li>
+<a href="#toc_0">概念</a>
+<ul>
+<li>
+<a href="#toc_1">单机一致性</a>
+</li>
+<li>
+<a href="#toc_2">分布式一致性</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_3">XA 规范</a>
+</li>
+<li>
+<a href="#toc_4">2PC</a>
+<ul>
+<li>
+<a href="#toc_5">阶段一</a>
+</li>
+<li>
+<a href="#toc_6">阶段二</a>
+</li>
+<li>
+<a href="#toc_7">优缺分析</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_8">3PC</a>
+<ul>
+<li>
+<a href="#toc_9">阶段一</a>
+</li>
+<li>
+<a href="#toc_10">阶段二</a>
+</li>
+<li>
+<a href="#toc_11">阶段三</a>
+</li>
+<li>
+<a href="#toc_12">优缺分析</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_13">Paxos</a>
+<ul>
+<li>
+<a href="#toc_14">节点角色</a>
+</li>
+<li>
+<a href="#toc_15">协议过程</a>
+</li>
+<li>
+<a href="#toc_16">活性保证</a>
+</li>
+<li>
+<a href="#toc_17">Learner 策略</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_18">小结</a>
+</li>
+<li>
+<a href="#toc_19">参考</a>
+</li>
+</ul>
+
+
+<h2 id="toc_0">概念</h2>
+
+<p>很多时候说到一致性的时候，很容易与把单机数据库的一致性概念与分布式一致性的概念弄混。</p>
+
+<h3 id="toc_1">单机一致性</h3>
+
+<p>回忆 CAP 原理，单机数据库符合 CA 模型，所以这里的一致性一般是强一致性，即我们非常熟悉的数据库中的 ACID 原则。</p>
+
+<h3 id="toc_2">分布式一致性</h3>
+
+<p>分布式事务是指会涉及到操作多个数据库的事务，其实就是将对同一库事务的概念扩大到了对多个库的事务。目的是为了保证分布式系统中的数据一致性。</p>
+
+<p>分布式事务处理的关键是：</p>
+
+<ul>
+<li><strong>需要记录事务在任何节点所做的所有动作</strong>。</li>
+<li><strong>事务进行的所有操作要么全部提交，要么全部回滚</strong>。</li>
+</ul>
+
+<p>分布式一致性算法还有有两个重要的属性：</p>
+
+<ol>
+<li><strong>活性</strong>(liveness)，即指那些一定会发生的事情</li>
+<li><strong>安全性</strong>(safety)，即指那些一定不会发生的事情</li>
+</ol>
+
+<h2 id="toc_3">XA 规范</h2>
+
+<p>XA规范是由 X/Open 组织定义的分布式事务处理模型，包含以下四个组成部分：</p>
+
+<ul>
+<li>应用程序(AP)</li>
+<li>事务管理器(TM)：交易中间件等</li>
+<li>资源管理器(RM)：关系型数据库等</li>
+<li>通信资源管理器(CRM)：消息中间件等</li>
+</ul>
+
+<p>XA规范定义了<strong>交易中间件与数据库之间的接口规范</strong>（即接口函数），交易中间件用它来通知数据库事务的开始、结束以及提交、回滚等。<br/>
+而XA接口函数由数据库厂商提供。即：</p>
+
+<ol>
+<li>配置TM，给TM注册RM作为数据源。其中，一个TM可以注册多个RM。</li>
+<li>AP向TM发起一个全局事务。这时，TM会发送一个XID（全局事务ID）通知各个RM。</li>
+<li>AP从TM获取资源管理器的代理（例如：使用JTA接口，从TM管理的上下文中，获取出这个TM所管理的RM的JDBC连接或JMS连接）。</li>
+<li>AP通过从TM中获取的连接，间接操作RM进行业务操作。TM在每次AP操作时把XID传递给RM，RM正是通过这个XID关联来操作和事务的关系的。</li>
+<li>AP结束全局事务时，TM会通知RM全局事务结束。开始二段提交，也就是prepare - commit的过程。</li>
+</ol>
+
+<p><img src="media/15564260705049/15564277477698.png" alt=""/></p>
+
+<h2 id="toc_4">2PC</h2>
+
+<p>分布式环境下虽然单机中每个节点都能明确知道自己事务提交结果，但是无法直接获得其他节点的操作结果。<br/>
+所以引入一个组件来保存事务处理 ACID 的特性，即<strong>协调者</strong>(Coordinator)来统一调度所有分布式节点的执行逻辑。<br/>
+那么被调度的节点就称为<strong>参与者</strong>(Participant)。<br/>
+2PC 即两段式提交协议(Two-Phase Commit)。是为了保存事务原子性和一致性设计的一种算法。而且绝大部分关系型数据库也是采用 2PC 算法来保证一致性的。</p>
+
+<h3 id="toc_5">阶段一</h3>
+
+<p><strong>提交事务请求</strong></p>
+
+<ol>
+<li>事务询问
+<ul>
+<li>协调者向所有参与者发送事务内容，询问是否可以执行，并等待响应。</li>
+</ul></li>
+<li>执行事务
+<ul>
+<li>各参与者执行事务，并在事务日志中记录 Undo 和 Redo 信息。</li>
+</ul></li>
+<li>参与者响应
+<ul>
+<li>各参与者给予协调者事务执行结果的反馈。</li>
+</ul></li>
+</ol>
+
+<p>类似于协调者组织参与者对一次事务操作的投票表态过程，因此这一阶段也可以叫做投票阶段。</p>
+
+<p><img src="media/15564260705049/15564268553889.png" alt=""/></p>
+
+<h3 id="toc_6">阶段二</h3>
+
+<p><strong>执行事务提交</strong><br/>
+执行事务提交还有可能有两种情况，直接执行事务提交，或者中断事务。<br/>
+如果各参与者<strong>都反馈了成功执行的响应</strong>。那么就会<strong>执行事务提交</strong>：</p>
+
+<ol>
+<li>发送提交请求
+<ul>
+<li>协调者向各参与者发出 Commit 请求。</li>
+</ul></li>
+<li>事务提交
+<ul>
+<li>参与者收到 Commit 请求后，正式提交事务，并释放事务资源。</li>
+</ul></li>
+<li>反馈提交结果
+<ul>
+<li>参与者完成提交后，向协调者发送 Ack 信息。</li>
+</ul></li>
+<li>完成事务
+<ul>
+<li>协调者收到所有 Ack 信息，事务完成。</li>
+</ul></li>
+</ol>
+
+<p><img src="media/15564260705049/15564268706734.png" alt=""/></p>
+
+<p>如果有参与者执行失败，那么就<strong>中断事务</strong>：</p>
+
+<ol>
+<li>发送回滚请求
+<ul>
+<li>协调者向各参与者发出 Rollbakc 请求。</li>
+</ul></li>
+<li>事务回滚
+<ul>
+<li>参与者收到 Rollback 请求后，使用日志中的 Undo 来执行事务回滚，并释放资源。</li>
+</ul></li>
+<li>反馈回滚结果
+<ul>
+<li>参与者完成回滚后，向协调者发送 Ack 信息。</li>
+</ul></li>
+<li>中断事务
+<ul>
+<li>协调者收到所有参与者的 Ack 信息，完成事务中断。</li>
+</ul></li>
+</ol>
+
+<p><img src="media/15564260705049/15564268927642.png" alt=""/></p>
+
+<p>即将事务分为投票和执行两个阶段。对每个事务都采用先尝试后提交的处理方式。因此可以将两段式提交视作一种强一致性算法。</p>
+
+<h3 id="toc_7">优缺分析</h3>
+
+<p><strong>优点</strong>：原理简单，实现方便。</p>
+
+<p><strong>缺点</strong>：同步阻塞，单点问题，脑裂，过于保守。</p>
+
+<ul>
+<li>同步阻塞，在第二阶段提交时所有参与者都会阻塞。</li>
+<li>单点问题，无法保证协调者的稳定。</li>
+<li>数据不一致，如果第二阶段<strong>发送 Commit 请求时如果只有部分节点接收到</strong>，会发生数据不一致。</li>
+<li>容错性不好，二阶段没有比较好的容错机制。</li>
+</ul>
+
+<h2 id="toc_8">3PC</h2>
+
+<p>其实容易看出 2PC 的问题在于二阶段没有比较好的容错机制。所以提出了 3PC 来改善。三阶段提交有两个改善：</p>
+
+<ol>
+<li><strong>引入超时机制</strong>，同时在协调者和参与者中都引入超时机制。</li>
+<li>在第一阶段和第二阶段中<strong>插入一个准备阶段</strong>，保证了在最后提交阶段之前各参与节点的状态是一致的。</li>
+</ol>
+
+<h3 id="toc_9">阶段一</h3>
+
+<p><strong>CanCommit</strong></p>
+
+<ol>
+<li>事务询问
+<ul>
+<li>协调者发送一个包含事务的 canCommit 请求</li>
+</ul></li>
+<li>反馈询问结果
+<ul>
+<li>收到 canCommit 请求后，可以执行反馈 Yes，否则 No</li>
+</ul></li>
+</ol>
+
+<h3 id="toc_10">阶段二</h3>
+
+<p><strong>PreCommit</strong><br/>
+同理分为执行提交和中断事务两种情况：<br/>
+如果都是 Yes 反馈，<strong>执行事务预提交</strong>：</p>
+
+<ol>
+<li>发送预提交请求
+<ul>
+<li>协调者向各参与者发送 preCommit 请求，并进入 Prepared 阶段。</li>
+</ul></li>
+<li>事务预提交
+<ul>
+<li>参与者收到 preCommit 请求，执行事务，并记录 Undo 和 Redo 日志。</li>
+</ul></li>
+<li>反馈提交结果
+<ul>
+<li>参与者成功执行反馈 Ack，同时等待最终指令，commit 或 abort</li>
+</ul></li>
+</ol>
+
+<p>如果存在 No 反馈，<strong>执行事务中断</strong>：</p>
+
+<ol>
+<li>发送中断请求
+<ul>
+<li>协调者向各节点发送 abort 球球</li>
+</ul></li>
+<li>中断事务
+<ul>
+<li>如果收到 abort 请求或等到协调者超时，都会中断事务。</li>
+</ul></li>
+</ol>
+
+<h3 id="toc_11">阶段三</h3>
+
+<p><strong>doCommit</strong><br/>
+进行真正的事务提交，还是分为两种情况来讨论：<br/>
+<strong>执行提交</strong>：</p>
+
+<ol>
+<li>发送提交请求
+<ul>
+<li>协调者收到了所有 Ack 响应，从预提交转到提交状态，并发送 doCommit 请求。</li>
+</ul></li>
+<li>事务提交
+<ul>
+<li>执行提交，释放资源</li>
+</ul></li>
+<li>反馈事务提交结果
+<ul>
+<li>提交成功发送 Ack</li>
+</ul></li>
+<li>完成事务
+<ul>
+<li>协调者收到所有 Ack 完成事务</li>
+</ul></li>
+</ol>
+
+<p>如果进入这一阶段，协调者正常，并且有任意一个参与者反馈了 No 响应或等待超时，就会<br/>
+<strong>中断事务</strong>：</p>
+
+<ol>
+<li>发送中断请求
+<ul>
+<li>协调者发送 Abort 请求</li>
+</ul></li>
+<li>事务回滚
+<ul>
+<li>参与收到 Abort 请求，使用 Undo 日志来回滚</li>
+</ul></li>
+<li>反馈回滚结果
+<ul>
+<li>参与者回滚完毕发送 Ack</li>
+</ul></li>
+<li>中断事务
+<ul>
+<li>协调者收到所有 Ack，事务成功中断</li>
+</ul></li>
+</ol>
+
+<p>需要注意的是，一旦进入阶段三，可能会存在以下两种故障：</p>
+
+<ul>
+<li>协调者出现问题</li>
+<li>协调者与参与者之间网络故障</li>
+</ul>
+
+<p>无论哪种情况，在参与者等待第三阶段的 doCommit 和 abort 请求超时时会继续事务的提交。</p>
+
+<p><img src="media/15564260705049/15564279360205.png" alt=""/></p>
+
+<h3 id="toc_12">优缺分析</h3>
+
+<p><strong>优点</strong>：</p>
+
+<ul>
+<li>降低了参与者的阻塞范围</li>
+<li>出现单点故障后能保持一致性</li>
+</ul>
+
+<p><strong>缺点</strong>：</p>
+
+<ul>
+<li>参与者接受到 preCommit 之后，如果网络分区，协调者和参与者无法通信，参与者继续事务提交，会违反一致性。</li>
+</ul>
+
+<h2 id="toc_13">Paxos</h2>
+
+<p>占拜庭问题说明了，从理论上想要在<strong>异步和不可靠信道</strong>上达到一致状态是不可能的。所以我们在研究一致性的过程中往往<strong>假设信道是可靠的</strong>。即：</p>
+
+<ul>
+<li>存在<strong>节点宕机</strong>或<strong>网络异常</strong> (包括消息的重复、丢失、延迟、乱序、网络分区)等情况。</li>
+<li>但<strong>信息不会被损坏或篡改</strong>。<br/>
+Paxos 算法主要就是解决如何在一个 发生如上故障的分布式系统中，<strong>快速正确的在集群内对某个值达成一致，并且保证整个系统的一致性</strong>。</li>
+</ul>
+
+<h3 id="toc_14">节点角色</h3>
+
+<ol>
+<li><strong>Proposer</strong> : 负责提出提案 (Proposal)。</li>
+<li><strong>Accecptor</strong> : 负责接受提案，一旦接受提案，提案里面的 value 值就被选定了。</li>
+<li><strong>Learner</strong> : Acceptor 告诉 Learner 哪个提案被选定了，那么 Learner 就学习这个被选择的 value。</li>
+</ol>
+
+<p><img src="media/15564260705049/15565054547401.png" alt=""/></p>
+
+<h3 id="toc_15">协议过程</h3>
+
+<p>Paxos 基于<strong>2PC</strong>进行了扩展。可以对比一下过程的差异。<br/>
+以下是 Proposer 与 Accecptor 协商过程，具体推导过程可以查看参考2：</p>
+
+<p><strong>准备(Prepare)阶段</strong></p>
+
+<ol>
+<li>Proposer 选定提议 P1(x, v)，其中 x 表示序号，v 表示值。Proposer 将这个提议发送给 Accecptor，等待大多数节点的返回。</li>
+<li>Acceptor在收到提议 P1(x, v)后，判断：
+<ul>
+<li>如果提议是该 Acceptor 收到的第一个提议，必须接受，该 Acceptor 保证未来不会接受序号小于 x 的请求。</li>
+<li>如果该 Acceptor 之前有接受过提议，比较 x 和之间和之前接受的最高序列号的提议，比如 P2(y,v2)：
+<ul>
+<li>如果 x&lt;y，回复拒绝和 y 值</li>
+<li>如果 x&gt;y，回复同意和 P2(y, v2)</li>
+</ul></li>
+</ul></li>
+</ol>
+
+<p><strong>接受(Accept)阶段</strong></p>
+
+<ol>
+<li>如果大半 Acceptor 拒绝提议或无回复，Proposer 取消本次提议。</li>
+<li>如果大半 Acceptor 接受提议。Proposer 从这些值中任选一个值（如果没有值被接受，选择自己的值）。发送 Accept(x, v)。
+<ul>
+<li>当 Acceptor 收到 Accept(x, v)，如果满足下面的两个条件，就发送 Accept ，否则返回 error。
+<ul>
+<li>v 和之前接受的某个值相同</li>
+<li>x 是该 Acceptor 所接受提议中序列号的最大值</li>
+</ul></li>
+</ul></li>
+<li>如果 Proposer 发现没用过半节点 Accept，则取消这次提议然后重新开始，否则协商结束。</li>
+</ol>
+
+<p><img src="media/15564260705049/15565056416024.png" alt=""/></p>
+
+<p>如果我们指定集群中同一时间只能有一个 Proposer 作为 Leader，并且要求所有节点都要投票呢？Paxos 算法就会退化 2PC，所以实际上 2PC 是 Paxos 的一个特例。</p>
+
+<h3 id="toc_16">活性保证</h3>
+
+<p>如果有两个 Proposer 依次提出编号递增的提案，可能会导致系统陷入死循环。<br/>
+<img src="media/15564260705049/15565069270120.png" alt=""/></p>
+
+<p>即可以通过选取主 Proposer 作为一个 Leader 节点来保证算法的活性。<br/>
+一般的实践中比如 ZAB 算法就是这么做的。</p>
+
+<h3 id="toc_17">Learner 策略</h3>
+
+<p>如果一个value 被选定，Learner 学习选定 value 方案也有不同的方案：<br/>
+<img src="media/15564260705049/15565057418163.png" alt=""/></p>
+
+<h2 id="toc_18">小结</h2>
+
+<p><img src="media/15564260705049/15565239276754.png" alt=""/></p>
+
+<h2 id="toc_19">参考</h2>
+
+<ol>
+<li><a href="https://juejin.im/post/5b2664446fb9a00e4a53136e">分布式理论(三) - 2PC协议</a></li>
+<li><a href="https://juejin.im/post/5b2664bd51882574874d8a76">分布式理论(五) - 一致性算法Paxos</a></li>
+<li><a href="">《从PAXOS到ZOOKEEPER分布式一致性原理与实践》</a></li>
+<li><a href="https://juejin.im/post/5a759bb06fb9a0636263ab57">简单理解Paxos算法（译）</a></li>
+</ol>
+
+
+</div>
+
+<br /><br />
+<hr />
+
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="15565438727155.html"  title="Previous Post: Redis 实现分布式锁">&laquo; Redis 实现分布式锁</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="15561544288813.html" 
+	        title="Next Post: 重要知识点">重要知识点 &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
+
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
+
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '15564260705049.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
+</div></div>
+
+
+<div class="page-bottom">
+  <div class="row">
+  <hr />
+  <div class="small-9 columns">
+  <p class="copyright">Copyright &copy; 2015
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+  <div class="small-3 columns">
+  <p class="copyright text-right"><a href="#header">TOP</a></p>
+  </div>
+   
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+    
+    
+    <script src="asset/js/foundation.min.js"></script>
+    <script src="asset/js/foundation/foundation.offcanvas.js"></script>
+    <script>
+      $(document).foundation();
+
+     
+    </script>
+    
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+
+  </body>
+</html>

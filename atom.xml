@@ -1,0 +1,1577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[NeverMoes 的笔记]]></title>
+  <link href="nevermoes.github.io/atom.xml" rel="self"/>
+  <link href="nevermoes.github.io/"/>
+  <updated>2019-07-28T00:37:30+08:00</updated>
+  <id>nevermoes.github.io/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://www.mweb.im">MWeb</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[栈]]></title>
+    <link href="nevermoes.github.io/15641207902154.html"/>
+    <updated>2019-07-26T13:59:50+08:00</updated>
+    <id>nevermoes.github.io/15641207902154.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">可能的出入栈顺序</h2>
+
+<blockquote>
+<p><strong>问题</strong>：<a href="https://leetcode.com/problems/validate-stack-sequences/">946. Validate Stack Sequences</a><br/>
+给定出入栈的顺序，判断是否是正确的出入栈顺序。</p>
+
+<p><strong>思路</strong>：</p>
+</blockquote>
+
+<pre class="line-numbers"><code class="language-java">class Solution {
+    public boolean validateStackSequences(int[] pushed, int[] popped) {
+        Stack&lt;Integer&gt; s = new Stack&lt;&gt;();
+        int i = 0;
+        for (int x : pushed) {
+            s.push(x);
+            while (!s.empty() &amp;&amp; s.peek() == popped[i]) {
+                s.pop();
+                i++;
+            }
+        }
+        return i == popped.length;
+    }
+}
+</code></pre>
+
+<blockquote>
+<p><strong>时间复杂度</strong>：<br/>
+<strong>空间复杂度</strong>：</p>
+
+<p><strong>优化</strong>：</p>
+</blockquote>
+
+<h2 id="toc_1">最小栈</h2>
+
+<blockquote>
+<p><strong>问题</strong>：<a href="https://leetcode.com/problems/min-stack/">155. Min Stack</a><br/>
+实现一个最小栈，可以以常数时间实现 push, pop, top 和 getMin。</p>
+
+<p><strong>思路</strong>：</p>
+</blockquote>
+
+<p><strong>双栈</strong></p>
+
+<pre class="line-numbers"><code class="language-java">class MinStack {
+    Stack&lt;Integer&gt; stack = new Stack&lt;Integer&gt;();
+    Stack&lt;Integer&gt; minStack = new Stack&lt;Integer&gt;();
+    
+    public void push(int x) {
+        stack.push(x);
+        if(minStack.isEmpty() || minStack.peek() &gt;= x)
+            minStack.push(x);
+    }
+    
+    public void pop() {
+        if (stack.isEmpty())
+            return ;
+        
+        int x = stack.pop();
+        if(minStack.peek() == x)
+            minStack.pop();
+    }
+    
+    public int top() {
+        return stack.peek();
+    }
+    
+    public int getMin() {
+        return minStack.peek();
+    }
+}
+</code></pre>
+
+<p><strong>单栈</strong></p>
+
+<pre class="line-numbers"><code class="language-java">class MinStack {
+    int min = Integer.MAX_VALUE;
+    Stack&lt;Integer&gt; stack = new Stack&lt;Integer&gt;();
+    
+    public void push(int x) {
+        // 注意这里
+        if(x &lt;= min){          
+            stack.push(min);
+            min=x;
+        }
+        stack.push(x);
+    }
+
+    public void pop() {
+        if(stack.pop() == min)
+            min=stack.pop();
+    }
+
+    public int top() {
+        return stack.peek();
+    }
+
+    public int getMin() {
+        return min;
+    }
+}
+</code></pre>
+
+<blockquote>
+<p><strong>时间复杂度</strong>：<br/>
+<strong>空间复杂度</strong>：</p>
+
+<p><strong>优化</strong>：</p>
+</blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[链表]]></title>
+    <link href="nevermoes.github.io/15640409436152.html"/>
+    <updated>2019-07-25T15:49:03+08:00</updated>
+    <id>nevermoes.github.io/15640409436152.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">倒数第K个节点</h2>
+
+<blockquote>
+<p><strong>问题</strong>：<a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/">19. Remove Nth Node From End of List</a></p>
+</blockquote>
+
+<pre class="line-numbers"><code class="language-java">public class Solution {
+    public ListNode FindKthToTail(ListNode head, int k) {
+        if (k &lt; 1 || head == null) {
+            return null;
+        }
+        
+        ListNode tail = head, cur = head;
+        
+        for (int i=0; i&lt;k; i++) {
+            if (tail == null) {
+                return null;
+            }
+            tail = tail.next;
+        }
+        
+        while (tail != null) {
+            tail = tail.next;
+            cur = cur.next;
+        }
+        
+        return cur;
+    }
+}
+</code></pre>
+
+<h2 id="toc_1">反转链表</h2>
+
+<blockquote>
+<p><strong>问题</strong>：<a href="https://leetcode.com/problems/reverse-linked-list/">206. Reverse Linked List</a></p>
+</blockquote>
+
+<pre class="line-numbers"><code class="language-java">public class Solution {
+    public ListNode ReverseList(ListNode head) {
+        if (head == null || head.next == null){
+            return head;
+        }
+        
+        ListNode pre = head;
+        ListNode cur = head.next;
+        ListNode next = head.next.next;
+        
+        while (true) {
+            cur.next = pre;
+            if (next == null) {
+                break;
+            }
+            pre = cur;
+            cur = next;
+            next = next.next;
+        }
+        head.next = null;
+        return cur;
+    }
+}
+</code></pre>
+
+<p><strong>另一种更加简洁的解法</strong></p>
+
+<pre class="line-numbers"><code class="language-java">class Solution {
+    public ListNode reverseList(ListNode head) {
+        ListNode pre = null;
+        ListNode nex = null;
+
+        while(head != null){
+            nex = head.next;
+            head.next = pre;
+            pre = head;
+            head = nex;
+        }
+        return pre;
+    }
+}
+</code></pre>
+
+<h2 id="toc_2">合并有序链表</h2>
+
+<blockquote>
+<p><strong>问题</strong>：<a href="https://leetcode.com/problems/merge-two-sorted-lists/">21. Merge Two Sorted Lists</a></p>
+</blockquote>
+
+<p><strong>迭代解</strong></p>
+
+<pre class="line-numbers"><code class="language-java">public class Solution {
+    public ListNode mergeTwoLists(ListNode list1,ListNode list2) {
+        if (list1 == null) {
+            return list2;
+        }
+        if (list2 == null) {
+            return list1;
+        }
+        
+        ListNode head, next1, next2;
+        if (list1.val &lt; list2.val) {
+            head = list1;
+            next1 = list1.next;
+            next2 = list2;
+        } else {
+            head = list2;
+            next1 = list1;
+            next2 = list2.next;
+        }
+        
+        ListNode cur = head;
+        while (next1 != null &amp;&amp; next2 != null) {
+            if (next1.val &lt; next2.val) {
+                cur.next = next1;
+                cur = cur.next;
+                next1 = next1.next;
+            } else {
+                cur.next = next2;
+                cur = cur.next;
+                next2 = next2.next;
+            }
+        }
+        
+        cur.next = next1 == null? next2 : next1;
+        return head;
+    }
+}
+</code></pre>
+
+<p><strong>递归解</strong></p>
+
+<pre class="line-numbers"><code class="language-java">class Solution {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2){
+        if(l1 == null) return l2;
+        if(l2 == null) return l1;
+        if(l1.val &lt; l2.val){
+            l1.next = mergeTwoLists(l1.next, l2);
+            return l1;
+        } else{
+            l2.next = mergeTwoLists(l1, l2.next);
+            return l2;
+        }
+    }
+}
+</code></pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[位运算]]></title>
+    <link href="nevermoes.github.io/15640226818030.html"/>
+    <updated>2019-07-25T10:44:41+08:00</updated>
+    <id>nevermoes.github.io/15640226818030.html</id>
+    <content type="html"><![CDATA[
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[树相关]]></title>
+    <link href="nevermoes.github.io/15638876391543.html"/>
+    <updated>2019-07-23T21:13:59+08:00</updated>
+    <id>nevermoes.github.io/15638876391543.html</id>
+    <content type="html"><![CDATA[
+<ul>
+<li>
+<a href="#toc_0">遍历</a>
+<ul>
+<li>
+<a href="#toc_1">前序</a>
+</li>
+<li>
+<a href="#toc_2">中序</a>
+</li>
+<li>
+<a href="#toc_3">后序</a>
+</li>
+<li>
+<a href="#toc_4">层序</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_5">相似树</a>
+</li>
+<li>
+<a href="#toc_6">判断子树</a>
+</li>
+<li>
+<a href="#toc_7">判断子结构</a>
+</li>
+<li>
+<a href="#toc_8">路径和</a>
+</li>
+</ul>
+
+
+<h2 id="toc_0">遍历</h2>
+
+<h3 id="toc_1">前序</h3>
+
+<h3 id="toc_2">中序</h3>
+
+<h3 id="toc_3">后序</h3>
+
+<h3 id="toc_4">层序</h3>
+
+<pre class="line-numbers"><code class="language-java">public class Solution {
+    public ArrayList&lt;Integer&gt; PrintFromTopToBottom(TreeNode root) {
+        ArrayList&lt;Integer&gt; resList = new ArrayList&lt;&gt;();
+        if (root == null) 
+            return resList;
+        Queue&lt;TreeNode&gt; queue = new LinkedList&lt;&gt;();
+        queue.offer(root);
+        while(!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            resList.add(node.val);
+            if (node.left != null) {
+                queue.offer(node.left);
+            }
+            if (node.right != null) {
+                queue.offer(node.right);
+            }
+        }
+        return resList;
+    }
+}
+</code></pre>
+
+<h2 id="toc_5">相似树</h2>
+
+<pre class="line-numbers"><code class="language-java">class Solution {
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        if(p==null&amp;&amp;q==null) return true;
+        if(p==null||q==null) return false;
+        if(p.val!=q.val) return false;
+        return isSameTree(p.left,q.left) &amp;&amp; isSameTree(p.right,q.right);
+    }
+}
+</code></pre>
+
+<h2 id="toc_6">判断子树</h2>
+
+<pre class="line-numbers"><code class="language-java">public class Solution {
+    public boolean isSubtree(TreeNode s, TreeNode t) {
+        if (s == null) return false;
+        if (isSame(s, t)) return true;
+        return isSubtree(s.left, t) || isSubtree(s.right, t);
+    }
+    
+    private boolean isSame(TreeNode s, TreeNode t) {
+        if (s == null &amp;&amp; t == null) return true;
+        if (s == null || t == null) return false;
+        
+        if (s.val != t.val) return false;
+        
+        return isSame(s.left, t.left) &amp;&amp; isSame(s.right, t.right);
+    }
+}
+</code></pre>
+
+<h2 id="toc_7">判断子结构</h2>
+
+<pre class="line-numbers"><code class="language-java">public class Solution {
+    public boolean HasSubtree(TreeNode root1,TreeNode root2) {
+        if (root1 == null || root2 == null)
+            return false;
+        if (root1.val == root2.val) 
+            if (sameStruct(root1, root2))
+                return true;
+        return HasSubtree(root1.left, root2)
+            || HasSubtree(root1.right, root2);
+    }
+    public boolean sameStruct(TreeNode t, TreeNode s) {
+        if (s==null)
+            return true;
+        if (t==null)
+            return false;
+        if (t.val != s.val)
+            return false;
+        return sameStruct(t.left, s.left) &amp;&amp; sameStruct(t.right, s.right);
+    }
+}
+</code></pre>
+
+<h2 id="toc_8">路径和</h2>
+
+<blockquote>
+<p><strong>问题</strong>：<a href="https://leetcode.com/problems/path-sum/">112. Path Sum</a></p>
+
+<p><strong>思路</strong>：</p>
+</blockquote>
+
+<pre class="line-numbers"><code class="language-java">class Solution {
+    public boolean hasPathSum(TreeNode root, int sum) {
+        if (root == null)
+            return false;
+        if (root.left == null &amp;&amp; root.right == null &amp;&amp; sum == root.val) 
+            return true;
+        return hasPathSum(root.left, sum-root.val)
+            || hasPathSum(root.right, sum-root.val);
+    }
+}
+</code></pre>
+
+<blockquote>
+<p><strong>时间复杂度</strong>：<br/>
+<strong>空间复杂度</strong>：</p>
+
+<p><strong>优化</strong>：</p>
+
+<p><strong>问题</strong>：<a href="https://leetcode.com/problems/path-sum-ii/">113. Path Sum II</a></p>
+
+<p><strong>思路</strong>：</p>
+</blockquote>
+
+<pre class="line-numbers"><code class="language-java">class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; pathSum(TreeNode root, int sum) {
+        List&lt;List&lt;Integer&gt;&gt; resList = new ArrayList&lt;&gt;();
+        helper(root, sum, new ArrayList&lt;&gt;(), resList);
+        return resList;
+    }
+    
+    public void helper(TreeNode root, int sum,
+                       List&lt;Integer&gt; curList,
+                       List&lt;List&lt;Integer&gt;&gt; resList) {
+        if (root == null)
+            return;
+        
+        curList.add(root.val);
+            
+        if(root.left == null &amp;&amp; root.right == null &amp;&amp; sum==root.val) {
+            resList.add(curList);
+            return;
+        }
+        
+        helper(root.left, sum-root.val, new ArrayList&lt;&gt;(curList), resList);
+        helper(root.right, sum-root.val, new ArrayList&lt;&gt;(curList), resList);
+    }
+}
+</code></pre>
+
+<pre class="line-numbers"><code class="language-java">class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; pathSum(TreeNode root, int sum) {
+        List&lt;List&lt;Integer&gt;&gt; resList = new ArrayList&lt;&gt;();
+        helper(root, sum, new ArrayList&lt;&gt;(), resList);
+        return resList;
+    }
+    
+    public void helper(TreeNode root, int sum,
+                       List&lt;Integer&gt; curList,
+                       List&lt;List&lt;Integer&gt;&gt; resList) {
+        if (root == null)
+            return;
+        
+        curList.add(root.val);
+            
+        if(root.left == null &amp;&amp; root.right == null &amp;&amp; sum==root.val) {
+            resList.add(new ArrayList&lt;&gt;(curList));
+            // 注意这里的回退
+            curList.remove(curList.size() - 1);
+            return;
+        }
+        
+        helper(root.left, sum-root.val, curList, resList);
+        helper(root.right, sum-root.val, curList, resList);
+        curList.remove(curList.size()-1);
+    }
+}
+</code></pre>
+
+<blockquote>
+<p><strong>时间复杂度</strong>：<br/>
+<strong>空间复杂度</strong>：</p>
+
+<p><strong>优化</strong>：</p>
+</blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[并查集(union-find)]]></title>
+    <link href="nevermoes.github.io/15637156793274.html"/>
+    <updated>2019-07-21T21:27:59+08:00</updated>
+    <id>nevermoes.github.io/15637156793274.html</id>
+    <content type="html"><![CDATA[
+<ul>
+<li>
+<a href="#toc_0">基本实现</a>
+<ul>
+<li>
+<a href="#toc_1">优化</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_2">朋友关系</a>
+</li>
+<li>
+<a href="#toc_3">最长连续序列</a>
+</li>
+<li>
+<a href="#toc_4">参考</a>
+</li>
+</ul>
+
+
+<h2 id="toc_0">基本实现</h2>
+
+<pre class="line-numbers"><code class="language-java">class UnionFind {
+    private int[] nodes;
+    
+    public UnionFind(int n) {
+        int[] node = new int[n];
+        for(int i=0; i&lt;n; i++) {
+            node[i] = i;
+        }
+    }
+    
+    boolean union(int a, int b) {
+        int rootA = find(a), rootB = find(b);
+        if (rootA == rootB) // 已经 union 过的情况
+            return false;
+        nodes[rootB] = rootA;
+        return true;
+    }
+    
+    int find(int k) {
+        int root = k;
+        // 判断是否到达根节点
+        while (root != nodes[root])
+            // 这里相当于获取 parent 节点
+            root = nodes[root]
+        return root;
+    }
+}
+</code></pre>
+
+<h3 id="toc_1">优化</h3>
+
+<ol>
+<li><strong>小树合并大树</strong>，即在根节点中维护深度，每次把深度小的合并到深度大的上面，这样可以保证整棵树的深度相对较低。</li>
+<li><strong>路径压缩</strong>，将路径上的节点之间与根节点相关联，这样可以缩短从某个节点搜索根节点的路径长度。</li>
+</ol>
+
+<pre class="line-numbers"><code class="language-java">int find(x) {
+    if (nodes[x] != x)
+        nodes[x] = find(nodes[x]);
+    return nodes[x];
+}
+</code></pre>
+
+<p>优化后的 union-find 基本结构为：</p>
+
+<pre class="line-numbers"><code class="language-java">
+
+</code></pre>
+
+<h2 id="toc_2">朋友关系</h2>
+
+<blockquote>
+<p><strong>问题</strong>：<a href="https://leetcode.com/problems/friend-circles/">547. Friend Circles</a></p>
+
+<p><strong>思路</strong>：</p>
+</blockquote>
+
+<pre class="line-numbers"><code class="language-java">
+</code></pre>
+
+<blockquote>
+<p><strong>时间复杂度</strong>：<br/>
+<strong>空间复杂度</strong>：</p>
+
+<p><strong>优化</strong>：</p>
+</blockquote>
+
+<h2 id="toc_3">最长连续序列</h2>
+
+<h2 id="toc_4">参考</h2>
+
+<ol>
+<li><a href="https://blog.csdn.net/Guo15331092/article/details/78702686">LeetCode Union-Find(并查集) 专题（一）</a></li>
+<li><a href="https://blog.csdn.net/why_still_confused/article/details/51497973">快速并查集(Java实现)</a></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[图相关]]></title>
+    <link href="nevermoes.github.io/15637123231485.html"/>
+    <updated>2019-07-21T20:32:03+08:00</updated>
+    <id>nevermoes.github.io/15637123231485.html</id>
+    <content type="html"><![CDATA[
+<ul>
+<li>
+<a href="#toc_0">岛屿数量</a>
+<ul>
+<li>
+<a href="#toc_1">DFS</a>
+</li>
+<li>
+<a href="#toc_2">BFS</a>
+</li>
+<li>
+<a href="#toc_3">Union-Find</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_4">账号合并</a>
+</li>
+<li>
+<a href="#toc_5">参考</a>
+</li>
+</ul>
+
+
+<h2 id="toc_0">岛屿数量</h2>
+
+<blockquote>
+<p><strong>问题</strong>：<a href="https://leetcode.com/problems/number-of-islands/">200. Number of Islands</a></p>
+</blockquote>
+
+<h3 id="toc_1">DFS</h3>
+
+<blockquote>
+<p><strong>思路</strong>：</p>
+</blockquote>
+
+<pre class="line-numbers"><code class="language-java">public class Solution {
+
+    int[][] dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+
+    public int numIslands(char[][] grid) {
+        if (grid == null || grid.length == 0)
+            return 0;
+        int m = grid.length;
+        int n = grid[0].length;
+        int count = 0;
+        for (int i = 0; i &lt; m; i++){
+            for (int j = 0; j &lt; n; j++)
+                if (grid[i][j] == &#39;1&#39;) {
+                    DFS(grid, i, j, m, n);
+                    count++;
+                }
+        }    
+        return count;
+    }
+
+    private void DFS(char[][] grid, int i, int j, int m, int n) {
+        // 边界检测
+        if (i &lt; 0 || j &lt; 0
+            || i &gt;= m || j &gt;= n
+            || grid[i][j] == &#39;0&#39;)
+            return;
+        // 标记为已经遍历了
+        grid[i][j] = &#39;0&#39;;
+        // 向其他方向进行搜索
+        for (int[] dir : dirs)
+            DFS(grid, i + dir[0], j + dir[1], m, n); 
+    }
+}
+</code></pre>
+
+<blockquote>
+<p><strong>时间复杂度</strong>：O(N*M)</p>
+</blockquote>
+
+<h3 id="toc_2">BFS</h3>
+
+<blockquote>
+<p><strong>思路</strong>：</p>
+</blockquote>
+
+<pre class="line-numbers"><code class="language-java">public class Solution {
+
+    int[][] dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+
+    public int numIslands(char[][] grid) {
+        if (grid == null || grid.length == 0)
+            return 0;
+        int m = grid.length;
+        int n = grid[0].length;
+        boolean[][] visited = new boolean[m][n];
+        Queue&lt;int[]&gt; queue = new LinkedList&lt;&gt;();
+        int count = 0;
+        for (int i = 0; i &lt; m; i++){
+            for (int j = 0; j &lt; n; j++)
+                if (grid[i][j] == &#39;1&#39; &amp;&amp; !visited[i][j]) {
+                    queue.offer(new int[]{i, j});
+                    visited[i][j] = true;
+                    BFS(grid, queue, visited, m, n);
+                    count++;
+                }
+        }  
+        return count;
+    }
+
+    private void BFS(char[][] grid, Queue&lt;int[]&gt; queue, boolean[][] visited,
+                    int m, int n) {
+        while (!queue.isEmpty()) {
+            int[] curPos = queue.poll();
+            for(int dir : dirs) {
+                int x = curPos[0] + dir[0];
+                int y = curPos[1] + dir[1];
+                if (x&lt;0 || y&lt;0 
+                    || x&gt;=m || y&gt;=n
+                    || grid[x][y] == &#39;0&#39;)
+                    continue;
+                visited[x][y] = true;
+                queue.offer(new int[]{x, y})
+            }
+        }
+    }
+}
+</code></pre>
+
+<blockquote>
+<p><strong>时间复杂度</strong>：O(N*M)</p>
+</blockquote>
+
+<h3 id="toc_3">Union-Find</h3>
+
+<blockquote>
+<p><strong>思路</strong>：</p>
+</blockquote>
+
+<pre class="line-numbers"><code class="language-java">public class Solution {
+
+    int[][] dirs = {{1,0},{-1,0},{0,1},{0,-1}};
+    
+    public int numIslands(char[][] grid) {  
+        if (grid == null || grid.length == 0 || grid[0].length == 0)  {
+            return 0;  
+        }
+        
+        UnionFind uf = new UnionFind(grid);  
+        int rows = grid.length;  
+        int cols = grid[0].length;  
+        
+        for (int row = 0; row &lt; rows; row++) {  
+            for (int col = 0; col &lt; cols; col++) {  
+                if (grid[row][col] == &#39;1&#39;) {  
+                    for (int[] d : dirs) {
+                        int x = row + d[0];
+                        int y = col + d[1];
+                        if (x &gt;= 0 &amp;&amp; x &lt; rows
+                            &amp;&amp; y &gt;= 0 &amp;&amp; y &lt; cols
+                            &amp;&amp; grid[x][y] == &#39;1&#39;) {  
+                            int pos1 = row*cols+col;
+                            int pos2 = x*cols+y;
+                            uf.union(pos1, pos2);  
+                        }  
+                    }  
+                }  
+            }  
+        } 
+        
+        return uf.count;  
+    }
+
+    class UnionFind {
+        int[] nodes;
+        int count = 0;
+        
+        UnionFind(char[][] grid) {  
+            int m = grid.length;  
+            int n = grid[0].length;  
+            nodes = new int[m*n];  
+            for (int i = 0; i &lt; m; i++) {  
+                for (int j = 0; j &lt; n; j++) {  
+                    if (grid[i][j] == &#39;1&#39;) {
+                        int pos = i * n + j;
+                        nodes[pos] = pos;
+                        count++;
+                    }
+                }  
+            }  
+        }
+        
+        public void union(int node1, int node2) {  
+            int root1 = find(node1);
+            int root2 = find(node2);
+            if(root1 != root2) {
+                nodes[root1] = root2;
+                count--;
+            }
+        }
+        
+        public int find (int node) {  
+            if (nodes[node] == node) {  
+                return node;
+            }
+            
+            nodes[node] = find(nodes[node]);  
+            return nodes[node];
+        }
+    }
+}
+</code></pre>
+
+<blockquote>
+<p><strong>时间复杂度</strong>：</p>
+</blockquote>
+
+<h2 id="toc_4">账号合并</h2>
+
+<blockquote>
+<p><strong>问题</strong>：<a href="https://leetcode.com/problems/accounts-merge/">721. Accounts Merge</a></p>
+
+<p><strong>思路</strong>：</p>
+</blockquote>
+
+<pre class="line-numbers"><code class="language-java">
+</code></pre>
+
+<blockquote>
+<p><strong>时间复杂度</strong>：<br/>
+<strong>空间复杂度</strong>：</p>
+
+<p><strong>优化</strong>：</p>
+</blockquote>
+
+<h2 id="toc_5">参考</h2>
+
+<ol>
+<li><a href="https://zhuanlan.zhihu.com/p/60635925">[LeetCode] 账号合并</a></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[动态规划 - 2]]></title>
+    <link href="nevermoes.github.io/15637092754569.html"/>
+    <updated>2019-07-21T19:41:15+08:00</updated>
+    <id>nevermoes.github.io/15637092754569.html</id>
+    <content type="html"><![CDATA[
+<ul>
+<li>
+<a href="#toc_0">路径数量</a>
+</li>
+<li>
+<a href="#toc_1">最小路径和</a>
+</li>
+<li>
+<a href="#toc_2">地牢游戏（逆向DP）</a>
+</li>
+<li>
+<a href="#toc_3">背包问题</a>
+</li>
+</ul>
+
+
+<h2 id="toc_0">路径数量</h2>
+
+<blockquote>
+<p><strong>问题</strong>：<a href="https://leetcode.com/problems/unique-paths/">62. Unique Paths</a></p>
+
+<p><strong>思路</strong>：这个问题就比较简单了，虽然是一个二维 DP 但是递推式子很容易写出。<br/>
+递推式：<code>f(m,n) = f(m-1,n) + f(m,n-1)</code><br/>
+边界：<code>f(x,1) = 1, f(1,x) = 1</code></p>
+</blockquote>
+
+<pre class="line-numbers"><code class="language-java">class Solution {
+    public int uniquePaths(int m, int n) {
+        if(m&lt;=1 || n&lt;=1) {
+            return 1;
+        }
+        int[][] dp = new int[m][n];
+        
+        for (int i=0; i&lt;m; i++) {
+            dp[i][0] = 1;
+        }
+        for (int i=0; i&lt;n; i++) {
+            dp[0][i] = 1;
+        }
+        
+        for (int i=1; i&lt;m; i++) {
+            for (int j=1; j&lt;n; j++) {
+                dp[i][j] = dp[i][j-1] + dp[i-1][j];
+            }
+        }
+        
+        return dp[m-1][n-1];
+    }
+}
+</code></pre>
+
+<blockquote>
+<p><strong>时间复杂度</strong>：O(n*m)<br/>
+<strong>空间复杂度</strong>：O(n*m)</p>
+</blockquote>
+
+<h2 id="toc_1">最小路径和</h2>
+
+<blockquote>
+<p><strong>问题</strong>：<a href="https://leetcode.com/problems/minimum-path-sum/">64. Minimum Path Sum</a></p>
+
+<p><strong>思路</strong>：对于一个格子，只有从上到下和从左到右两种路径，然后在这两个路径中选取小的那个即可。<br/>
+递推式也很简单：<code>f(x,y) = min[f(x-1,y), f(x,y-1)]</code></p>
+</blockquote>
+
+<pre class="line-numbers"><code class="language-java">class Solution {
+    public int minPathSum(int[][] grid) {
+        if (grid==null || grid.length==0) {
+            return 0;
+        }
+        int m = grid.length, n = grid[0].length;
+        int[][] dp = new int[m][n];
+        for (int i=0; i&lt;m; i++) {
+            for (int j=0; j&lt;n; j++) {
+                if (i==0 &amp;&amp; j==0) {
+                    dp[i][j] = grid[i][j];
+                }
+                else if (i==0) {
+                    dp[i][j] = grid[i][j]+dp[i][j-1];
+                }
+                else if (j==0) {
+                    dp[i][j] = grid[i][j]+dp[i-1][j];
+                }
+                else {
+                    dp[i][j] = Math.min(grid[i][j]+dp[i-1][j], grid[i][j]+dp[i][j-1]);
+                }
+            }
+        }
+        return dp[m-1][n-1];
+    }
+}
+</code></pre>
+
+<blockquote>
+<p><strong>时间复杂度</strong>：<br/>
+<strong>空间复杂度</strong>：</p>
+
+<p><strong>优化</strong>：</p>
+</blockquote>
+
+<h2 id="toc_2">地牢游戏（逆向DP）</h2>
+
+<blockquote>
+<p><strong>问题</strong>：<a href="https://leetcode.com/problems/dungeon-game/">174. Dungeon Game</a></p>
+
+<p><strong>思路</strong>：首先对于一个地牢格子，只有两种可能的路径，要么从从上到下走到这个格子，要么从左到右走到这个格子。我们要<strong>保证用最少的血量走过某个路径</strong>。<br/>
+那么我们可以定义一个，走到当前格子所需要的最小 HP ，并在路径中选择最小 HP 大的那个。<br/>
+即：<code>minHP(i,j) = max(minHP(i-1,j), minHP(i, j-1))</code>，解就为 <code>minHP[m-1][n-1]&lt;0 ? Abs(minHP[m-1][n-1])+1 : 1</code><br/>
+<strong>但是这样还不行</strong>，考虑两条路径 [1,-2,1,-100], [1,-5,100,-100]，这样在 -2 和 -5 的选择中就会选择 -2 而不是 -5。在路径的选择上还要<strong>保证能保留足够多的血量</strong>来保证能通过那些扣血量很多的格子。<br/>
+用 <code>curHP[i][j]</code> 表示发生战斗前走到某个格子上面的剩余 HP。 那么需要保证：</p>
+
+<ol>
+<li>HP[i][j]+dungeon[i][j] &gt; 0</li>
+<li>HP[i][j]+dungeon[i][j] 应该足够大来保证能走过那些扣血很多的路径。</li>
+</ol>
+
+<p>注意这里的<strong>第二条违反了 DP 无后效性的约束</strong>。即我们再保证第二条约束的时候，要用到后续的值。比如上面那两条路径，有一个恢复很多血量的在路径之后。或者说在路径选择中我们不知道该选择哪条。<br/>
+也就是说正常的顺序计算，<strong>从左上算到右下是不可行的</strong>。</p>
+
+<p><strong>另一种思路：</strong><br/>
+这是个典型的<strong>逆序 DP 问题</strong>，至于是怎么想到要逆序的，笔者表示也不知道。<br/>
+那么从终点开始推递推式子，<code>minHP[i][j]</code> <br/>
+走到终点前我们要保证 HP &gt; 1：<code>curHP[m - 1][n - 1] &gt;= 1</code><br/>
+发生战斗后需要保证 HP &gt; 1： <code>curHP[m - 1][n - 1] + dungeon[m - 1][n - 1] &gt;= 1</code><br/>
+那么初始值就为：<code>curHP[m - 1][n - 1] &gt;= max(1, 1 - dungeon[m - 1][n - 1])</code><br/>
+得到初始值后开始向前递推，假设前一个最小 HP 为 <code>perv</code>，那么有：<br/>
+<code>prev &gt;= 1</code>, <code>prev + dungeon[prev] = cur</code><br/>
+可以得到递推式： <code>prev = max(1, cur - dungeon[prev])</code></p>
+</blockquote>
+
+<pre class="line-numbers"><code class="language-java">class Solution {
+    public int calculateMinimumHP(int[][] dungeon) {
+        if(dungeon == null || dungeon.length == 0 || dungeon[0].length == 0){
+            return 0;
+        }
+
+        int m = dungeon.length;
+        int n = dungeon[0].length;
+        int[][] curHP = new int[m][n];
+
+        for(int i = m - 1; i &gt;= 0; i--){
+            for(int j = n - 1; j &gt;= 0; j--){
+                // 终点
+                if(i == m - 1 &amp;&amp; j == n - 1){
+                    curHP[m - 1][n - 1] = Math.max(1, 1 - dungeon[m - 1][n - 1]); 
+                // 下边界
+                }else if(i == m - 1){
+                    curHP[m - 1][j] = Math.max(curHP[m - 1][j + 1] - dungeon[m - 1][j], 1);
+                // 右边界
+                }else if(j == n - 1){
+                    curHP[i][n - 1] = Math.max(curHP[i + 1][n - 1] - dungeon[i][n - 1], 1);
+                }else{
+                    curHP[i][j] = Math.min(Math.max(curHP[i + 1][j] - dungeon[i][j], 1),
+                                       Math.max(curHP[i][j + 1] - dungeon[i][j], 1));
+                }
+            }
+        }
+        
+        return curHP[0][0];
+    }
+}
+</code></pre>
+
+<blockquote>
+<p><strong>时间复杂度</strong>：O(m*n)<br/>
+<strong>空间复杂度</strong>：O(m*n)</p>
+
+<p>还有一种使用递归 + mem 方式的解法，也挺直观的。</p>
+</blockquote>
+
+<pre class="line-numbers"><code class="language-java">public class Solution {
+    
+    int[][] mem;
+
+    private int helper(int[][] dungeon, int i, int j) {
+        if(i&gt;=dungeon.length || j&gt;=dungeon[0].length)
+            return Integer.MAX_VALUE;
+        if(mem[i][j]&gt;0)
+            return mem[i][j];
+        int health = Integer.MAX_VALUE;
+        health = Math.min(health, helper(dungeon, i+1, j));
+        health = Math.min(health, helper(dungeon, i, j+1));
+        health = health==Integer.MAX_VALUE ? 1 : health; // this only happens with i, j is P already
+        int ret = health&gt;dungeon[i][j] ? (health-dungeon[i][j]) : 1;
+        mem[i][j] = ret;
+        return ret;
+    }
+    
+    public int calculateMinimumHP(int[][] dungeon) {
+        if(dungeon.length==0)
+            return 0;
+        mem = new int[dungeon.length][dungeon[0].length];
+        return helper(dungeon, 0, 0);
+    }
+}
+</code></pre>
+
+<blockquote>
+<p><strong>优化</strong>：实际上这个二维 DP 可以优化到一维，具体可以参看参看。</p>
+
+<p><strong>参考</strong>：<br/>
+<a href="https://blog.csdn.net/juzihongle1/article/details/76098229">Leetcode—174. Dungeon Game 倒序DP</a><br/>
+<a href="https://leetcode.com/problems/dungeon-game/discuss/52784/who-can-explain-why-u201cfrom-the-bottom-right-corner-to-left-topu201d/53828">Who can explain why from the bottom right corner to left top.</a><br/>
+<a href="https://leetcode.com/problems/dungeon-game/discuss/52790/My-AC-Java-Version-Suggestions-are-welcome">My AC Java Version, Suggestions are welcome</a></p>
+</blockquote>
+
+<h2 id="toc_3">背包问题</h2>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[海量数据]]></title>
+    <link href="nevermoes.github.io/15635229096880.html"/>
+    <updated>2019-07-19T15:55:09+08:00</updated>
+    <id>nevermoes.github.io/15635229096880.html</id>
+    <content type="html"><![CDATA[
+<ol>
+<li><a href="https://blog.csdn.net/v_JULY_v/article/details/6279498">十道海量数据处理面试题与十个方法大总结</a></li>
+<li><a href="https://blog.csdn.net/v_july_v/article/details/7382693">教你如何迅速秒杀掉：99%的海量数据处理面试题</a></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mysql - 键、索引、约束]]></title>
+    <link href="nevermoes.github.io/15633466729778.html"/>
+    <updated>2019-07-17T14:57:52+08:00</updated>
+    <id>nevermoes.github.io/15633466729778.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">参考</h2>
+
+<p><a href="https://blog.csdn.net/dlodj/article/details/7017331">键、索引、约束及其区别</a></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Netty]]></title>
+    <link href="nevermoes.github.io/15633460791334.html"/>
+    <updated>2019-07-17T14:47:59+08:00</updated>
+    <id>nevermoes.github.io/15633460791334.html</id>
+    <content type="html"><![CDATA[
+<ul>
+<li>
+<a href="#toc_0">参考</a>
+</li>
+</ul>
+
+
+<h2 id="toc_0">参考</h2>
+
+<ol>
+<li><a href="https://juejin.im/post/5c75cbabe51d453ecf7d6f3f">使用Netty，我们到底在开发些什么？</a></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mysql - 性能优化]]></title>
+    <link href="nevermoes.github.io/15633423972144.html"/>
+    <updated>2019-07-17T13:46:37+08:00</updated>
+    <id>nevermoes.github.io/15633423972144.html</id>
+    <content type="html"><![CDATA[
+<p><img src="media/15607574336137/15607574470182.jpg" alt=""/></p>
+
+<p>访问磁盘的成本大概是访问内存的十万倍左右</p>
+
+<h2 id="toc_0">参考</h2>
+
+<ol>
+<li><a href="https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&amp;mid=2247485117&amp;idx=1&amp;sn=92361755b7c3de488b415ec4c5f46d73">MySQL高性能优化规范建议</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&amp;mid=2247485185&amp;idx=1&amp;sn=66ef08b4ab6af5757792223a83fc0d45">一条SQL语句执行得很慢的原因有哪些？</a></li>
+<li><a href="https://tech.meituan.com/2014/06/30/mysql-index.html"></a></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[索引中的树 - B,B+,B*]]></title>
+    <link href="nevermoes.github.io/15633420860231.html"/>
+    <updated>2019-07-17T13:41:26+08:00</updated>
+    <id>nevermoes.github.io/15633420860231.html</id>
+    <content type="html"><![CDATA[
+<ul>
+<li>
+<a href="#toc_0">参考</a>
+</li>
+</ul>
+
+
+<h2 id="toc_0">参考</h2>
+
+<ol>
+<li><a href="https://blog.csdn.net/v_JULY_v/article/details/6530142/">从B树、B+树、B*树谈到R 树</a></li>
+<li><a href="https://blog.csdn.net/dbanote/article/details/8897599">HBase LSM树 VS B+树</a></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[其他]]></title>
+    <link href="nevermoes.github.io/15632741408063.html"/>
+    <updated>2019-07-16T18:49:00+08:00</updated>
+    <id>nevermoes.github.io/15632741408063.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">Contiguous Array</h2>
+
+<blockquote>
+<p><strong>问题</strong>：<a href="https://leetcode.com/problems/contiguous-array/">525. Contiguous Array</a></p>
+
+<p><strong>思路</strong>：</p>
+
+<p><strong>复杂度</strong>：<br/>
+<strong>时间</strong>：<br/>
+<strong>空间</strong>：</p>
+</blockquote>
+
+<pre class="line-numbers"><code class="language-java">
+</code></pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[概览]]></title>
+    <link href="nevermoes.github.io/15630938148608.html"/>
+    <updated>2019-07-14T16:43:34+08:00</updated>
+    <id>nevermoes.github.io/15630938148608.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">参考</h2>
+
+<ol>
+<li><a href="https://juejin.im/post/5c7cd6eee51d457c042d4b52">我理解的分布式系统</a></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Http 授权]]></title>
+    <link href="nevermoes.github.io/15629155221529.html"/>
+    <updated>2019-07-12T15:12:02+08:00</updated>
+    <id>nevermoes.github.io/15629155221529.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">参考</h2>
+
+<ol>
+<li><a href="https://coolshell.cn/articles/19395.html">HTTP API 认证授权术</a></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Java 并发 - 同步器框架 AQS]]></title>
+    <link href="nevermoes.github.io/15628279381258.html"/>
+    <updated>2019-07-11T14:52:18+08:00</updated>
+    <id>nevermoes.github.io/15628279381258.html</id>
+    <content type="html"><![CDATA[
+<ul>
+<li>
+<a href="#toc_0">AQS 简介</a>
+<ul>
+<li>
+<a href="#toc_1">使用</a>
+</li>
+<li>
+<a href="#toc_2">具体同步器实现</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_3">设计与实现</a>
+<ul>
+<li>
+<a href="#toc_4">同步状态</a>
+</li>
+<li>
+<a href="#toc_5">线程的阻塞与唤醒</a>
+</li>
+<li>
+<a href="#toc_6">排队机制</a>
+<ul>
+<li>
+<a href="#toc_7">CLH 锁</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_8">参考</a>
+</li>
+</ul>
+
+
+<h2 id="toc_0">AQS 简介</h2>
+
+<p>AQS 即 <code>AbstractQueuedSynchronizer</code> 队列<strong>同步器</strong>，是 java 并发包一个基础部件。在 java.util.concurrent 包中，大部分的并发类都是基于 AQS 来实现的。</p>
+
+<p>这个框架为原子性管理同步状态、阻塞和唤醒线程、排队等提供了一种通用的机制。<br/>
+这个类还定义了 AbstractQueuedSynchronizer.ConditionObject，实现了 Condition 接口，用于支持管程形式的 await、signal 操作。</p>
+
+<p>AQS 与具体锁的主要区别在于：<br/>
+锁面向<strong>使用者</strong>，主要定义的是使用者与锁交换的接口，屏蔽了实现的细节。<br/>
+同步器面向<strong>锁的实现者</strong>，主要是简化了锁的实现，屏蔽了同步状态的管理，线程的排队，等待和唤醒操作。</p>
+
+<h3 id="toc_1">使用</h3>
+
+<p>AQS 使用了模板方法来让锁的实现者来实现自己需要的锁，即：</p>
+
+<ol>
+<li>使用者继承 AbstractQueuedSynchronizer 并重写指定的方法。</li>
+<li>将 AQS 组合在自定义同步组件的实现中，并调用其模板方法，而这些模板方法会调用使用者重写的方法。</li>
+</ol>
+
+<p>自定义同步器需要重写的模板方法：</p>
+
+<ul>
+<li><code>tryAcquire(int arg)</code>，独占式获取同步状态。成功则返回true，失败则返回false。</li>
+<li><code>tryRelease(int arg)</code>，独占式释放同步状态。成功则返回true，失败则返回false。</li>
+<li><code>tryAcquireShared(int arg)</code>，共享式获得同步状。负数表示失败；0表示成功，但没有剩余可用资源；正数表示成功，且有剩余资源。</li>
+<li><code>tryReleaseShared(int arg)</code>，共享式释放同步状态。如果释放后允许唤醒后续等待结点返回true，否则返回false。</li>
+<li><code>isHeldExclusively()</code>，当前同步器是否被线程独占。实现 Condition 的时候会用到。</li>
+</ul>
+
+<p>一般来说，自定义同步器要么是独占方法，要么是共享方式，所以只需实现 <code>tryAcquire</code> -<code>tryRelease</code>、比如 ReentrantLock。<br/>
+或者 <code>tryAcquireShared</code> - <code>tryReleaseShared</code> ，比如 Semaphore/CountDownLatch 。<br/>
+但AQS也支持自定义同步器同时实现独占和共享两种方式，如<strong><code>ReentrantReadWriteLock</code></strong>。</p>
+
+<h3 id="toc_2">具体同步器实现</h3>
+
+<p>以 ReentrantLock 的实现举例：</p>
+
+<ol>
+<li>state 初始化为 0，表示未锁定状态。</li>
+<li>A线程 lock() 时，会调用 tryAcquire() 独占该锁并将 state+1。此后，其他线程再 tryAcquire()时就会失败。</li>
+<li>释放锁之前，A 线程自己是可以重复获取此锁的（state 会累加）但要注意，获取多少次就要释放多么次，这样才能保证 state 是能回到零态的。</li>
+<li>直到A线程 unlock()到 state=0（即释放锁）为止，其它线程才有机会获取该锁。</li>
+</ol>
+
+<p>再以CountDownLatch以例：</p>
+
+<ol>
+<li>任务分为 N 个子线程去执行，state 也初始化为 N（注意 N 要与线程个数一致）。</li>
+<li>这 N 个子线程是并行执行的，每个子线程执行完后countDown()一次，state 会 CAS 减 1。</li>
+<li>等到所有子线程都执行完后(即state=0)，会 unpark()主调用线程，然后主调用线程就会从 await()函数返回，继续后余动作。</li>
+</ol>
+
+<h2 id="toc_3">设计与实现</h2>
+
+<p>acquire 操作如下：</p>
+
+<pre class="line-numbers"><code class="language-java">while (synchronization state does not allow acquire) {
+    enqueue current thread if not already queued;
+    possibly block current thread;
+}
+dequeue current thread if it was queued;
+</code></pre>
+
+<p>release 操作如下：</p>
+
+<pre class="line-numbers"><code class="language-java">update synchronization state;
+if (state may permit a blocked thread to acquire)
+    unblock one or more queued threads;
+</code></pre>
+
+<p>为了实现上述 acquire、release 操作，需要完成以下三个功能：</p>
+
+<ol>
+<li>同步状态的原子性管理。</li>
+<li>线程的阻塞与唤醒。</li>
+<li>排队机制。</li>
+</ol>
+
+<h3 id="toc_4">同步状态</h3>
+
+<p>首先 AQS 维护了一个状态变量来表示同步状态，volatile 关键字保证了多线程环境下可见性。</p>
+
+<pre class="line-numbers"><code class="language-text">private volatile int state
+</code></pre>
+
+<p>AQS 使用了提供三个方法来管理同步状态，且屏蔽了底层实现：</p>
+
+<ul>
+<li><code>getState()</code></li>
+<li><code>setState(int)</code></li>
+<li><code>compareAndSetState(int,int)</code>，使用 CAS 操作保证原子性</li>
+</ul>
+
+<h3 id="toc_5">线程的阻塞与唤醒</h3>
+
+<p>LockSupport.park</p>
+
+<h3 id="toc_6">排队机制</h3>
+
+<h4 id="toc_7">CLH 锁</h4>
+
+<p><img src="media/15628279381258/15629002726916.jpg" alt="" style="width:510px;"/></p>
+
+<h2 id="toc_8">参考</h2>
+
+<ol>
+<li><a href="http://www.cnblogs.com/waterystone/p/4920797.html">Java并发之AQS详解</a></li>
+<li><a href="https://www.cnblogs.com/chengxiao/archive/2017/07/24/7141160.html">Java并发包基石-AQS详解</a></li>
+<li><a href="https://juejin.im/post/5d1d7253f265da1ba56b3b67">java.util.concurrent 同步器框架详解</a></li>
+<li><a href="https://blog.csdn.net/jackyechina/article/details/73199638">CLH锁与MCS锁</a></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Java 并发 - volatile 与 Java 内存模型(JMM)]]></title>
+    <link href="nevermoes.github.io/15628250952791.html"/>
+    <updated>2019-07-11T14:04:55+08:00</updated>
+    <id>nevermoes.github.io/15628250952791.html</id>
+    <content type="html"><![CDATA[
+<ul>
+<li>
+<a href="#toc_0">Java 内存模型(JMM)</a>
+<ul>
+<li>
+<a href="#toc_1">为什么需要 JMM</a>
+</li>
+<li>
+<a href="#toc_2">JMM 是什么</a>
+</li>
+<li>
+<a href="#toc_3">Happens-Before</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_4">volatile 与可见性</a>
+<ul>
+<li>
+<a href="#toc_5">缓存一致性协议</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_6">内存屏障</a>
+</li>
+<li>
+<a href="#toc_7">参考</a>
+</li>
+</ul>
+
+
+<h2 id="toc_0">Java 内存模型(JMM)</h2>
+
+<h3 id="toc_1">为什么需要 JMM</h3>
+
+<ol>
+<li>缓存一致性问题导致的<strong>可见性问题</strong>。</li>
+<li>处理器优化导致的<strong>原子性问题</strong>。</li>
+<li>指令重排导致的<strong>有序性问题</strong>。</li>
+</ol>
+
+<p><img src="media/15536711259128/15549697939801.png" alt=""/></p>
+
+<p>对于可见性问题的一个例子：<br/>
+如果 A 线程要向 B 线程通信时要经历如下两步：</p>
+
+<ol>
+<li>线程A从主内存中将共享变量读入线程A的工作内存后并进行操作，之后将数据重新写回到主内存中。</li>
+<li>线程B从主存中读取最新的共享变量。</li>
+</ol>
+
+<p>这里就会出现可见性问题</p>
+
+<h3 id="toc_2">JMM 是什么</h3>
+
+<p>为了保证共享内存的正确性（可见性、有序性、原子性），内存模型定义了共享内存系统中多线程程序读写操作行为的规范。<br/>
+或者说 JMM 是一种规范，目的是解决由于多线程通过共享内存进行通信时，存在的本地内存数据不一致、编译器会对代码指令重排序、处理器会对代码乱序执行等带来的问题。</p>
+
+<p><img src="media/15628250952791/15628258440003.png" alt=""/></p>
+
+<h3 id="toc_3">Happens-Before</h3>
+
+<p>JVM 希望尽可能优化性能，而程序员又希望并发时程序能够正确运行。<br/>
+于是在<strong>屏蔽底层实现</strong>的情况下提出了 Happens-Before 规则。即不管底层怎么优化怎么重排执行，必须要遵守一定的规则。这就是 Happens-Before。它向程序员保证了并发的正确性也向 JVM 要求了实现的标准。<br/>
+或者说 <strong>Happens-Before 向程序员提供跨线程的内存可见性保证</strong>。<br/>
+以下为了方便就简称 HP。<br/>
+具体定义如下：</p>
+
+<ol>
+<li>程序顺序：单线程中的每一个操作，hp 与该线程中的任意后序操作。</li>
+<li>监视器锁：对锁的解锁 hp 于之后对这个锁的加锁。</li>
+<li><strong>volatile 变量：对一个 volatile 域的写 hp 于任意后续对这个域的读。</strong></li>
+<li>传递性：hp 性质具有传递性。</li>
+<li>start()：如果 A 线程 start() 一个 B 线程，那么 start() 操作 hp 于任意 B 线程中的操作。</li>
+<li>join()：如果 A 线程执行 B.join() 且成功返回，那么线程 B 中的任意操作 hp 于 B.join() 成功返回。</li>
+<li>程序中断： 对线程 interrupt() 方法的调用 hp 于被检测到中断的时间。</li>
+<li>finalize：对象的构造 hp 于 finalize()方法执行。</li>
+</ol>
+
+<p>重点关注第三条，其他的其实都比较直观。</p>
+
+<h2 id="toc_4">volatile 与可见性</h2>
+
+<p>volatile 这个关键字本质上就是 Java 提供给我们的一个<strong>实现可见性</strong>的接口。</p>
+
+<p>以下具体介绍一下内存模型中 volatile 的实现原理。内存模型解决并发问题主要采用两种方式：<strong>限制处理器优化和使用内存屏障</strong>。</p>
+
+<h3 id="toc_5">缓存一致性协议</h3>
+
+<p>JMM 与内存的交互中使用了缓存一致性协议来<strong>保证可见性</strong>。</p>
+
+<p>如果我们对 对 volatile 变量进行<strong>写操作</strong>，JMM 操作过程如下。</p>
+
+<ol>
+<li>JVM 发送一条 <strong>Lock 前缀的指令</strong>。</li>
+<li>Lock 前缀的指令会引起处理器<strong>缓存回写内存</strong>。</li>
+<li>一个处理器的缓存回写到内存会导致其他处理器的<strong>缓存失效</strong>，这里失效的判断检查了时间戳。</li>
+<li>当处理器发现本地缓存失效后，就会从内存中<strong>重读</strong>该变量数据，即可以获取当前最新值。</li>
+</ol>
+
+<p><strong>即任何对 volatile 的写命令会强制刷新缓存，保证其他线程可以读到最新的数据。</strong></p>
+
+<h2 id="toc_6">内存屏障</h2>
+
+<p>JMM 在不改变正确语义的情况下会运行编译器对指令进行重排，但是为了可见性要限制这样的重排，那么编译器是如何限制这样的重排，就是添加了<strong>内存屏障</strong>。</p>
+
+<p>内存屏障分为四种：</p>
+
+<ul>
+<li>LoadLoad，确保 Load1 的装载先于 Load2 及其后续所有指令的装载。</li>
+<li>StoreStore，确保 Store1 在内存中的刷新先于 Store2 及其所有后续指令的装载。</li>
+<li>LoadStore，同理顺序不一样。</li>
+<li>StoreLoad，同理。</li>
+</ul>
+
+<p>换个角度理解就是：</p>
+
+<ul>
+<li>StoreStore：禁止上面的普通写和下面的 volatile 写重排序。</li>
+<li>StoreLoad：防止上面的 volatil e写与下面可能有的 volatile 读/写重排序。</li>
+<li>LoadLoad：禁止下面所有的普通读操作和上面的 volatile 读重排序。</li>
+<li>LoadStore：禁止下面所有的普通写操作和上面的 volatile 读重排序。</li>
+</ul>
+
+<p>因为编译器不知道如何保证屏障最小化，所以采取了保守策略。</p>
+
+<ol>
+<li>在每个 volatile <strong>写操作</strong>的前后<strong>分别插入</strong>一个 <strong>StoreStore</strong> 和一个 <strong>StoreLoad</strong>。</li>
+<li>在每个 volatile <strong>读操作后面</strong>后面<strong>连续插入</strong>一个 <strong>LoadLoad</strong> 和 <strong>LoadStore</strong>。</li>
+</ol>
+
+<h2 id="toc_7">参考</h2>
+
+<ol>
+<li><a href="https://www.hollischuang.com/archives/2550">再有人问你Java内存模型是什么，就把这篇文章发给他。</a></li>
+<li><a href="https://juejin.im/post/5ae9b41b518825670b33e6c4">彻底理解volatile</a></li>
+<li><a href="http://ifeve.com/volatile-array-visiblity/294529737/">volatile是否能保证数组中元素的可见性？</a></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mybatis]]></title>
+    <link href="nevermoes.github.io/15627234169476.html"/>
+    <updated>2019-07-10T09:50:16+08:00</updated>
+    <id>nevermoes.github.io/15627234169476.html</id>
+    <content type="html"><![CDATA[
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[源码]]></title>
+    <link href="nevermoes.github.io/15627233586740.html"/>
+    <updated>2019-07-10T09:49:18+08:00</updated>
+    <id>nevermoes.github.io/15627233586740.html</id>
+    <content type="html"><![CDATA[
+<p><a href="https://www.zhihu.com/question/56476038/answer/731951364"></a></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Https]]></title>
+    <link href="nevermoes.github.io/15627233138405.html"/>
+    <updated>2019-07-10T09:48:33+08:00</updated>
+    <id>nevermoes.github.io/15627233138405.html</id>
+    <content type="html"><![CDATA[
+
+]]></content>
+  </entry>
+  
+</feed>
